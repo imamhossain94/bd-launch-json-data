@@ -15,9 +15,9 @@ A structured JSON dataset of passenger launches (river ferries) operating out of
 
   <!-- Middle: 1 image -->
   <div style="gap: 8px;">
-    <img src="launch-image\MV Zam Zam 7.jpg" width="31%" height="150" style="object-fit: cover; border-radius: 4px;" alt="MV Zam Zam 7" />
-    <img src="launch-image\MV Raf Raf 7.jpg" width="31%" height="150" style="object-fit: cover; border-radius: 4px;" alt="MV Raf Raf 7" />
-    <img src="launch-image\MV Mayur 10.jpg" width="31%" height="150" style="object-fit: cover; border-radius: 4px;" alt="MV Mayur 10" />
+    <img src="launch-image\MV Zam Zam 7.jpg" width="30%" height="150" style="object-fit: cover; border-radius: 4px;" alt="MV Zam Zam 7" />
+    <img src="launch-image\MV Raf Raf 7.jpg" width="32.5%" height="150" style="object-fit: cover; border-radius: 4px;" alt="MV Raf Raf 7" />
+    <img src="launch-image\MV Mayur 10.jpg" width="30%" height="150" style="object-fit: cover; border-radius: 4px;" alt="MV Mayur 10" />
   </div>
 
   <!-- Right column: 2 images -->
