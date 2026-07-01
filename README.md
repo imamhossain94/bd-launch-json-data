@@ -3,29 +3,29 @@
 A structured JSON dataset of passenger launches (river ferries) operating out of Dhaka, Bangladesh — schedules, fares, amenities, and technical specs for **66 launches** across **8 routes** and **26 operators**.
 
 ## Preview
-<div style="display: flex; gap: 8px; overflow-x: auto; width: 100%; padding: 10px 0;">
+<div style="gap: 8px; overflow-x: auto; width: 100%; padding: 10px 0; flex-wrap: wrap; align-content: center;">
 
   <!-- Left column: 2 images -->
-  <div style="display: flex; flex-direction: column; gap: 8px;">
-    <img src="launch-image\MV Sundarban 10.jpg" width="236" height="150" style="object-fit: cover; border-radius: 4px;" alt="MV Sundarban 10" />
-    <img src="launch-image\MV Parabat 9.jpg" width="236" height="150" style="object-fit: cover; border-radius: 4px;" alt="MV Parabat 9" />
-    <img src="launch-image\MV Surovi 7.jpg" width="236" height="150" style="object-fit: cover; border-radius: 4px;" alt="MV Surovi 7" />
-    <img src="launch-image\MV Kirtankhola 2.jpg" width="236" height="150" style="object-fit: cover; border-radius: 4px;" alt="MV Kirtankhola 2" />
+  <div style="gap: 8px;">
+    <img src="launch-image\MV Sundarban 10.jpg" width="23%" height="150" style="object-fit: cover; border-radius: 4px;" alt="MV Sundarban 10" />
+    <img src="launch-image\MV Parabat 9.jpg" width="23%" height="150" style="object-fit: cover; border-radius: 4px;" alt="MV Parabat 9" />
+    <img src="launch-image\MV Surovi 7.jpg" width="23%" height="150" style="object-fit: cover; border-radius: 4px;" alt="MV Surovi 7" />
+    <img src="launch-image\MV Kirtankhola 2.jpg" width="23%" height="150" style="object-fit: cover; border-radius: 4px;" alt="MV Kirtankhola 2" />
   </div>
 
   <!-- Middle: 1 image -->
-  <div style="display: flex; flex-direction: column; gap: 8px;">
-    <img src="launch-image\MV Zam Zam 7.jpg" width="314" height="308" style="object-fit: cover; border-radius: 4px;" alt="MV Zam Zam 7" />
-    <img src="launch-image\MV Raf Raf 7.jpg" width="314" height="308" style="object-fit: cover; border-radius: 4px;" alt="MV Raf Raf 7" />
-    <img src="launch-image\MV Mayur 10.jpg" width="314" height="308" style="object-fit: cover; border-radius: 4px;" alt="MV Mayur 10" />
+  <div style="gap: 8px;">
+    <img src="launch-image\MV Zam Zam 7.jpg" width="31%" height="150" style="object-fit: cover; border-radius: 4px;" alt="MV Zam Zam 7" />
+    <img src="launch-image\MV Raf Raf 7.jpg" width="31%" height="150" style="object-fit: cover; border-radius: 4px;" alt="MV Raf Raf 7" />
+    <img src="launch-image\MV Mayur 10.jpg" width="31%" height="150" style="object-fit: cover; border-radius: 4px;" alt="MV Mayur 10" />
   </div>
 
   <!-- Right column: 2 images -->
-  <div style="display: flex; flex-direction: column; gap: 8px;">
-    <img src="launch-image\MV Adventure 1.jpg" width="236" height="150" style="object-fit: cover; border-radius: 4px;" alt="MV Adventure 1" />
-    <img src="launch-image\MV Manami.jpg" width="236" height="150" style="object-fit: cover; border-radius: 4px;" alt="MV Manami" />
-    <img src="launch-image\MV Tipu 7.jpg" width="236" height="150" style="object-fit: cover; border-radius: 4px;" alt="MV Tipu 7" />
-    <img src="launch-image\MV Kirtankhola 10.jpg" width="236" height="150" style="object-fit: cover; border-radius: 4px;" alt="MV Kirtankhola 10" />
+  <div style="gap: 8px;">
+    <img src="launch-image\MV Adventure 1.jpg" width="23%" height="150" style="object-fit: cover; border-radius: 4px;" alt="MV Adventure 1" />
+    <img src="launch-image\MV Manami.jpg" width="23%" height="150" style="object-fit: cover; border-radius: 4px;" alt="MV Manami" />
+    <img src="launch-image\MV Tipu 7.jpg" width="23%" height="150" style="object-fit: cover; border-radius: 4px;" alt="MV Tipu 7" />
+    <img src="launch-image\MV Kirtankhola 10.jpg" width="23%" height="150" style="object-fit: cover; border-radius: 4px;" alt="MV Kirtankhola 10" />
   </div>
 
 </div>
