@@ -3,15 +3,15 @@
     "name": "MV Sundarban 8",
     "operator": "Sundarban Navigation",
     "route": "Dhaka ⇄ Patuakhali",
-    "routeId": "route_patuakhali",
+    "routeId": "route_dhaka_patuakhali",
     "schedule": {
       "departFromDhaka": "07:30 PM",
       "departFromDestination": "05:30 PM",
-      "journeyTimeDhakaToDest": "10 hours 30 mins",
-      "journeyTimeDestToDhaka": "9 hours"
+      "journeyTimeDhakaToDest": "09 hours 00 mins",
+      "journeyTimeDestToDhaka": "09 hours 00 mins"
     },
     "fares": {
-      "deck": 450,
+      "deck": 350,
       "economyChair": null,
       "businessClassAC": null,
       "singleCabinNonAC": 1300,
@@ -29,35 +29,35 @@
       "Prayer Room"
     ],
     "technicalInfo": {
-      "floors": 4,
-      "speed": "17 nautical miles",
+      "floors": 3,
+      "speed": "15-17 knots",
       "numberOfEngines": 2
     },
-    "contact": null,
+    "contact": "+8801716444367",
     "status": "active",
-    "image": "MV Sundarban 8.png"
+    "image": "mv_sundarban_8.png"
   },
   {
     "name": "MV Sundarban 10",
     "operator": "Sundarban Navigation",
     "route": "Dhaka ⇄ Barishal",
-    "routeId": "route_barishal",
+    "routeId": "route_dhaka_barishal",
     "schedule": {
-      "departFromDhaka": "08:30 PM",
-      "departFromDestination": "08:30 PM",
-      "journeyTimeDhakaToDest": "8 hours 30 mins",
-      "journeyTimeDestToDhaka": "7 hours 30 mins"
+      "departFromDhaka": "09:00 PM",
+      "departFromDestination": "09:00 PM",
+      "journeyTimeDhakaToDest": "5 hours 30 mins",
+      "journeyTimeDestToDhaka": "5 hours 30 mins"
     },
     "fares": {
-      "deck": 400,
+      "deck": 350,
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1200,
+      "singleCabinNonAC": 1400,
       "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2200,
-      "doubleCabinAC": 2600,
+      "doubleCabinNonAC": 2400,
+      "doubleCabinAC": 2500,
       "familyCabinAC": 3500,
-      "vipCabin": 6000
+      "vipCabin": 7000
     },
     "amenities": [
       "AC",
@@ -68,35 +68,35 @@
       "Generator"
     ],
     "technicalInfo": {
-      "floors": 4,
-      "speed": "18 nautical miles",
+      "floors": 3,
+      "speed": "18 knots",
       "numberOfEngines": 2
     },
-    "contact": "01711-358838",
+    "contact": "01711358838",
     "status": "active",
-    "image": "MV Sundarban 10.jpg"
+    "image": "mv_sundarban_10.jpg"
   },
   {
     "name": "MV Sundarban 11",
     "operator": "Sundarban Navigation",
     "route": "Dhaka ⇄ Barishal",
-    "routeId": "route_barishal",
+    "routeId": "route_dhaka_barishal",
     "schedule": {
-      "departFromDhaka": "08:45 PM",
-      "departFromDestination": "08:45 PM",
-      "journeyTimeDhakaToDest": "8 hours 30 mins",
-      "journeyTimeDestToDhaka": "7 hours 30 mins"
+      "departFromDhaka": "09:00 PM",
+      "departFromDestination": "09:00 PM",
+      "journeyTimeDhakaToDest": "5 hours 30 mins",
+      "journeyTimeDestToDhaka": "5 hours 30 mins"
     },
     "fares": {
-      "deck": 400,
+      "deck": 350,
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1200,
+      "singleCabinNonAC": 1400,
       "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2200,
-      "doubleCabinAC": 2600,
+      "doubleCabinNonAC": 2400,
+      "doubleCabinAC": 2500,
       "familyCabinAC": 3500,
-      "vipCabin": 6000
+      "vipCabin": 7000
     },
     "amenities": [
       "AC",
@@ -106,34 +106,34 @@
       "Prayer Room"
     ],
     "technicalInfo": {
-      "floors": 4,
-      "speed": "18 nautical miles",
+      "floors": 3,
+      "speed": "18 knots",
       "numberOfEngines": 2
     },
-    "contact": "01718-664700",
+    "contact": "01718664700",
     "status": "active",
-    "image": "MV Sundarban 11.jpg"
+    "image": "mv_sundarban_11.jpg"
   },
   {
     "name": "MV Sundarban 12",
     "operator": "Sundarban Navigation",
     "route": "Dhaka ⇄ Jhalokathi",
-    "routeId": "route_jhalokathi",
+    "routeId": "route_dhaka_jhalokathi",
     "schedule": {
-      "departFromDhaka": "07:30 PM",
+      "departFromDhaka": "06:00 PM",
       "departFromDestination": "06:00 PM",
-      "journeyTimeDhakaToDest": "10 hours",
-      "journeyTimeDestToDhaka": "9 hours"
+      "journeyTimeDhakaToDest": "8 hours 30 mins",
+      "journeyTimeDestToDhaka": "8 hours 30 mins"
     },
     "fares": {
-      "deck": 450,
+      "deck": 400,
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1300,
-      "singleCabinAC": 1600,
+      "singleCabinNonAC": 1400,
+      "singleCabinAC": 1500,
       "doubleCabinNonAC": 2400,
-      "doubleCabinAC": 2800,
-      "familyCabinAC": 4000,
+      "doubleCabinAC": 2500,
+      "familyCabinAC": 2700,
       "vipCabin": 6500
     },
     "amenities": [
@@ -144,35 +144,110 @@
       "Prayer Room"
     ],
     "technicalInfo": {
-      "floors": 4,
-      "speed": "17 nautical miles",
+      "floors": 3,
+      "speed": "17 knots",
       "numberOfEngines": 2
     },
-    "contact": null,
+    "contact": "01724955600",
     "status": "active",
-    "image": "MV Sundarban 12.jpg"
-  },
+    "image": "mv_sundarban_12.jpg"
+},
+{
+    "name": "MV Sundarban 14",
+    "operator": "Sundarban Navigation",
+    "route": "Dhaka ⇄ Patuakhali",
+    "routeId": "route_dhaka_patuakhali",
+    "schedule": {
+      "departFromDhaka": "07:30 PM",
+      "departFromDestination": "05:30 PM",
+      "journeyTimeDhakaToDest": "09 hours 30 mins",
+      "journeyTimeDestToDhaka": "09 hours 00 mins"
+    },
+    "fares": {
+      "deck": 350,
+      "economyChair": null,
+      "businessClassAC": null,
+      "singleCabinNonAC": 1300,
+      "singleCabinAC": 1600,
+      "doubleCabinNonAC": 2400,
+      "doubleCabinAC": 2800,
+      "familyCabinAC": 4000,
+      "vipCabin": 7000
+    },
+    "amenities": [
+      "AC",
+      "Restaurant",
+      "CCTV",
+      "Generator",
+      "Prayer Room"
+    ],
+    "technicalInfo": {
+      "floors": 3,
+      "speed": "17 knots",
+      "numberOfEngines": 2
+    },
+    "contact": "01711358838",
+    "status": "active",
+    "image": "mv_sundarban_14.jpg"
+},{
+    "name": "MV Sundarban 15",
+    "operator": "Sundarban Navigation",
+    "route": "Dhaka ⇄ Barishal",
+    "routeId": "route_dhaka_barishal",
+    "schedule": {
+      "departFromDhaka": "09:00 PM",
+      "departFromDestination": "09:00 PM",
+      "journeyTimeDhakaToDest": "5 hours 30 mins",
+      "journeyTimeDestToDhaka": "5 hours 30 mins"
+    },
+    "fares": {
+      "deck": 350,
+      "economyChair": null,
+      "businessClassAC": null,
+      "singleCabinNonAC": 1400,
+      "singleCabinAC": 1500,
+      "doubleCabinNonAC": 2400,
+      "doubleCabinAC": 2500,
+      "familyCabinAC": 3500,
+      "vipCabin": 7000
+    },
+    "amenities": [
+      "AC",
+      "Restaurant",
+      "CCTV",
+      "Generator",
+      "Prayer Room"
+    ],
+    "technicalInfo": {
+      "floors": 3,
+      "speed": "18 knots",
+      "numberOfEngines": 2
+    },
+    "contact": "01322859915",
+    "status": "active",
+    "image": "mv_sundarban_15.jpg"
+},
   {
     "name": "MV Sundarban 16",
     "operator": "Sundarban Navigation",
     "route": "Dhaka ⇄ Barishal",
-    "routeId": "route_barishal",
+    "routeId": "route_dhaka_barishal",
     "schedule": {
       "departFromDhaka": "09:00 PM",
-      "departFromDestination": "08:30 PM",
-      "journeyTimeDhakaToDest": "8 hours 30 mins",
-      "journeyTimeDestToDhaka": "7 hours 30 mins"
+      "departFromDestination": "09:00 PM",
+      "journeyTimeDhakaToDest": "5 hours 30 mins",
+      "journeyTimeDestToDhaka": "5 hours 30 mins"
     },
     "fares": {
-      "deck": 400,
+      "deck": 350,
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1200,
+      "singleCabinNonAC": 1400,
       "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2200,
-      "doubleCabinAC": 2600,
+      "doubleCabinNonAC": 2400,
+      "doubleCabinAC": 2500,
       "familyCabinAC": 3500,
-      "vipCabin": 6000
+      "vipCabin": 8000
     },
     "amenities": [
       "AC",
@@ -184,34 +259,110 @@
     ],
     "technicalInfo": {
       "floors": 4,
-      "speed": "19 nautical miles",
+      "speed": "19 knots",
       "numberOfEngines": 3
     },
-    "contact": null,
+    "contact": "01752555325",
     "status": "active",
-    "image": "MV Sundarban 16.jpg"
+    "image": "mv_sundarban_16.jpg"
   },
   {
+    "name": "MV Parabat 7",
+    "operator": "Parabat Group",
+    "route": "Dhaka ⇄ Barishal",
+    "routeId": "route_dhaka_barishal",
+    "schedule": {
+      "departFromDhaka": "09:00 PM",
+      "departFromDestination": "09:00 PM",
+      "journeyTimeDhakaToDest": "5 hours 30 mins",
+      "journeyTimeDestToDhaka": "5 hours 30 mins"
+    },
+    "fares": {
+      "deck": 350,
+      "economyChair": null,
+      "businessClassAC": null,
+      "singleCabinNonAC": 1400,
+      "singleCabinAC": 1500,
+      "doubleCabinNonAC": 2400,
+      "doubleCabinAC": 2500,
+      "familyCabinAC": 3500,
+      "vipCabin": 7000
+    },
+    "amenities": [
+      "AC",
+      "TV",
+      "CCTV",
+      "Generator",
+      "Prayer Room"
+    ],
+    "technicalInfo": {
+      "floors": 3,
+      "speed": "18 knots",
+      "numberOfEngines": 2
+    },
+    "contact": "01711344745",
+    "status": "active",
+    "image": "mv_parabat_7.jpg"
+},
+  {
+    "name": "MV Parabat 8",
+    "operator": "Parabat Group",
+    "route": "Dhaka ⇄ Barishal",
+    "routeId": "route_dhaka_barishal",
+    "schedule": {
+      "departFromDhaka": "09:00 PM",
+      "departFromDestination": "09:00 PM",
+      "journeyTimeDhakaToDest": "5 hours 30 mins",
+      "journeyTimeDestToDhaka": "5 hours 30 mins"
+    },
+    "fares": {
+      "deck": 350,
+      "economyChair": null,
+      "businessClassAC": null,
+      "singleCabinNonAC": 1400,
+      "singleCabinAC": 1500,
+      "doubleCabinNonAC": 2400,
+      "doubleCabinAC": 2500,
+      "familyCabinAC": 3500,
+      "vipCabin": 7000
+    },
+    "amenities": [
+      "AC",
+      "TV",
+      "CCTV",
+      "Generator",
+      "Prayer Room"
+    ],
+    "technicalInfo": {
+      "floors": 3,
+      "speed": "18 knots",
+      "numberOfEngines": 2
+    },
+    "contact": "01715384131",
+    "status": "active",
+    "image": "mv_parabat_8.jpg"
+},
+{
     "name": "MV Parabat 9",
     "operator": "Parabat Group",
     "route": "Dhaka ⇄ Barishal",
-    "routeId": "route_barishal",
+    "routeId": "route_dhaka_barishal",
     "schedule": {
-      "departFromDhaka": "08:30 PM",
-      "departFromDestination": "08:30 PM",
-      "journeyTimeDhakaToDest": "8 hours 30 mins",
-      "journeyTimeDestToDhaka": "7 hours 30 mins"
+      "departFromDhaka": "09:00 PM",
+      "departFromDestination": "09:00 PM",
+      "journeyTimeDhakaToDest": "5 hours 30 mins",
+      "journeyTimeDestToDhaka": "5 hours 30 mins"
     },
     "fares": {
-      "deck": 400,
+      "deck": 350,
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1200,
+      "singleCabinNonAC": 1400,
       "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2200,
-      "doubleCabinAC": 2600,
+      "doubleCabinNonAC": 2400,
+      "doubleCabinAC": 2500,
       "familyCabinAC": 3500,
-      "vipCabin": 6000
+      "vipCabin": 7000
     },
     "amenities": [
       "AC",
@@ -221,35 +372,35 @@
       "Prayer Room"
     ],
     "technicalInfo": {
-      "floors": 4,
-      "speed": "18 nautical miles",
+      "floors": 3,
+      "speed": "18 knots",
       "numberOfEngines": 2
     },
-    "contact": null,
+    "contact": "01711346080",
     "status": "active",
-    "image": "MV Parabat 9.jpg"
-  },
-  {
+    "image": "mv_parabat_9.jpg"
+},
+{
     "name": "MV Parabat 10",
     "operator": "Parabat Group",
     "route": "Dhaka ⇄ Barishal",
-    "routeId": "route_barishal",
+    "routeId": "route_dhaka_barishal",
     "schedule": {
-      "departFromDhaka": "08:45 PM",
-      "departFromDestination": "08:45 PM",
-      "journeyTimeDhakaToDest": "8 hours 30 mins",
-      "journeyTimeDestToDhaka": "7 hours 30 mins"
+      "departFromDhaka": "09:00 PM",
+      "departFromDestination": "09:00 PM",
+      "journeyTimeDhakaToDest": "5 hours 30 mins",
+      "journeyTimeDestToDhaka": "5 hours 30 mins"
     },
     "fares": {
-      "deck": 400,
+      "deck": 350,
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1200,
+      "singleCabinNonAC": 1400,
       "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2200,
-      "doubleCabinAC": 2600,
+      "doubleCabinNonAC": 2400,
+      "doubleCabinAC": 2500,
       "familyCabinAC": 3500,
-      "vipCabin": 6000
+      "vipCabin": 7000
     },
     "amenities": [
       "AC",
@@ -259,33 +410,148 @@
       "Prayer Room"
     ],
     "technicalInfo": {
-      "floors": 4,
-      "speed": "18 nautical miles",
+      "floors": 3,
+      "speed": "18 knots",
       "numberOfEngines": 2
     },
-    "contact": null,
+    "contact": "01552429746",
     "status": "active",
-    "image": "MV Parabat 10.jpg"
-  },
-  {
+    "image": "mv_parabat_10.jpg"
+},
+{
     "name": "MV Parabat 11",
     "operator": "Parabat Group",
     "route": "Dhaka ⇄ Barishal",
-    "routeId": "route_barishal",
+    "routeId": "route_dhaka_barishal",
     "schedule": {
       "departFromDhaka": "09:00 PM",
-      "departFromDestination": "08:30 PM",
-      "journeyTimeDhakaToDest": "8 hours 30 mins",
-      "journeyTimeDestToDhaka": "7 hours 30 mins"
+      "departFromDestination": "09:00 PM",
+      "journeyTimeDhakaToDest": "5 hours 30 mins",
+      "journeyTimeDestToDhaka": "5 hours 30 mins"
     },
     "fares": {
-      "deck": 400,
+      "deck": 350,
+      "economyChair": null,
+      "businessClassAC": null,
+      "singleCabinNonAC": 1400,
+      "singleCabinAC": 1500,
+      "doubleCabinNonAC": 2400,
+      "doubleCabinAC": 2500,
+      "familyCabinAC": 3500,
+      "vipCabin": 7500
+    },
+    "amenities": [
+      "AC",
+      "TV",
+      "CCTV",
+      "Generator",
+      "Prayer Room"
+    ],
+    "technicalInfo": {
+      "floors": 3,
+      "speed": "18 knots",
+      "numberOfEngines": 2
+    },
+    "contact": "01711344745",
+    "status": "active",
+    "image": "mv_parabat_11.jpg"
+},
+{
+    "name": "MV Parabat 12",
+    "operator": "Parabat Group",
+    "route": "Dhaka ⇄ Barishal",
+    "routeId": "route_dhaka_barishal",
+    "schedule": {
+      "departFromDhaka": "09:00 PM",
+      "departFromDestination": "09:00 PM",
+      "journeyTimeDhakaToDest": "5 hours 30 mins",
+      "journeyTimeDestToDhaka": "5 hours 30 mins"
+    },
+    "fares": {
+      "deck": 350,
+      "economyChair": null,
+      "businessClassAC": null,
+      "singleCabinNonAC": 1400,
+      "singleCabinAC": 1500,
+      "doubleCabinNonAC": 2400,
+      "doubleCabinAC": 2500,
+      "familyCabinAC": 4000,
+      "vipCabin": 8000
+    },
+    "amenities": [
+      "AC",
+      "TV",
+      "CCTV",
+      "Generator",
+      "Prayer Room",
+      "Restaurant"
+    ],
+    "technicalInfo": {
+      "floors": 3,
+      "speed": "19 knots",
+      "numberOfEngines": 2
+    },
+    "contact": "01789448088",
+    "status": "active",
+    "image": "mv_parabat_12.jpg"
+},
+{
+    "name": "MV Parabat 14",
+    "operator": "Parabat Group",
+    "route": "Dhaka ⇄ Patuakhali",
+    "routeId": "route_dhaka_patuakhali",
+    "schedule": {
+      "departFromDhaka": "07:30 PM",
+      "departFromDestination": "05:30 PM",
+      "journeyTimeDhakaToDest": "09 hours 30 mins",
+      "journeyTimeDestToDhaka": "09 hours 00 mins"
+    },
+    "fares": {
+      "deck": 350,
+      "economyChair": null,
+      "businessClassAC": null,
+      "singleCabinNonAC": 1300,
+      "singleCabinAC": 1600,
+      "doubleCabinNonAC": 2400,
+      "doubleCabinAC": 2800,
+      "familyCabinAC": 4000,
+      "vipCabin": 7000
+    },
+    "amenities": [
+      "AC",
+      "TV",
+      "CCTV",
+      "Generator",
+      "Prayer Room"
+    ],
+    "technicalInfo": {
+      "floors": 3,
+      "speed": "17 knots",
+      "numberOfEngines": 2
+    },
+    "contact": "01712495144",
+    "status": "active",
+    "image": "mv_parabat_14.jpg"
+},
+{
+    "name": "MV Parabat 15",
+    "operator": "Parabat Group",
+    "route": "Dhaka ⇄ Ilisha",
+    "routeId": "route_dhaka_ilisha",
+    "schedule": {
+      "departFromDhaka": "08:00 PM",
+      "departFromDestination": "08:30 PM",
+      "journeyTimeDhakaToDest": "05 hours 00 mins",
+      "journeyTimeDestToDhaka": "05 hours 00 mins"
+    },
+    "fares": {
+      "deck": 350,
       "economyChair": null,
       "businessClassAC": null,
       "singleCabinNonAC": 1200,
-      "singleCabinAC": 1500,
+      "singleCabinAC": 1400,
       "doubleCabinNonAC": 2200,
-      "doubleCabinAC": 2600,
+      "doubleCabinAC": 2400,
       "familyCabinAC": 3500,
       "vipCabin": 6000
     },
@@ -293,54 +559,59 @@
       "AC",
       "TV",
       "CCTV",
-      "Generator"
-    ],
-    "technicalInfo": {
-      "floors": 4,
-      "speed": "19 nautical miles",
-      "numberOfEngines": 2
-    },
-    "contact": null,
-    "status": "active",
-    "image": "MV Parabat 11.jpg"
-  },
-  {
-    "name": "MV Parabat 12",
-    "operator": "Parabat Group",
-    "route": "Dhaka ⇄ Barishal",
-    "routeId": "route_barishal",
-    "schedule": {
-      "departFromDhaka": "09:15 PM",
-      "departFromDestination": "08:30 PM",
-      "journeyTimeDhakaToDest": "8 hours 30 mins",
-      "journeyTimeDestToDhaka": "7 hours 30 mins"
-    },
-    "fares": {
-      "deck": 400,
-      "economyChair": null,
-      "businessClassAC": null,
-      "singleCabinNonAC": 1200,
-      "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2200,
-      "doubleCabinAC": 2600,
-      "familyCabinAC": 3500,
-      "vipCabin": 6000
-    },
-    "amenities": [
-      "AC",
-      "TV",
       "Generator",
       "Prayer Room"
     ],
     "technicalInfo": {
-      "floors": 4,
-      "speed": "19 nautical miles",
+      "floors": 3,
+      "speed": "18 knots",
       "numberOfEngines": 2
     },
-    "contact": null,
+    "contact": "01711311029",
     "status": "active",
-    "image": "MV Parabat 12.jpg"
-  },
+    "image": "mv_parabat_15.jpg"
+},
+{
+    "name": "MV Parabat 18",
+    "operator": "Parabat Group",
+    "route": "Dhaka ⇄ Barishal",
+    "routeId": "route_dhaka_barishal",
+    "schedule": {
+      "departFromDhaka": "09:00 PM",
+      "departFromDestination": "09:00 PM",
+      "journeyTimeDhakaToDest": "5 hours 30 mins",
+      "journeyTimeDestToDhaka": "5 hours 30 mins"
+    },
+    "fares": {
+      "deck": 350,
+      "economyChair": null,
+      "businessClassAC": null,
+      "singleCabinNonAC": 1400,
+      "singleCabinAC": 1500,
+      "doubleCabinNonAC": 2400,
+      "doubleCabinAC": 2500,
+      "familyCabinAC": 4000,
+      "vipCabin": 8500
+    },
+    "amenities": [
+      "AC",
+      "TV",
+      "CCTV",
+      "Generator",
+      "Prayer Room",
+      "VIP Suite",
+      "Restaurant"
+    ],
+    "technicalInfo": {
+      "floors": 4,
+      "speed": "19 knots",
+      "numberOfEngines": 3
+    },
+    "contact": "01711276597",
+    "status": "active",
+    "image": "mv_parabat_18.jpg"
+},
+
   {
     "name": "MV Surovi 7",
     "operator": "Surovi Group",
@@ -491,23 +762,23 @@
     "name": "MV Kirtankhola 2",
     "operator": "Kirtankhola Navigation",
     "route": "Dhaka ⇄ Barishal",
-    "routeId": "route_barishal",
+    "routeId": "route_dhaka_barishal",
     "schedule": {
-      "departFromDhaka": "08:30 PM",
-      "departFromDestination": "08:30 PM",
-      "journeyTimeDhakaToDest": "8 hours 30 mins",
-      "journeyTimeDestToDhaka": "7 hours 30 mins"
+      "departFromDhaka": "09:00 PM",
+      "departFromDestination": "09:00 PM",
+      "journeyTimeDhakaToDest": "5 hours 30 mins",
+      "journeyTimeDestToDhaka": "5 hours 30 mins"
     },
     "fares": {
-      "deck": 400,
+      "deck": 350,
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1200,
+      "singleCabinNonAC": 1400,
       "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2200,
-      "doubleCabinAC": 2600,
+      "doubleCabinNonAC": 2400,
+      "doubleCabinAC": 2500,
       "familyCabinAC": 3500,
-      "vipCabin": 6000
+      "vipCabin": 7000
     },
     "amenities": [
       "AC",
@@ -516,35 +787,35 @@
       "Generator"
     ],
     "technicalInfo": {
-      "floors": 4,
-      "speed": "18 nautical miles",
+      "floors": 3,
+      "speed": "18 knots",
       "numberOfEngines": 2
     },
-    "contact": null,
+    "contact": "01712495145",
     "status": "active",
-    "image": "MV Kirtankhola 2.jpg"
+    "image": "mv_kirtankhola_2.jpg"
   },
   {
     "name": "MV Kirtankhola 10",
     "operator": "Kirtankhola Navigation",
     "route": "Dhaka ⇄ Barishal",
-    "routeId": "route_barishal",
+    "routeId": "route_dhaka_barishal",
     "schedule": {
       "departFromDhaka": "09:00 PM",
       "departFromDestination": "09:00 PM",
-      "journeyTimeDhakaToDest": "8 hours 30 mins",
-      "journeyTimeDestToDhaka": "7 hours 30 mins"
+      "journeyTimeDhakaToDest": "5 hours 30 mins",
+      "journeyTimeDestToDhaka": "5 hours 30 mins"
     },
     "fares": {
-      "deck": 400,
+      "deck": 350,
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1200,
+      "singleCabinNonAC": 1400,
       "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2200,
-      "doubleCabinAC": 2600,
-      "familyCabinAC": 3500,
-      "vipCabin": 6000
+      "doubleCabinNonAC": 2400,
+      "doubleCabinAC": 2500,
+      "familyCabinAC": 4000,
+      "vipCabin": 8000
     },
     "amenities": [
       "AC",
@@ -554,35 +825,37 @@
       "Medical Kit"
     ],
     "technicalInfo": {
-      "floors": 4,
-      "speed": "19 nautical miles",
+      "floors": 3,
+      "speed": "19 knots",
       "numberOfEngines": 2
     },
-    "contact": null,
+    "contact": "01733337553",
     "status": "active",
-    "image": "MV Kirtankhola 10.jpg"
+    "image": "mv_kirtankhola_10.jpg"
   },
-  {
+
+
+ {
     "name": "MV Adventure 1",
     "operator": "Adventure Launch Group",
     "route": "Dhaka ⇄ Barishal",
-    "routeId": "route_barishal",
+    "routeId": "route_dhaka_barishal",
     "schedule": {
-      "departFromDhaka": "08:45 PM",
-      "departFromDestination": "08:30 PM",
-      "journeyTimeDhakaToDest": "8 hours 30 mins",
-      "journeyTimeDestToDhaka": "7 hours 30 mins"
+      "departFromDhaka": "09:00 PM",
+      "departFromDestination": "09:00 PM",
+      "journeyTimeDhakaToDest": "5 hours 30 mins",
+      "journeyTimeDestToDhaka": "5 hours 30 mins"
     },
     "fares": {
-      "deck": 400,
+      "deck": 350,
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1200,
+      "singleCabinNonAC": 1400,
       "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2200,
-      "doubleCabinAC": 2600,
+      "doubleCabinNonAC": 2400,
+      "doubleCabinAC": 2500,
       "familyCabinAC": 3500,
-      "vipCabin": 6000
+      "vipCabin": 7000
     },
     "amenities": [
       "AC",
@@ -591,35 +864,35 @@
       "Life Jackets"
     ],
     "technicalInfo": {
-      "floors": 4,
-      "speed": "19 nautical miles",
+      "floors": 3,
+      "speed": "19 knots",
       "numberOfEngines": 2
     },
-    "contact": null,
+    "contact": "01711320330",
     "status": "active",
-    "image": "MV Adventure 1.jpg"
+    "image": "mv_adventure_1.jpg"
   },
   {
     "name": "MV Adventure 9",
     "operator": "Adventure Launch Group",
     "route": "Dhaka ⇄ Barishal",
-    "routeId": "route_barishal",
+    "routeId": "route_dhaka_barishal",
     "schedule": {
       "departFromDhaka": "09:00 PM",
       "departFromDestination": "09:00 PM",
-      "journeyTimeDhakaToDest": "8 hours 30 mins",
-      "journeyTimeDestToDhaka": "7 hours 30 mins"
+      "journeyTimeDhakaToDest": "5 hours 30 mins",
+      "journeyTimeDestToDhaka": "5 hours 30 mins"
     },
     "fares": {
-      "deck": 400,
+      "deck": 350,
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1200,
+      "singleCabinNonAC": 1400,
       "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2200,
-      "doubleCabinAC": 2600,
-      "familyCabinAC": 3500,
-      "vipCabin": 6000
+      "doubleCabinNonAC": 2400,
+      "doubleCabinAC": 2500,
+      "familyCabinAC": 4000,
+      "vipCabin": 8000
     },
     "amenities": [
       "AC",
@@ -629,71 +902,116 @@
       "Generator"
     ],
     "technicalInfo": {
-      "floors": 4,
-      "speed": "19 nautical miles",
+      "floors": 3,
+      "speed": "19 knots",
       "numberOfEngines": 2
     },
-    "contact": null,
+    "contact": "01720853366",
     "status": "active",
-    "image": "MV Adventure 9.jpg"
+    "image": "mv_adventure_9.jpg"
   },
   {
-    "name": "MV Manami",
-    "operator": "Manami Group",
+    "name": "MV Adventure 11",
+    "operator": "Adventure Launch Group",
     "route": "Dhaka ⇄ Barishal",
-    "routeId": "route_barishal",
+    "routeId": "route_dhaka_barishal",
     "schedule": {
-      "departFromDhaka": "08:30 PM",
-      "departFromDestination": "08:30 PM",
-      "journeyTimeDhakaToDest": "8 hours 30 mins",
-      "journeyTimeDestToDhaka": "7 hours 30 mins"
+      "departFromDhaka": "09:00 PM",
+      "departFromDestination": "09:00 PM",
+      "journeyTimeDhakaToDest": "5 hours 30 mins",
+      "journeyTimeDestToDhaka": "5 hours 30 mins"
     },
     "fares": {
-      "deck": 400,
+      "deck": 350,
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1200,
+      "singleCabinNonAC": 1400,
       "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2200,
-      "doubleCabinAC": 2600,
-      "familyCabinAC": 3500,
-      "vipCabin": 6000
+      "doubleCabinNonAC": 2400,
+      "doubleCabinAC": 2500,
+      "familyCabinAC": 4000,
+      "vipCabin": 8000
+    },
+    "amenities": [
+      "AC",
+      "Prayer Room",
+      "TV",
+      "Life Jackets",
+      "Generator"
+    ],
+    "technicalInfo": {
+      "floors": 3,
+      "speed": "19 knots",
+      "numberOfEngines": 2
+    },
+    "contact": "01730018585",
+    "status": "active",
+    "image": "mv_adventure_11.jpg"
+  },
+
+
+  {
+    "name": "MV Manami",
+    "operator": "Salam Shipping Lines Limited",
+    "route": "Dhaka ⇄ Barishal",
+    "routeId": "route_dhaka_barishal",
+    "schedule": {
+      "departFromDhaka": "09:00 PM",
+      "departFromDestination": "09:00 PM",
+      "journeyTimeDhakaToDest": "5 hours 30 mins",
+      "journeyTimeDestToDhaka": "5 hours 30 mins"
+    },
+    "fares": {
+      "deck": 350,
+      "economyChair": 800,
+      "businessClassAC": null,
+      "singleCabinNonAC": 1300,
+      "singleCabinAC": 1400,
+      "doubleCabinNonAC": 2400,
+      "doubleCabinAC": 2500,
+      "familyCabinAC": 3000,
+      "vipCabin": 8000
     },
     "amenities": [
       "AC",
       "TV",
-      "Generator"
+      "Generator",
+      "Restaurant",
+      "CCTV",
+      "Prayer Room",
+      "Free WiFi"
     ],
     "technicalInfo": {
       "floors": 4,
-      "speed": "20 nautical miles",
+      "speed": "20 knots",
       "numberOfEngines": 2
     },
-    "contact": null,
+    "contact": "01329643771",
     "status": "active",
-    "image": "MV Manami.jpg"
-  },
+    "image": "mv_manami.jpg"
+}
+,
   {
     "name": "MV Kalam Khan 7",
     "operator": "Mahfuz Khan Ltd",
     "route": "Dhaka ⇄ Barishal",
-    "routeId": "route_barishal",
+    "routeId": "route_dhaka_barishal",
     "schedule": {
       "departFromDhaka": "09:00 PM",
       "departFromDestination": "09:00 PM",
-      "journeyTimeDhakaToDest": "8 hours 30 mins",
-      "journeyTimeDestToDhaka": "7 hours 30 mins"
+      "journeyTimeDhakaToDest": "5 hours 30 mins",
+      "journeyTimeDestToDhaka": "5 hours 30 mins"
     },
     "fares": {
-      "deck": 400,
+      "deck": 350,
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1200,
+      "singleCabinNonAC": 1400,
       "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2200,
-      "doubleCabinAC": 2600,
+      "doubleCabinNonAC": 2400,
+      "doubleCabinAC": 2500,
       "familyCabinAC": 3500,
-      "vipCabin": 6000
+      "vipCabin": 7000
     },
     "amenities": [
       "AC",
@@ -704,24 +1022,25 @@
       "Prayer Room"
     ],
     "technicalInfo": {
-      "floors": 4,
-      "speed": "18 nautical miles",
+      "floors": 3,
+      "speed": "18 knots",
       "numberOfEngines": 2
     },
-    "contact": null,
+    "contact": "01712053123",
     "status": "active",
-    "image": "MV Kalam Khan 7.jpg"
-  },
+    "image": "mv_kalam_khan_7.jpg"
+},
+
   {
-    "name": "MV Green Line 3",
+    "name": "MV Green Line 2",
     "operator": "Green Line Water Wings",
     "route": "Dhaka ⇄ Barishal",
-    "routeId": "route_barishal",
+    "routeId": "route_dhaka_barishal",
     "schedule": {
       "departFromDhaka": "03:00 PM",
       "departFromDestination": "08:00 AM",
-      "journeyTimeDhakaToDest": "5 hours",
-      "journeyTimeDestToDhaka": "5 hours"
+      "journeyTimeDhakaToDest": "5 hours 00 mins",
+      "journeyTimeDestToDhaka": "5 hours 00 mins"
     },
     "fares": {
       "deck": null,
@@ -743,23 +1062,65 @@
     ],
     "technicalInfo": {
       "floors": 2,
-      "speed": "25 nautical miles",
+      "speed": "25 knots",
       "numberOfEngines": 2
     },
-    "contact": null,
+    "contact": "01730060076",
     "status": "active",
-    "image": "MV Green Line 3.jpg"
+    "image": "mv_green_line_2.jpg"
   },
+  {
+    "name": "MV Green Line 3",
+    "operator": "Green Line Water Wings",
+    "route": "Dhaka ⇄ Barishal",
+    "routeId": "route_dhaka_barishal",
+    "schedule": {
+      "departFromDhaka": "03:00 PM",
+      "departFromDestination": "08:00 AM",
+      "journeyTimeDhakaToDest": "5 hours 00 mins",
+      "journeyTimeDestToDhaka": "5 hours 00 mins"
+    },
+    "fares": {
+      "deck": null,
+      "economyChair": 800,
+      "businessClassAC": 1200,
+      "singleCabinNonAC": null,
+      "singleCabinAC": null,
+      "doubleCabinNonAC": null,
+      "doubleCabinAC": null,
+      "familyCabinAC": null,
+      "vipCabin": null
+    },
+    "amenities": [
+      "AC",
+      "Restaurant",
+      "TV",
+      "WiFi",
+      "CCTV"
+    ],
+    "technicalInfo": {
+      "floors": 2,
+      "speed": "25 knots",
+      "numberOfEngines": 2
+    },
+    "contact": "01730060004",
+    "status": "active",
+    "image": "mv_green_line_3.jpg"
+  },
+
+
+
+
   {
     "name": "MV Bagdadia 5",
     "operator": "Bagdadia Group",
     "route": "Dhaka ⇄ Chandpur",
-    "routeId": "route_chandpur",
+    "routeId": "route_dhaka_chandpur",
     "schedule": {
       "departFromDhaka": "10:30 AM",
       "departFromDestination": "02:30 PM",
-      "journeyTimeDhakaToDest": "4 hours 30 mins",
-      "journeyTimeDestToDhaka": "3 hours 30 mins"
+      "journeyTimeDhakaToDest": "03 hours 30 mins",
+      "journeyTimeDestToDhaka": "03 hours 30 mins"
     },
     "fares": {
       "deck": 200,
@@ -779,23 +1140,23 @@
     ],
     "technicalInfo": {
       "floors": 3,
-      "speed": "16 nautical miles",
+      "speed": "16 knots",
       "numberOfEngines": 2
     },
-    "contact": null,
+    "contact": "01711132644",
     "status": "active",
-    "image": "MV Bagdadia 5.jpg"
+    "image": "mv_bagdadia_5.jpg"
   },
   {
     "name": "MV Bagdadia 7",
     "operator": "Bagdadia Group",
     "route": "Dhaka ⇄ Chandpur",
-    "routeId": "route_chandpur",
+    "routeId": "route_dhaka_chandpur",
     "schedule": {
       "departFromDhaka": "01:00 PM",
       "departFromDestination": "08:30 AM",
-      "journeyTimeDhakaToDest": "4 hours 30 mins",
-      "journeyTimeDestToDhaka": "3 hours 30 mins"
+      "journeyTimeDhakaToDest": "03 hours 30 mins",
+      "journeyTimeDestToDhaka": "03 hours 30 mins"
     },
     "fares": {
       "deck": 200,
@@ -815,23 +1176,23 @@
     ],
     "technicalInfo": {
       "floors": 3,
-      "speed": "16 nautical miles",
+      "speed": "16 knots",
       "numberOfEngines": 2
     },
-    "contact": null,
+    "contact": "01711132644",
     "status": "active",
-    "image": "MV Bagdadia 7.jpg"
+    "image": "mv_bagdadia_7.jpg"
   },
   {
     "name": "MV Bagdadia 8",
     "operator": "Bagdadia Group",
     "route": "Dhaka ⇄ Chandpur",
-    "routeId": "route_chandpur",
+    "routeId": "route_dhaka_chandpur",
     "schedule": {
       "departFromDhaka": "02:00 PM",
       "departFromDestination": "09:30 AM",
-      "journeyTimeDhakaToDest": "4 hours 30 mins",
-      "journeyTimeDestToDhaka": "3 hours 30 mins"
+      "journeyTimeDhakaToDest": "03 hours 30 mins",
+      "journeyTimeDestToDhaka": "03 hours 30 mins"
     },
     "fares": {
       "deck": 200,
@@ -851,23 +1212,23 @@
     ],
     "technicalInfo": {
       "floors": 3,
-      "speed": "16 nautical miles",
+      "speed": "16 knots",
       "numberOfEngines": 2
     },
-    "contact": null,
+    "contact": "01711132644",
     "status": "active",
-    "image": "MV Bagdadia 8.jpg"
+    "image": "mv_bagdadia_8.jpg"
   },
   {
     "name": "MV Bagdadia 9",
     "operator": "Bagdadia Group",
     "route": "Dhaka ⇄ Chandpur",
-    "routeId": "route_chandpur",
+    "routeId": "route_dhaka_chandpur",
     "schedule": {
       "departFromDhaka": "03:30 PM",
       "departFromDestination": "10:00 AM",
-      "journeyTimeDhakaToDest": "4 hours 30 mins",
-      "journeyTimeDestToDhaka": "3 hours 30 mins"
+      "journeyTimeDhakaToDest": "03 hours 30 mins",
+      "journeyTimeDestToDhaka": "03 hours 30 mins"
     },
     "fares": {
       "deck": 200,
@@ -887,23 +1248,95 @@
     ],
     "technicalInfo": {
       "floors": 3,
-      "speed": "16 nautical miles",
+      "speed": "16 knots",
       "numberOfEngines": 2
     },
-    "contact": null,
+    "contact": "01711132644",
     "status": "active",
-    "image": "MV Bagdadia 9.jpg"
+    "image": "mv_bagdadia_9.jpg"
+  },
+  {
+    "name": "MV Bagdadia 10",
+    "operator": "Bagdadia Group",
+    "route": "Dhaka ⇄ Chandpur",
+    "routeId": "route_dhaka_chandpur",
+    "schedule": {
+      "departFromDhaka": "05:00 PM",
+      "departFromDestination": "11:30 AM",
+      "journeyTimeDhakaToDest": "03 hours 30 mins",
+      "journeyTimeDestToDhaka": "03 hours 30 mins"
+    },
+    "fares": {
+      "deck": 200,
+      "economyChair": 300,
+      "businessClassAC": 400,
+      "singleCabinNonAC": 800,
+      "singleCabinAC": 1000,
+      "doubleCabinNonAC": 1300,
+      "doubleCabinAC": 1500,
+      "familyCabinAC": 2000,
+      "vipCabin": 3500
+    },
+    "amenities": [
+      "TV",
+      "Generator",
+      "Life Jackets"
+    ],
+    "technicalInfo": {
+      "floors": 3,
+      "speed": "16 knots",
+      "numberOfEngines": 2
+    },
+    "contact": "01711132644",
+    "status": "active",
+    "image": "mv_bagdadia_10.jpg"
+  },
+  {
+    "name": "MV Bagdadia 11",
+    "operator": "Bagdadia Group",
+    "route": "Dhaka ⇄ Chandpur",
+    "routeId": "route_dhaka_chandpur",
+    "schedule": {
+      "departFromDhaka": "06:30 PM",
+      "departFromDestination": "12:30 PM",
+      "journeyTimeDhakaToDest": "03 hours 30 mins",
+      "journeyTimeDestToDhaka": "03 hours 30 mins"
+    },
+    "fares": {
+      "deck": 200,
+      "economyChair": 300,
+      "businessClassAC": 400,
+      "singleCabinNonAC": 800,
+      "singleCabinAC": 1000,
+      "doubleCabinNonAC": 1300,
+      "doubleCabinAC": 1500,
+      "familyCabinAC": 2000,
+      "vipCabin": 3500
+    },
+    "amenities": [
+      "TV",
+      "Generator",
+      "Life Jackets"
+    ],
+    "technicalInfo": {
+      "floors": 3,
+      "speed": "16 knots",
+      "numberOfEngines": 2
+    },
+    "contact": "01711132644",
+    "status": "active",
+    "image": "mv_bagdadia_11.jpg"
   },
   {
     "name": "MV Bagdadia 12",
     "operator": "Bagdadia Group",
     "route": "Dhaka ⇄ Chandpur",
-    "routeId": "route_chandpur",
+    "routeId": "route_dhaka_chandpur",
     "schedule": {
-      "departFromDhaka": "05:00 PM",
-      "departFromDestination": "11:30 AM",
-      "journeyTimeDhakaToDest": "4 hours 30 mins",
-      "journeyTimeDestToDhaka": "3 hours 30 mins"
+      "departFromDhaka": "07:30 PM",
+      "departFromDestination": "01:30 PM",
+      "journeyTimeDhakaToDest": "03 hours 30 mins",
+      "journeyTimeDestToDhaka": "03 hours 30 mins"
     },
     "fares": {
       "deck": 200,
@@ -923,23 +1356,27 @@
     ],
     "technicalInfo": {
       "floors": 3,
-      "speed": "16 nautical miles",
+      "speed": "16 knots",
       "numberOfEngines": 2
     },
-    "contact": null,
+    "contact": "01711132644",
     "status": "active",
-    "image": "MV Bagdadia 12.jpg"
+    "image": "mv_bagdadia_12.jpg"
   },
-  {
+
+
+
+
+{
     "name": "MV Eagle 1",
     "operator": "Eagle Group",
     "route": "Dhaka ⇄ Chandpur",
-    "routeId": "route_chandpur",
+    "routeId": "route_dhaka_chandpur",
     "schedule": {
       "departFromDhaka": "07:00 AM",
       "departFromDestination": "12:30 PM",
-      "journeyTimeDhakaToDest": "4 hours 30 mins",
-      "journeyTimeDestToDhaka": "3 hours 30 mins"
+      "journeyTimeDhakaToDest": "03 hours 30 mins",
+      "journeyTimeDestToDhaka": "03 hours 30 mins"
     },
     "fares": {
       "deck": 200,
@@ -959,23 +1396,23 @@
     ],
     "technicalInfo": {
       "floors": 3,
-      "speed": "16 nautical miles",
+      "speed": "16 knots",
       "numberOfEngines": 2
     },
-    "contact": null,
+    "contact": "01711311449",
     "status": "active",
-    "image": null
+    "image": "mv_eagle_1.jpg"
   },
   {
     "name": "MV Eagle 3",
     "operator": "Eagle Group",
     "route": "Dhaka ⇄ Chandpur",
-    "routeId": "route_chandpur",
+    "routeId": "route_dhaka_chandpur",
     "schedule": {
       "departFromDhaka": "09:00 AM",
       "departFromDestination": "03:00 PM",
-      "journeyTimeDhakaToDest": "4 hours 30 mins",
-      "journeyTimeDestToDhaka": "3 hours 30 mins"
+      "journeyTimeDhakaToDest": "03 hours 30 mins",
+      "journeyTimeDestToDhaka": "03 hours 30 mins"
     },
     "fares": {
       "deck": 200,
@@ -995,23 +1432,23 @@
     ],
     "technicalInfo": {
       "floors": 3,
-      "speed": "16 nautical miles",
+      "speed": "16 knots",
       "numberOfEngines": 2
     },
-    "contact": null,
+    "contact": "01711311449",
     "status": "active",
-    "image": "MV Eagle 3.jpg"
+    "image": "mv_eagle_3.jpg"
   },
   {
     "name": "MV Eagle 4",
     "operator": "Eagle Group",
     "route": "Dhaka ⇄ Chandpur",
-    "routeId": "route_chandpur",
+    "routeId": "route_dhaka_chandpur",
     "schedule": {
-      "departFromDhaka": "10:00 AM",
+      "departFromDhaka": "10:30 AM",
       "departFromDestination": "04:30 PM",
-      "journeyTimeDhakaToDest": "4 hours 30 mins",
-      "journeyTimeDestToDhaka": "3 hours 30 mins"
+      "journeyTimeDhakaToDest": "03 hours 30 mins",
+      "journeyTimeDestToDhaka": "03 hours 30 mins"
     },
     "fares": {
       "deck": 200,
@@ -1031,23 +1468,59 @@
     ],
     "technicalInfo": {
       "floors": 3,
-      "speed": "16 nautical miles",
+      "speed": "16 knots",
       "numberOfEngines": 2
     },
-    "contact": null,
+    "contact": "01711311449",
     "status": "active",
-    "image": "MV Eagle 4.jpg"
+    "image": "mv_eagle_4.jpg"
+  },
+  {
+    "name": "MV Eagle 5",
+    "operator": "Eagle Group",
+    "route": "Dhaka ⇄ Chandpur",
+    "routeId": "route_dhaka_chandpur",
+    "schedule": {
+      "departFromDhaka": "11:30 AM",
+      "departFromDestination": "05:15 PM",
+      "journeyTimeDhakaToDest": "03 hours 30 mins",
+      "journeyTimeDestToDhaka": "03 hours 30 mins"
+    },
+    "fares": {
+      "deck": 200,
+      "economyChair": 300,
+      "businessClassAC": 400,
+      "singleCabinNonAC": 800,
+      "singleCabinAC": 1000,
+      "doubleCabinNonAC": 1300,
+      "doubleCabinAC": 1500,
+      "familyCabinAC": 2000,
+      "vipCabin": 3500
+    },
+    "amenities": [
+      "TV",
+      "Generator",
+      "Life Jackets"
+    ],
+    "technicalInfo": {
+      "floors": 3,
+      "speed": "16 knots",
+      "numberOfEngines": 2
+    },
+    "contact": "01711311449",
+    "status": "active",
+    "image": "mv_eagle_5.jpg"
   },
   {
     "name": "MV Eagle 7",
     "operator": "Eagle Group",
     "route": "Dhaka ⇄ Chandpur",
-    "routeId": "route_chandpur",
+    "routeId": "route_dhaka_chandpur",
     "schedule": {
       "departFromDhaka": "02:30 PM",
       "departFromDestination": "08:00 AM",
-      "journeyTimeDhakaToDest": "4 hours 30 mins",
-      "journeyTimeDestToDhaka": "3 hours 30 mins"
+      "journeyTimeDhakaToDest": "03 hours 30 mins",
+      "journeyTimeDestToDhaka": "03 hours 30 mins"
     },
     "fares": {
       "deck": 200,
@@ -1062,27 +1535,29 @@
     },
     "amenities": [
       "TV",
-      "Generator"
+      "Generator",
+      "Life Jackets"
     ],
     "technicalInfo": {
       "floors": 3,
-      "speed": "16 nautical miles",
+      "speed": "16 knots",
       "numberOfEngines": 2
     },
-    "contact": null,
+    "contact": "01711311449",
     "status": "active",
-    "image": "MV Eagle 7.jpg"
+    "image": "mv_eagle_7.jpg"
   },
-  {
+
+{
     "name": "MV Meghna Rani",
     "operator": "Meghna Group",
     "route": "Dhaka ⇄ Chandpur",
-    "routeId": "route_chandpur",
+    "routeId": "route_dhaka_chandpur",
     "schedule": {
       "departFromDhaka": "08:00 AM",
       "departFromDestination": "01:00 PM",
-      "journeyTimeDhakaToDest": "4 hours 30 mins",
-      "journeyTimeDestToDhaka": "3 hours 30 mins"
+      "journeyTimeDhakaToDest": "03 hours 30 mins",
+      "journeyTimeDestToDhaka": "03 hours 30 mins"
     },
     "fares": {
       "deck": 200,
@@ -1102,23 +1577,23 @@
     ],
     "technicalInfo": {
       "floors": 3,
-      "speed": "15 nautical miles",
+      "speed": "15 knots",
       "numberOfEngines": 2
     },
-    "contact": null,
+    "contact": "01711311449",
     "status": "active",
-    "image": "MV Meghna Rani.jpg"
+    "image": "mv_meghna_rani.jpg"
   },
   {
     "name": "MV Imam Hasan",
-    "operator": "Imam Hasan Group",
+    "operator": "Bikrampur Shipping Corporation",
     "route": "Dhaka ⇄ Chandpur",
-    "routeId": "route_chandpur",
+    "routeId": "route_dhaka_chandpur",
     "schedule": {
-      "departFromDhaka": "08:30 AM",
-      "departFromDestination": "01:30 PM",
-      "journeyTimeDhakaToDest": "4 hours 30 mins",
-      "journeyTimeDestToDhaka": "3 hours 30 mins"
+      "departFromDhaka": "06:00 AM",
+      "departFromDestination": "12:00 PM",
+      "journeyTimeDhakaToDest": "03 hours 30 mins",
+      "journeyTimeDestToDhaka": "03 hours 30 mins"
     },
     "fares": {
       "deck": 200,
@@ -1138,23 +1613,23 @@
     ],
     "technicalInfo": {
       "floors": 3,
-      "speed": "16 nautical miles",
+      "speed": "16 knots",
       "numberOfEngines": 2
     },
-    "contact": null,
+    "contact": "01812703047",
     "status": "active",
-    "image": "MV Imam Hasan.jpg"
+    "image": "mv_imam_hasan.jpg"
   },
   {
     "name": "MV Imam Hasan 2",
-    "operator": "Imam Hasan Group",
+    "operator": "Bikrampur Shipping Corporation",
     "route": "Dhaka ⇄ Chandpur",
-    "routeId": "route_chandpur",
+    "routeId": "route_dhaka_chandpur",
     "schedule": {
-      "departFromDhaka": "10:00 AM",
+      "departFromDhaka": "11:00 AM",
       "departFromDestination": "03:30 PM",
-      "journeyTimeDhakaToDest": "4 hours 30 mins",
-      "journeyTimeDestToDhaka": "3 hours 30 mins"
+      "journeyTimeDhakaToDest": "03 hours 30 mins",
+      "journeyTimeDestToDhaka": "03 hours 30 mins"
     },
     "fares": {
       "deck": 200,
@@ -1173,23 +1648,23 @@
     ],
     "technicalInfo": {
       "floors": 3,
-      "speed": "16 nautical miles",
+      "speed": "16 knots",
       "numberOfEngines": 2
     },
-    "contact": null,
+    "contact": "01812703047",
     "status": "active",
-    "image": "MV Imam Hasan 2.jpg"
+    "image": "mv_imam_hasan_2.jpg"
   },
   {
     "name": "MV Imam Hasan 5",
-    "operator": "Imam Hasan Group",
+    "operator": "Bikrampur Shipping Corporation",
     "route": "Dhaka ⇄ Chandpur",
-    "routeId": "route_chandpur",
+    "routeId": "route_dhaka_chandpur",
     "schedule": {
-      "departFromDhaka": "04:00 PM",
-      "departFromDestination": "09:00 AM",
-      "journeyTimeDhakaToDest": "4 hours 30 mins",
-      "journeyTimeDestToDhaka": "3 hours 30 mins"
+      "departFromDhaka": "11:45 AM",
+      "departFromDestination": "05:00 PM",
+      "journeyTimeDhakaToDest": "03 hours 30 mins",
+      "journeyTimeDestToDhaka": "03 hours 30 mins"
     },
     "fares": {
       "deck": 200,
@@ -1208,34 +1683,36 @@
     ],
     "technicalInfo": {
       "floors": 3,
-      "speed": "16 nautical miles",
+      "speed": "16 knots",
       "numberOfEngines": 2
     },
-    "contact": null,
+    "contact": "01812703047",
     "status": "active",
-    "image": "MV Imam Hasan 5.jpg"
+    "image": "mv_imam_hasan_5.jpg"
   },
-  {
+
+
+ {
     "name": "MV Mitali 7",
-    "operator": "Mitali Group",
+    "operator": "Bengal Shipping Company",
     "route": "Dhaka ⇄ Chandpur",
-    "routeId": "route_chandpur",
+    "routeId": "route_dhaka_chandpur",
     "schedule": {
-      "departFromDhaka": "11:00 AM",
-      "departFromDestination": "04:30 PM",
-      "journeyTimeDhakaToDest": "4 hours 30 mins",
-      "journeyTimeDestToDhaka": "3 hours 30 mins"
+      "departFromDhaka": "09:50 AM",
+      "departFromDestination": "10:00 PM",
+      "journeyTimeDhakaToDest": "03 hours 30 mins",
+      "journeyTimeDestToJhaka": "03 hours 30 mins"
     },
     "fares": {
-      "deck": 200,
-      "economyChair": 300,
-      "businessClassAC": 400,
-      "singleCabinNonAC": 800,
-      "singleCabinAC": 1000,
-      "doubleCabinNonAC": 1300,
-      "doubleCabinAC": 1500,
-      "familyCabinAC": 2000,
-      "vipCabin": 3500
+      "deck": 100,
+      "economyChair": 150,
+      "businessClassAC": 250,
+      "singleCabinNonAC": 500,
+      "singleCabinAC": 700,
+      "doubleCabinNonAC": 800,
+      "doubleCabinAC": 1200,
+      "familyCabinAC": 1400,
+      "vipCabin": 2000
     },
     "amenities": [
       "TV",
@@ -1244,23 +1721,23 @@
     ],
     "technicalInfo": {
       "floors": 3,
-      "speed": "16 nautical miles",
+      "speed": "16 knots",
       "numberOfEngines": 2
     },
-    "contact": null,
+    "contact": "01775001272",
     "status": "active",
-    "image": "MV Mitali 7.jpg"
+    "image": "mv_mitali_7.jpg"
   },
   {
     "name": "MV Ab-E-Jamjam",
     "operator": "Jamjam Group",
     "route": "Dhaka ⇄ Chandpur",
-    "routeId": "route_chandpur",
+    "routeId": "route_dhaka_chandpur",
     "schedule": {
-      "departFromDhaka": "11:30 PM",
-      "departFromDestination": "01:30 PM",
-      "journeyTimeDhakaToDest": "4 hours 30 mins",
-      "journeyTimeDestToDhaka": "3 hours 30 mins"
+      "departFromDhaka": "09:15 AM",
+      "departFromDestination": "01:00 PM",
+      "journeyTimeDhakaToDest": "03 hours 30 mins",
+      "journeyTimeDestToJhaka": "03 hours 30 mins"
     },
     "fares": {
       "deck": 200,
@@ -1278,24 +1755,24 @@
       "Generator"
     ],
     "technicalInfo": {
-      "floors": 4,
-      "speed": "16 nautical miles",
+      "floors": 3,
+      "speed": "16 knots",
       "numberOfEngines": 2
     },
-    "contact": null,
+    "contact": "01714248589",
     "status": "active",
-    "image": "MV Ab-E-Jamjam.jpg"
+    "image": "mv_ab_e_jamjam.jpg"
   },
   {
     "name": "MV Zam Zam 1",
     "operator": "Zam Zam Group",
     "route": "Dhaka ⇄ Chandpur",
-    "routeId": "route_chandpur",
+    "routeId": "route_dhaka_chandpur",
     "schedule": {
-      "departFromDhaka": "12:30 PM",
+      "departFromDhaka": "09:15 AM",
       "departFromDestination": "06:00 AM",
-      "journeyTimeDhakaToDest": "4 hours 30 mins",
-      "journeyTimeDestToDhaka": "3 hours 30 mins"
+      "journeyTimeDhakaToDest": "03 hours 30 mins",
+      "journeyTimeDestToJhaka": "03 hours 30 mins"
     },
     "fares": {
       "deck": 200,
@@ -1314,35 +1791,35 @@
       "Life Jackets"
     ],
     "technicalInfo": {
-      "floors": 4,
-      "speed": "16 nautical miles",
+      "floors": 3,
+      "speed": "16 knots",
       "numberOfEngines": 2
     },
-    "contact": null,
+    "contact": "01711311449",
     "status": "active",
-    "image": "MV Zam Zam 1.jpg"
+    "image": "mv_zam_zam_1.jpg"
   },
   {
     "name": "MV Zam Zam 7",
     "operator": "Zam Zam Group",
-    "route": "Dhaka ⇄ Chandpur",
-    "routeId": "route_chandpur",
+    "route": "Dhaka ⇄ Elisha",
+    "routeId": "route_dhaka_elisha_bhola",
     "schedule": {
-      "departFromDhaka": "02:00 PM",
-      "departFromDestination": "07:30 AM",
-      "journeyTimeDhakaToDest": "4 hours 30 mins",
-      "journeyTimeDestToDhaka": "3 hours 30 mins"
+      "departFromDhaka": "09:00 PM",
+      "departFromDestination": "08:30 AM",
+      "journeyTimeDhakaToDest": "07 hours 00 mins",
+      "journeyTimeDestToJhaka": "07 hours 00 mins"
     },
     "fares": {
-      "deck": 200,
-      "economyChair": 300,
-      "businessClassAC": 400,
-      "singleCabinNonAC": 800,
-      "singleCabinAC": 1000,
-      "doubleCabinNonAC": 1300,
-      "doubleCabinAC": 1500,
-      "familyCabinAC": 2000,
-      "vipCabin": 3500
+      "deck": 350,
+      "economyChair": 450,
+      "businessClassAC": 600,
+      "singleCabinNonAC": 1200,
+      "singleCabinAC": 1400,
+      "doubleCabinNonAC": 2200,
+      "doubleCabinAC": 2400,
+      "familyCabinAC": 3500,
+      "vipCabin": 7000
     },
     "amenities": [
       "TV",
@@ -1351,13 +1828,15 @@
     ],
     "technicalInfo": {
       "floors": 4,
-      "speed": "16 nautical miles",
+      "speed": "17 knots",
       "numberOfEngines": 2
     },
-    "contact": null,
+    "contact": "01752555325",
     "status": "active",
-    "image": "MV Zam Zam 7.jpg"
+    "image": "mv_zam_zam_7.jpg"
   },
+
+
   {
     "name": "MV Raf Raf 2",
     "operator": "Raf Raf Group",

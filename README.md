@@ -181,3 +181,188 @@ This dataset is community-maintained and far from complete — contributions are
 - **Fix wrong data**: schedules, fares, and contact numbers change often — if you spot something inaccurate or outdated, please correct it.
 
 To contribute, fork the repo, make your changes, and open a pull request. For a new launch, include the source of your information (operator website, ticket counter, personal trip, etc.) in the PR description so it can be verified.
+
+
+```
+MV Raf Raf 1
+MV Mayur 1 {
+    "name": "MV Mitali 7",
+    "operator": "Bengal Shipping Company",
+    "route": "Dhaka ⇄ Chandpur",
+    "routeId": "route_dhaka_chandpur",
+    "schedule": {
+      "departFromDhaka": "09:50 AM",
+      "departFromDestination": "10:00 PM",
+      "journeyTimeDhakaToDest": "03 hours 30 mins",
+      "journeyTimeDestToJhaka": "03 hours 30 mins"
+    },
+    "fares": {
+      "deck": 100,
+      "economyChair": 150,
+      "businessClassAC": 250,
+      "singleCabinNonAC": 500,
+      "singleCabinAC": 700,
+      "doubleCabinNonAC": 800,
+      "doubleCabinAC": 1200,
+      "familyCabinAC": 1400,
+      "vipCabin": 2000
+    },
+    "amenities": [
+      "TV",
+      "Generator",
+      "Life Jackets"
+    ],
+    "technicalInfo": {
+      "floors": 3,
+      "speed": "16 knots",
+      "numberOfEngines": 2
+    },
+    "contact": "01775001272",
+    "status": "active",
+    "image": "mv_mitali_7.jpg"
+  },
+  {
+    "name": "MV Ab-E-Jamjam",
+    "operator": "Jamjam Group",
+    "route": "Dhaka ⇄ Chandpur",
+    "routeId": "route_dhaka_chandpur",
+    "schedule": {
+      "departFromDhaka": "09:15 AM",
+      "departFromDestination": "01:00 PM",
+      "journeyTimeDhakaToDest": "03 hours 30 mins",
+      "journeyTimeDestToJhaka": "03 hours 30 mins"
+    },
+    "fares": {
+      "deck": 200,
+      "economyChair": 300,
+      "businessClassAC": 400,
+      "singleCabinNonAC": 800,
+      "singleCabinAC": 1000,
+      "doubleCabinNonAC": 1300,
+      "doubleCabinAC": 1500,
+      "familyCabinAC": 2000,
+      "vipCabin": 3500
+    },
+    "amenities": [
+      "TV",
+      "Generator"
+    ],
+    "technicalInfo": {
+      "floors": 3,
+      "speed": "16 knots",
+      "numberOfEngines": 2
+    },
+    "contact": "01714248589",
+    "status": "active",
+    "image": "mv_ab_e_jamjam.jpg"
+  },
+  {
+    "name": "MV Zam Zam 1",
+    "operator": "Zam Zam Group",
+    "route": "Dhaka ⇄ Chandpur",
+    "routeId": "route_dhaka_chandpur",
+    "schedule": {
+      "departFromDhaka": "09:15 AM",
+      "departFromDestination": "06:00 AM",
+      "journeyTimeDhakaToDest": "03 hours 30 mins",
+      "journeyTimeDestToJhaka": "03 hours 30 mins"
+    },
+    "fares": {
+      "deck": 200,
+      "economyChair": 300,
+      "businessClassAC": 400,
+      "singleCabinNonAC": 800,
+      "singleCabinAC": 1000,
+      "doubleCabinNonAC": 1300,
+      "doubleCabinAC": 1500,
+      "familyCabinAC": 2000,
+      "vipCabin": 3500
+    },
+    "amenities": [
+      "TV",
+      "Generator",
+      "Life Jackets"
+    ],
+    "technicalInfo": {
+      "floors": 3,
+      "speed": "16 knots",
+      "numberOfEngines": 2
+    },
+    "contact": "01711311449",
+    "status": "active",
+    "image": "mv_zam_zam_1.jpg"
+  },
+  {
+    "name": "MV Zam Zam 7",
+    "operator": "Zam Zam Group",
+    "route": "Dhaka ⇄ Elisha",
+    "routeId": "route_dhaka_elisha_bhola",
+    "schedule": {
+      "departFromDhaka": "09:00 PM",
+      "departFromDestination": "08:30 AM",
+      "journeyTimeDhakaToDest": "07 hours 00 mins",
+      "journeyTimeDestToJhaka": "07 hours 00 mins"
+    },
+    "fares": {
+      "deck": 350,
+      "economyChair": 450,
+      "businessClassAC": 600,
+      "singleCabinNonAC": 1200,
+      "singleCabinAC": 1400,
+      "doubleCabinNonAC": 2200,
+      "doubleCabinAC": 2400,
+      "familyCabinAC": 3500,
+      "vipCabin": 7000
+    },
+    "amenities": [
+      "TV",
+      "Generator",
+      "Life Jackets"
+    ],
+    "technicalInfo": {
+      "floors": 4,
+      "speed": "17 knots",
+      "numberOfEngines": 2
+    },
+    "contact": "01752555325",
+    "status": "active",
+    "image": "mv_zam_zam_7.jpg"
+  }
+MV Prince Awlad 8
+MV Prince Awlad 9
+MV Rajdut 6
+MV Rajdut 8
+MV Farhan
+MV Farhan 2
+MV Farhan 3
+MV Farhan 4
+MV Farhan 5
+MV Farhan 6
+MV Farhan 7
+MV Farhan 8
+MV Farhan 9
+MV Farhan 10
+MV Farhan 11
+MV Farhan 12
+MV Farhan 13
+MV Farhan 14
+MV Farhan 15
+MV Farhan 16
+MV Kiron
+MV Kiron 2
+MV Kiron 3
+MV Kiron 5
+MV Kiron 6
+MV Pubali
+MV Pubali 1
+MV Pubali 2
+MV Manik
+MV Dipraj
+MV Captain
+MV Queen
+MV Morning Bird
+MV Glory of Shariatpur
+MV Kokilmoni
+MV Sea Bird
+MV Suravi (older vessel still occasionally listed on schedules)
+```
