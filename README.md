@@ -23,7 +23,7 @@ A structured JSON dataset of passenger launches (river ferries) operating out of
   <!-- Right column: 2 images -->
   <div style="gap: 8px;">
     <img src="launch-image\MV Adventure 1.jpg" width="23%" height="150" style="object-fit: cover; border-radius: 4px;" alt="MV Adventure 1" />
-    <img src="launch-image\MV Manami.jpg" width="23%" height="150" style="object-fit: cover; border-radius: 4px;" alt="MV Manami" />
+    <img src="launch-image\MV Sundarban 12.jpg" width="23%" height="150" style="object-fit: cover; border-radius: 4px;" alt="MV Manami" />
     <img src="launch-image\MV Tipu 7.jpg" width="23%" height="150" style="object-fit: cover; border-radius: 4px;" alt="MV Tipu 7" />
     <img src="launch-image\MV Kirtankhola 10.jpg" width="23%" height="150" style="object-fit: cover; border-radius: 4px;" alt="MV Kirtankhola 10" />
   </div>
