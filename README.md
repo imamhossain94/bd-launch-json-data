@@ -1,6 +1,8 @@
 # Bd Launch JSON Data
 
-A structured JSON dataset of passenger launches (river ferries) operating out of Dhaka, Bangladesh — schedules, fares, amenities, and technical specs for **66 launches** across **8 routes** and **26 operators**.
+A structured JSON dataset of passenger launches (river ferries) operating out of Dhaka, Bangladesh — schedules, fares, amenities, and technical specs for **98 launches** across **24 routes** and **36 operators**.
+
+A companion Next.js app that renders this data as a browsable launch list lives in [`web/`](web/) and is ready to deploy on Vercel.
 
 ## Preview
 <div style="gap: 8px; overflow-x: auto; width: 100%; padding: 10px 0; flex-wrap: wrap; align-content: center;">
@@ -38,14 +40,17 @@ A structured JSON dataset of passenger launches (river ferries) operating out of
 
 | Route | Launches |
 |---|---|
-| Dhaka ⇄ Chandpur | 29 |
-| Dhaka ⇄ Barishal | 18 |
-| Dhaka ⇄ Hularhat (Pirojpur) | 7 |
-| Dhaka ⇄ Shariatpur | 5 |
-| Dhaka ⇄ Patuakhali | 3 |
-| Dhaka ⇄ Barguna | 2 |
-| Dhaka ⇄ Jhalokathi | 1 |
-| Dhaka ⇄ Bhola | 1 |
+| Dhaka ⇄ Chandpur | 32 |
+| Dhaka ⇄ Barishal | 29 |
+| Dhaka ⇄ Patuakhali | 7 |
+| Dhaka ⇄ Hularhat (Pirojpur) | 4 |
+| Dhaka ⇄ Shariatpur | 4 |
+| Dhaka ⇄ Barisal | 2 |
+| Dhaka ⇄ Bhashanchar (Mehendiganj) | 2 |
+| Dhaka ⇄ Betua (Charfasson) | 2 |
+| ...and 16 more single-launch routes | 16 |
+
+The array is sorted alphabetically by `name` (natural sort, so "MV Bagdadia 9" sorts before "MV Bagdadia 10").
 
 ## Schema
 
@@ -53,17 +58,27 @@ Each launch object has the following shape:
 
 ```ts
 {
-  name: string;            // Launch name, e.g. "MV Sundarban 10"
-  operator: string;        // Operating company
-  route: string;           // Human-readable route, e.g. "Dhaka ⇄ Barishal"
-  routeId: string;         // Stable slug for the route, e.g. "route_barishal"
+  id: string;               // Stable slug derived from name, e.g. "mv-sundarban-10"
+  name: string;              // Launch name, e.g. "MV Sundarban 10"
+  operator: string;          // Operating company
+  route: {
+    id: string;               // Stable slug for the route, e.g. "route_dhaka_barishal"
+    label: string;            // Human-readable route, e.g. "Dhaka ⇄ Barishal"
+    from: string;             // Origin, always "Dhaka"
+    to: string;                // Destination(s), e.g. "Barishal"
+  };
   schedule: {
-    departFromDhaka: string;          // Departure time from Dhaka
-    departFromDestination: string;    // Departure time from destination
-    journeyTimeDhakaToDest: string;   // Duration, Dhaka -> destination
-    journeyTimeDestToDhaka: string;   // Duration, destination -> Dhaka
+    departure: {
+      fromDhaka: string;       // Departure time from Dhaka, e.g. "08:30 PM"
+      fromDestination: string; // Departure time from destination
+    };
+    duration: {
+      toDestination: string;   // Journey time, Dhaka -> destination, e.g. "8h 30m"
+      toDhaka: string;         // Journey time, destination -> Dhaka
+    };
   };
   fares: {
+    currency: "BDT";
     deck: number | null;
     economyChair: number | null;
     businessClassAC: number | null;
@@ -72,17 +87,17 @@ Each launch object has the following shape:
     doubleCabinNonAC: number | null;
     doubleCabinAC: number | null;
     familyCabinAC: number | null;
-    vipCabin: number | null;          // All fares in BDT; null = not offered
+    vipCabin: number | null;   // null = not offered
   };
-  amenities: string[];      // e.g. "AC", "Restaurant", "CCTV", "WiFi", "Prayer Room"
-  technicalInfo: {
+  amenities: string[];        // e.g. "AC", "Restaurant", "CCTV", "WiFi", "Prayer Room"
+  specifications: {
     floors: number;
-    speed: string;          // e.g. "18 nautical miles"
-    numberOfEngines: number;
+    speedKnots: string;        // e.g. "18" or "15-17"
+    engines: number;
   };
-  contact: string | null;   // Phone number, when available
+  contact: string | null;     // Phone number, when available
   status: "active";
-  image: string | null;     // Filename relative to launch-image/
+  image: string | null;       // Path relative to the repo root, e.g. "/launch-image/MV Sundarban 10.jpg"
 }
 ```
 
@@ -90,17 +105,27 @@ Each launch object has the following shape:
 
 ```json
 {
+  "id": "mv-sundarban-10",
   "name": "MV Sundarban 10",
   "operator": "Sundarban Navigation",
-  "route": "Dhaka ⇄ Barishal",
-  "routeId": "route_barishal",
+  "route": {
+    "id": "route_dhaka_barishal",
+    "label": "Dhaka ⇄ Barishal",
+    "from": "Dhaka",
+    "to": "Barishal"
+  },
   "schedule": {
-    "departFromDhaka": "08:30 PM",
-    "departFromDestination": "08:30 PM",
-    "journeyTimeDhakaToDest": "8 hours 30 mins",
-    "journeyTimeDestToDhaka": "7 hours 30 mins"
+    "departure": {
+      "fromDhaka": "08:30 PM",
+      "fromDestination": "08:30 PM"
+    },
+    "duration": {
+      "toDestination": "8h 30m",
+      "toDhaka": "7h 30m"
+    }
   },
   "fares": {
+    "currency": "BDT",
     "deck": 400,
     "economyChair": null,
     "businessClassAC": null,
@@ -112,20 +137,20 @@ Each launch object has the following shape:
     "vipCabin": 6000
   },
   "amenities": ["AC", "Restaurant", "Prayer Room", "CCTV", "VIP Suite", "Generator"],
-  "technicalInfo": {
+  "specifications": {
     "floors": 4,
-    "speed": "18 nautical miles",
-    "numberOfEngines": 2
+    "speedKnots": "18",
+    "engines": 2
   },
   "contact": "01711-358838",
   "status": "active",
-  "image": "MV Sundarban 10.jpg"
+  "image": "/launch-image/MV Sundarban 10.jpg"
 }
 ```
 
 ## Images
 
-Launch photos live in [`launch-image/`](launch-image/), named to match each entry's `image` field. Not every launch has a photo — check for a non-null `image` before rendering.
+Launch photos live in [`launch-image/`](launch-image/). Each entry's `image` field already contains the path relative to the repo root (e.g. `/launch-image/MV Sundarban 10.jpg`) — not every launch has a photo yet, so check for a non-null `image` before rendering.
 
 ## Usage
 
@@ -134,8 +159,8 @@ Launch photos live in [`launch-image/`](launch-image/), named to match each entr
 ```js
 const ships = require('./ships.json');
 
-// All launches on the Barishal route, sorted by earliest departure from Dhaka
-const barishal = ships.filter(s => s.routeId === 'route_barishal');
+// All launches on the Barishal route
+const barishal = ships.filter(s => s.route.id === 'route_dhaka_barishal');
 
 // Cheapest deck fare available
 const cheapestDeck = ships
@@ -153,7 +178,7 @@ const ships = await fetch('./ships.json').then(r => r.json());
 const withImages = ships.filter(s => s.image);
 withImages.forEach(s => {
   const img = document.createElement('img');
-  img.src = `launch-image/${s.image}`;
+  img.src = s.image; // e.g. "/launch-image/MV Sundarban 10.jpg"
   img.alt = s.name;
   document.body.appendChild(img);
 });
@@ -167,7 +192,7 @@ import json
 with open("ships.json", encoding="utf-8") as f:
     ships = json.load(f)
 
-chandpur_ships = [s for s in ships if s["routeId"] == "route_chandpur"]
+chandpur_ships = [s for s in ships if s["route"]["id"] == "route_dhaka_chandpur"]
 avg_deck_fare = sum(
     s["fares"]["deck"] for s in ships if s["fares"]["deck"] is not None
 ) / sum(1 for s in ships if s["fares"]["deck"] is not None)
@@ -181,188 +206,3 @@ This dataset is community-maintained and far from complete — contributions are
 - **Fix wrong data**: schedules, fares, and contact numbers change often — if you spot something inaccurate or outdated, please correct it.
 
 To contribute, fork the repo, make your changes, and open a pull request. For a new launch, include the source of your information (operator website, ticket counter, personal trip, etc.) in the PR description so it can be verified.
-
-
-```
-MV Raf Raf 1
-MV Mayur 1 {
-    "name": "MV Mitali 7",
-    "operator": "Bengal Shipping Company",
-    "route": "Dhaka ⇄ Chandpur",
-    "routeId": "route_dhaka_chandpur",
-    "schedule": {
-      "departFromDhaka": "09:50 AM",
-      "departFromDestination": "10:00 PM",
-      "journeyTimeDhakaToDest": "03 hours 30 mins",
-      "journeyTimeDestToJhaka": "03 hours 30 mins"
-    },
-    "fares": {
-      "deck": 100,
-      "economyChair": 150,
-      "businessClassAC": 250,
-      "singleCabinNonAC": 500,
-      "singleCabinAC": 700,
-      "doubleCabinNonAC": 800,
-      "doubleCabinAC": 1200,
-      "familyCabinAC": 1400,
-      "vipCabin": 2000
-    },
-    "amenities": [
-      "TV",
-      "Generator",
-      "Life Jackets"
-    ],
-    "technicalInfo": {
-      "floors": 3,
-      "speed": "16 knots",
-      "numberOfEngines": 2
-    },
-    "contact": "01775001272",
-    "status": "active",
-    "image": "mv_mitali_7.jpg"
-  },
-  {
-    "name": "MV Ab-E-Jamjam",
-    "operator": "Jamjam Group",
-    "route": "Dhaka ⇄ Chandpur",
-    "routeId": "route_dhaka_chandpur",
-    "schedule": {
-      "departFromDhaka": "09:15 AM",
-      "departFromDestination": "01:00 PM",
-      "journeyTimeDhakaToDest": "03 hours 30 mins",
-      "journeyTimeDestToJhaka": "03 hours 30 mins"
-    },
-    "fares": {
-      "deck": 200,
-      "economyChair": 300,
-      "businessClassAC": 400,
-      "singleCabinNonAC": 800,
-      "singleCabinAC": 1000,
-      "doubleCabinNonAC": 1300,
-      "doubleCabinAC": 1500,
-      "familyCabinAC": 2000,
-      "vipCabin": 3500
-    },
-    "amenities": [
-      "TV",
-      "Generator"
-    ],
-    "technicalInfo": {
-      "floors": 3,
-      "speed": "16 knots",
-      "numberOfEngines": 2
-    },
-    "contact": "01714248589",
-    "status": "active",
-    "image": "mv_ab_e_jamjam.jpg"
-  },
-  {
-    "name": "MV Zam Zam 1",
-    "operator": "Zam Zam Group",
-    "route": "Dhaka ⇄ Chandpur",
-    "routeId": "route_dhaka_chandpur",
-    "schedule": {
-      "departFromDhaka": "09:15 AM",
-      "departFromDestination": "06:00 AM",
-      "journeyTimeDhakaToDest": "03 hours 30 mins",
-      "journeyTimeDestToJhaka": "03 hours 30 mins"
-    },
-    "fares": {
-      "deck": 200,
-      "economyChair": 300,
-      "businessClassAC": 400,
-      "singleCabinNonAC": 800,
-      "singleCabinAC": 1000,
-      "doubleCabinNonAC": 1300,
-      "doubleCabinAC": 1500,
-      "familyCabinAC": 2000,
-      "vipCabin": 3500
-    },
-    "amenities": [
-      "TV",
-      "Generator",
-      "Life Jackets"
-    ],
-    "technicalInfo": {
-      "floors": 3,
-      "speed": "16 knots",
-      "numberOfEngines": 2
-    },
-    "contact": "01711311449",
-    "status": "active",
-    "image": "mv_zam_zam_1.jpg"
-  },
-  {
-    "name": "MV Zam Zam 7",
-    "operator": "Zam Zam Group",
-    "route": "Dhaka ⇄ Elisha",
-    "routeId": "route_dhaka_elisha_bhola",
-    "schedule": {
-      "departFromDhaka": "09:00 PM",
-      "departFromDestination": "08:30 AM",
-      "journeyTimeDhakaToDest": "07 hours 00 mins",
-      "journeyTimeDestToJhaka": "07 hours 00 mins"
-    },
-    "fares": {
-      "deck": 350,
-      "economyChair": 450,
-      "businessClassAC": 600,
-      "singleCabinNonAC": 1200,
-      "singleCabinAC": 1400,
-      "doubleCabinNonAC": 2200,
-      "doubleCabinAC": 2400,
-      "familyCabinAC": 3500,
-      "vipCabin": 7000
-    },
-    "amenities": [
-      "TV",
-      "Generator",
-      "Life Jackets"
-    ],
-    "technicalInfo": {
-      "floors": 4,
-      "speed": "17 knots",
-      "numberOfEngines": 2
-    },
-    "contact": "01752555325",
-    "status": "active",
-    "image": "mv_zam_zam_7.jpg"
-  }
-MV Prince Awlad 8
-MV Prince Awlad 9
-MV Rajdut 6
-MV Rajdut 8
-MV Farhan
-MV Farhan 2
-MV Farhan 3
-MV Farhan 4
-MV Farhan 5
-MV Farhan 6
-MV Farhan 7
-MV Farhan 8
-MV Farhan 9
-MV Farhan 10
-MV Farhan 11
-MV Farhan 12
-MV Farhan 13
-MV Farhan 14
-MV Farhan 15
-MV Farhan 16
-MV Kiron
-MV Kiron 2
-MV Kiron 3
-MV Kiron 5
-MV Kiron 6
-MV Pubali
-MV Pubali 1
-MV Pubali 2
-MV Manik
-MV Dipraj
-MV Captain
-MV Queen
-MV Morning Bird
-MV Glory of Shariatpur
-MV Kokilmoni
-MV Sea Bird
-MV Suravi (older vessel still occasionally listed on schedules)
-```
