@@ -5,28 +5,38 @@ export interface Route {
   to: string;
 }
 
-export interface Schedule {
-  departure: {
-    fromDhaka: string;
-    fromDestination: string;
-  };
-  duration: {
-    toDestination: string;
-    toDhaka: string;
-  };
+/** One direction of travel. */
+export interface Leg {
+  departure: string;
+  duration: string;
 }
+
+/**
+ * Keyed by direction, e.g. `dhaka_to_chandpur` and `chandpur_to_dhaka`.
+ * The outbound leg is always the `dhaka_to_*` key.
+ */
+export type Schedule = Record<string, Leg>;
+
+/** A fare with no fixed price, quoted as a range. */
+export interface FareRange {
+  min: number;
+  max: number;
+}
+
+/** A fixed price, a range when the operator has no fixed price, or null when not offered. */
+export type Fare = number | FareRange | null;
 
 export interface Fares {
   currency: string;
-  deck: number | null;
-  economyChair: number | null;
-  businessClassAC: number | null;
-  singleCabinNonAC: number | null;
-  singleCabinAC: number | null;
-  doubleCabinNonAC: number | null;
-  doubleCabinAC: number | null;
-  familyCabinAC: number | null;
-  vipCabin: number | null;
+  deck: Fare;
+  economyChair: Fare;
+  businessClassAC: Fare;
+  singleCabinNonAC: Fare;
+  singleCabinAC: Fare;
+  doubleCabinNonAC: Fare;
+  doubleCabinAC: Fare;
+  familyCabinAC: Fare;
+  vipCabin: Fare;
 }
 
 export interface Specifications {
@@ -40,6 +50,7 @@ export interface Ship {
   name: string;
   operator: string;
   route: Route;
+  description: string;
   schedule: Schedule;
   fares: Fares;
   amenities: string[];
@@ -69,13 +80,42 @@ export function getRoutes(ships: Ship[]): Route[] {
   return [...seen.values()].sort((a, b) => a.label.localeCompare(b.label));
 }
 
-export function lowestFare(ship: Ship): { key: string; amount: number } | null {
-  const entries = Object.entries(ship.fares).filter(
-    ([key, value]) => key !== "currency" && typeof value === "number"
-  ) as [string, number][];
-  if (entries.length === 0) return null;
-  const [key, amount] = entries.reduce((min, cur) => (cur[1] < min[1] ? cur : min));
-  return { key, amount };
+export function isFareRange(fare: Fare): fare is FareRange {
+  return typeof fare === "object" && fare !== null;
+}
+
+/** Cheapest end of a fare, for sorting and "from" pricing. */
+export function fareFloor(fare: Fare): number | null {
+  if (fare === null) return null;
+  return isFareRange(fare) ? fare.min : fare;
+}
+
+/** True when at least one class has no fixed price. */
+export function hasRangedFare(ship: Ship): boolean {
+  return Object.entries(ship.fares).some(([key, value]) => key !== "currency" && isFareRange(value as Fare));
+}
+
+/** The Dhaka → destination leg. */
+export function outboundLeg(ship: Ship): Leg | null {
+  const key = Object.keys(ship.schedule).find((k) => k.startsWith("dhaka_to_"));
+  return key ? ship.schedule[key] : null;
+}
+
+/** The destination → Dhaka leg. */
+export function inboundLeg(ship: Ship): Leg | null {
+  const key = Object.keys(ship.schedule).find((k) => k.endsWith("_to_dhaka"));
+  return key ? ship.schedule[key] : null;
+}
+
+export function lowestFare(ship: Ship): { key: string; fare: Fare; amount: number } | null {
+  let best: { key: string; fare: Fare; amount: number } | null = null;
+  for (const [key, value] of Object.entries(ship.fares)) {
+    if (key === "currency") continue;
+    const amount = fareFloor(value as Fare);
+    if (amount === null) continue;
+    if (!best || amount < best.amount) best = { key, fare: value as Fare, amount };
+  }
+  return best;
 }
 
 export function fareLabel(key: string): string {
@@ -86,8 +126,17 @@ export function formatBDT(amount: number): string {
   return `৳${amount.toLocaleString("en-US")}`;
 }
 
+/** Renders a fixed price as `৳200` and a range as `৳150–350`. */
+export function formatFare(fare: Fare): string {
+  if (fare === null) return "—";
+  if (isFareRange(fare)) return `${formatBDT(fare.min)}–${fare.max.toLocaleString("en-US")}`;
+  return formatBDT(fare);
+}
+
 export function telHref(contact: string | null): string | undefined {
   if (!contact) return undefined;
-  const digits = contact.replace(/[^\d+]/g, "");
+  // A contact field may hold several numbers; dial the first.
+  const first = contact.split(",")[0];
+  const digits = first.replace(/[^\d+]/g, "");
   return digits ? `tel:${digits}` : undefined;
 }

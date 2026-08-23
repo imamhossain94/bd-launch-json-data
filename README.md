@@ -1,6 +1,8 @@
 # Bd Launch JSON Data
 
-A structured JSON dataset of passenger launches (river ferries) operating out of Dhaka, Bangladesh — schedules, fares, amenities, and technical specs for **98 launches** across **24 routes** and **36 operators**.
+A structured JSON dataset of passenger launches (river ferries) operating out of Dhaka, Bangladesh — schedules, fares, amenities, descriptions, and technical specs for **93 launches** across **20 routes** and **35 operators**.
+
+> **Fares and schedules are indicative.** Prices may not be current, and operators change departures without notice. Confirm at the ghat counter before travelling.
 
 A companion Next.js app that renders this data as a browsable launch list lives in [`web/`](web/) and is ready to deploy on Vercel.
 
@@ -57,6 +59,8 @@ The array is sorted alphabetically by `name` (natural sort, so "MV Bagdadia 9" s
 Each launch object has the following shape:
 
 ```ts
+type Fare = number | { min: number; max: number } | null;
+
 {
   id: string;               // Stable slug derived from name, e.g. "mv-sundarban-10"
   name: string;              // Launch name, e.g. "MV Sundarban 10"
@@ -67,27 +71,29 @@ Each launch object has the following shape:
     from: string;             // Origin, always "Dhaka"
     to: string;                // Destination(s), e.g. "Barishal"
   };
+  description: string;        // Prose summary: route, timings, fares, amenities, contact
+  // Keyed by direction. The outbound leg is always the `dhaka_to_*` key; the
+  // suffix is derived from the route id, e.g. `route_dhaka_barishal` -> "barishal".
   schedule: {
-    departure: {
-      fromDhaka: string;       // Departure time from Dhaka, e.g. "08:30 PM"
-      fromDestination: string; // Departure time from destination
-    };
-    duration: {
-      toDestination: string;   // Journey time, Dhaka -> destination, e.g. "8h 30m"
-      toDhaka: string;         // Journey time, destination -> Dhaka
+    [direction: string]: {     // e.g. "dhaka_to_barishal", "barishal_to_dhaka"
+      departure: string;       // Departure time, e.g. "08:30 PM"
+      duration: string;        // Journey time for that leg, e.g. "8h 30m"
     };
   };
   fares: {
     currency: "BDT";
-    deck: number | null;
-    economyChair: number | null;
-    businessClassAC: number | null;
-    singleCabinNonAC: number | null;
-    singleCabinAC: number | null;
-    doubleCabinNonAC: number | null;
-    doubleCabinAC: number | null;
-    familyCabinAC: number | null;
-    vipCabin: number | null;   // null = not offered
+    // number       -> fixed price
+    // {min, max}   -> operator has no fixed price; the fare is a range
+    // null         -> class not offered / no figure on record
+    deck: Fare;
+    economyChair: Fare;
+    businessClassAC: Fare;
+    singleCabinNonAC: Fare;
+    singleCabinAC: Fare;
+    doubleCabinNonAC: Fare;
+    doubleCabinAC: Fare;
+    familyCabinAC: Fare;
+    vipCabin: Fare;
   };
   amenities: string[];        // e.g. "AC", "Restaurant", "CCTV", "WiFi", "Prayer Room"
   specifications: {
@@ -114,35 +120,55 @@ Each launch object has the following shape:
     "from": "Dhaka",
     "to": "Barishal"
   },
+  "description": "MV Sundarban 10 runs the main Dhaka ⇄ Barishal night route for Sundarban Navigation, leaving Sadarghat at 09:00 PM — departures are also quoted from about 08:00 PM — and Barishal at the same hour, arriving early the next morning after about 5 hours 30 minutes. Deck has no fixed price and goes for roughly ৳250–350, with a sofa seat sold at about ৳600; a non-AC single cabin runs ৳1,000–1,400 and the AC single ৳1,500, the non-AC double ৳1,800–2,400 and the AC double ৳2,500, the AC family or semi-VIP cabin ৳3,500 and the VIP duplex ৳5,000–7,000. The three-floor, twin-engine launch cruises at about 18 knots and carries AC, a restaurant, a prayer room, CCTV, a VIP suite and a generator. For bookings, call the Barishal counter on 01711358838, the Dhaka counter on 01716-444367 or the hotline on 01758-113011.",
   "schedule": {
-    "departure": {
-      "fromDhaka": "08:30 PM",
-      "fromDestination": "08:30 PM"
+    "dhaka_to_barishal": {
+      "departure": "09:00 PM",
+      "duration": "5h 30m"
     },
-    "duration": {
-      "toDestination": "8h 30m",
-      "toDhaka": "7h 30m"
+    "barishal_to_dhaka": {
+      "departure": "09:00 PM",
+      "duration": "5h 30m"
     }
   },
   "fares": {
     "currency": "BDT",
-    "deck": 400,
+    "deck": {
+      "min": 250,
+      "max": 350
+    },
     "economyChair": null,
     "businessClassAC": null,
-    "singleCabinNonAC": 1200,
+    "singleCabinNonAC": {
+      "min": 1000,
+      "max": 1400
+    },
     "singleCabinAC": 1500,
-    "doubleCabinNonAC": 2200,
-    "doubleCabinAC": 2600,
+    "doubleCabinNonAC": {
+      "min": 1800,
+      "max": 2400
+    },
+    "doubleCabinAC": 2500,
     "familyCabinAC": 3500,
-    "vipCabin": 6000
+    "vipCabin": {
+      "min": 5000,
+      "max": 7000
+    }
   },
-  "amenities": ["AC", "Restaurant", "Prayer Room", "CCTV", "VIP Suite", "Generator"],
+  "amenities": [
+    "AC",
+    "Restaurant",
+    "Prayer Room",
+    "CCTV",
+    "VIP Suite",
+    "Generator"
+  ],
   "specifications": {
-    "floors": 4,
+    "floors": 3,
     "speedKnots": "18",
     "engines": 2
   },
-  "contact": "01711-358838",
+  "contact": "01711358838",
   "status": "active",
   "image": "/launch-image/MV Sundarban 10.jpg"
 }
@@ -162,10 +188,11 @@ const ships = require('./ships.json');
 // All launches on the Barishal route
 const barishal = ships.filter(s => s.route.id === 'route_dhaka_barishal');
 
-// Cheapest deck fare available
+// Cheapest deck fare available — deck may be a number, a {min, max} range, or null
+const deckFloor = f => (f == null ? null : typeof f === 'object' ? f.min : f);
 const cheapestDeck = ships
-  .filter(s => s.fares.deck != null)
-  .sort((a, b) => a.fares.deck - b.fares.deck)[0];
+  .filter(s => deckFloor(s.fares.deck) != null)
+  .sort((a, b) => deckFloor(a.fares.deck) - deckFloor(b.fares.deck))[0];
 
 // Launches with AC and WiFi
 const acWifi = ships.filter(s => s.amenities.includes('AC') && s.amenities.includes('WiFi'));

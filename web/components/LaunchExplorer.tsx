@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Route, Ship, lowestFare } from "@/lib/ship-utils";
+import { Route, Ship, lowestFare, outboundLeg } from "@/lib/ship-utils";
 import ShipCard from "@/components/ShipCard";
 
 type SortOption = "name" | "priceAsc" | "priceDesc" | "departure";
@@ -34,7 +34,8 @@ export default function LaunchExplorer({ ships, routes }: { ships: Ship[]; route
         !q ||
         ship.name.toLowerCase().includes(q) ||
         ship.operator.toLowerCase().includes(q) ||
-        ship.route.label.toLowerCase().includes(q);
+        ship.route.label.toLowerCase().includes(q) ||
+        ship.description.toLowerCase().includes(q);
       const matchesRoute = routeId === "all" || ship.route.id === routeId;
       return matchesQuery && matchesRoute;
     });
@@ -48,7 +49,9 @@ export default function LaunchExplorer({ ships, routes }: { ships: Ship[]; route
           return sort === "priceAsc" ? fa - fb : fb - fa;
         }
         case "departure":
-          return parseTime(a.schedule.departure.fromDhaka) - parseTime(b.schedule.departure.fromDhaka);
+          return (
+            parseTime(outboundLeg(a)?.departure ?? "") - parseTime(outboundLeg(b)?.departure ?? "")
+          );
         default:
           return a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: "base" });
       }

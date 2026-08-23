@@ -1,50 +1,5 @@
 [
   {
-    "id": "mv-ab-e-jamjam",
-    "name": "MV Ab-E-Jamjam",
-    "operator": "Jamjam Group",
-    "route": {
-      "id": "route_dhaka_chandpur",
-      "label": "Dhaka ⇄ Chandpur",
-      "from": "Dhaka",
-      "to": "Chandpur"
-    },
-    "schedule": {
-      "departure": {
-        "fromDhaka": "09:15 AM",
-        "fromDestination": "01:00 PM"
-      },
-      "duration": {
-        "toDestination": "3h 30m",
-        "toDhaka": "3h 30m"
-      }
-    },
-    "fares": {
-      "currency": "BDT",
-      "deck": 200,
-      "economyChair": 300,
-      "businessClassAC": 400,
-      "singleCabinNonAC": 800,
-      "singleCabinAC": 1000,
-      "doubleCabinNonAC": 1300,
-      "doubleCabinAC": 1500,
-      "familyCabinAC": 2000,
-      "vipCabin": 3500
-    },
-    "amenities": [
-      "TV",
-      "Generator"
-    ],
-    "specifications": {
-      "floors": 3,
-      "speedKnots": "16",
-      "engines": 2
-    },
-    "contact": "01714248589",
-    "status": "active",
-    "image": "/launch-image/MV Ab-e-Jamjam.jpg"
-  },
-  {
     "id": "mv-adventure-1",
     "name": "MV Adventure 1",
     "operator": "Adventure Launch Group",
@@ -54,26 +9,33 @@
       "from": "Dhaka",
       "to": "Barishal"
     },
+    "description": "MV Adventure 1 sails the Dhaka ⇄ Barishal waterway nightly for Adventure Launch Group, casting off from Sadarghat at 09:00 PM and leaving Barishal for Dhaka at the same hour. The overnight crossing takes roughly 5 hours 30 minutes in either direction. Deck has no fixed price and runs roughly ৳100–350; cabins are ৳1,400 for a non-AC single and ৳1,500 with AC, ৳2,400 and ৳2,500 for the non-AC and AC doubles, ৳2,000–3,500 for the AC family cabin and ৳7,000 for the VIP cabin. The three-floor, twin-engine launch cruises at about 19 knots and carries AC, TV, a generator and life jackets. To confirm the day's exact departure slot or check cabin availability, call 01711320330.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "09:00 PM",
-        "fromDestination": "09:00 PM"
+      "dhaka_to_barishal": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       },
-      "duration": {
-        "toDestination": "5h 30m",
-        "toDhaka": "5h 30m"
+      "barishal_to_dhaka": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 350,
+      "deck": {
+        "min": 100,
+        "max": 350
+      },
       "economyChair": null,
       "businessClassAC": null,
       "singleCabinNonAC": 1400,
       "singleCabinAC": 1500,
       "doubleCabinNonAC": 2400,
       "doubleCabinAC": 2500,
-      "familyCabinAC": 3500,
+      "familyCabinAC": {
+        "min": 2000,
+        "max": 3500
+      },
       "vipCabin": 7000
     },
     "amenities": [
@@ -101,26 +63,39 @@
       "from": "Dhaka",
       "to": "Barishal"
     },
+    "description": "MV Adventure 9 is a luxury launch on the Dhaka ⇄ Barishal route for Adventure Launch Group, leaving Sadarghat at 09:00 PM and Barishal for Dhaka at 09:00 PM nightly, with the overnight crossing taking about 5 hours 30 minutes either way. Deck has no fixed price and runs roughly ৳250–350; single cabins are ৳1,000–1,400 non-AC and ৳1,500 with AC, doubles ৳1,800–2,400 non-AC and ৳2,500 with AC, the AC family cabin ৳3,500–4,000 and the VIP cabin ৳8,000. Children under 12 usually travel free when sharing with a parent. The three-floor, twin-engine launch cruises at about 19 knots and carries AC, a prayer room, TV, a generator and life jackets. To confirm the day's exact departure slot or check cabin availability, call 01720853366.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "09:00 PM",
-        "fromDestination": "09:00 PM"
+      "dhaka_to_barishal": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       },
-      "duration": {
-        "toDestination": "5h 30m",
-        "toDhaka": "5h 30m"
+      "barishal_to_dhaka": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 350,
+      "deck": {
+        "min": 250,
+        "max": 350
+      },
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1400,
+      "singleCabinNonAC": {
+        "min": 1000,
+        "max": 1400
+      },
       "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2400,
+      "doubleCabinNonAC": {
+        "min": 1800,
+        "max": 2400
+      },
       "doubleCabinAC": 2500,
-      "familyCabinAC": 4000,
+      "familyCabinAC": {
+        "min": 3500,
+        "max": 4000
+      },
       "vipCabin": 8000
     },
     "amenities": [
@@ -149,14 +124,15 @@
       "from": "Dhaka",
       "to": "Barishal"
     },
+    "description": "MV Adventure 11 sails the Dhaka ⇄ Barishal route for Adventure Launch Group, leaving Sadarghat at 09:00 PM and Barishal for Dhaka at 09:00 PM, with the overnight crossing taking 5 hours 30 minutes either way. Fares are fixed and run from ৳350 for deck up to ৳8,000 for the VIP cabin, with single cabins at ৳1,400 non-AC and ৳1,500 with AC, doubles at ৳2,400 and ৳2,500, and the AC family cabin at ৳4,000. The three-floor, twin-engine launch cruises at about 19 knots and carries AC, a prayer room, TV, a generator and life jackets. To confirm the day's exact departure slot or check cabin availability, call 01730018585.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "09:00 PM",
-        "fromDestination": "09:00 PM"
+      "dhaka_to_barishal": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       },
-      "duration": {
-        "toDestination": "5h 30m",
-        "toDhaka": "5h 30m"
+      "barishal_to_dhaka": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       }
     },
     "fares": {
@@ -197,14 +173,15 @@
       "from": "Dhaka",
       "to": "Chandpur"
     },
+    "description": "MV Bagdadia 5 runs the Dhaka ⇄ Chandpur route for Bagdadia Group, carrying on to Chor Voirovi, with the trip taking about 3 hours 30 minutes each way. It leaves Sadarghat at 10:30 AM and starts back from Chandpur at 02:30 PM. Fares are fixed: ৳200 for deck, ৳300 for an economy chair, ৳400 for AC business class, ৳800 and ৳1,000 for the non-AC and AC single cabins, ৳1,300 and ৳1,500 for the doubles, ৳2,000 for the AC family cabin and ৳3,500 for the VIP cabin. The three-floor, twin-engine launch cruises at about 16 knots and carries TV, a generator and life jackets. To confirm the day's exact departure slot or check cabin availability, call 01711132644.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "10:30 AM",
-        "fromDestination": "02:30 PM"
+      "dhaka_to_chandpur": {
+        "departure": "10:30 AM",
+        "duration": "3h 30m"
       },
-      "duration": {
-        "toDestination": "3h 30m",
-        "toDhaka": "3h 30m"
+      "chandpur_to_dhaka": {
+        "departure": "02:30 PM",
+        "duration": "3h 30m"
       }
     },
     "fares": {
@@ -243,22 +220,32 @@
       "from": "Dhaka",
       "to": "Chandpur"
     },
+    "description": "MV Bagdadia 7 runs the Dhaka ⇄ Chandpur water route for Bagdadia Group, carrying on to Nilkomol and Haimchar, with a Munshiganj call on some sailings. It leaves Sadarghat at 08:35 AM daily and starts back from Chandpur at 05:00 PM; the crossing takes about 3 hours 30 minutes, closer to 4 hours when the river runs badly. Deck has no fixed price and goes for roughly ৳100–200, an economy chair ৳150–300 and a non-AC single cabin ৳400–800. AC business class is ৳400, the AC single cabin ৳1,000, the doubles ৳1,300 non-AC and ৳1,500 with AC, the AC family cabin ৳2,000 and the VIP cabin ৳3,500. Fares follow the authorised BIWTA chart and shift with the season, so confirm the current sheet at the Sadarghat counter. The three-floor, twin-engine launch cruises at about 16 knots and carries TV, a generator and life jackets. For the day's exact departure slot and cabin availability, call 01711132644.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "01:00 PM",
-        "fromDestination": "08:30 AM"
+      "dhaka_to_chandpur": {
+        "departure": "08:35 AM",
+        "duration": "3h 30m"
       },
-      "duration": {
-        "toDestination": "3h 30m",
-        "toDhaka": "3h 30m"
+      "chandpur_to_dhaka": {
+        "departure": "05:00 PM",
+        "duration": "3h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 200,
-      "economyChair": 300,
+      "deck": {
+        "min": 100,
+        "max": 200
+      },
+      "economyChair": {
+        "min": 150,
+        "max": 300
+      },
       "businessClassAC": 400,
-      "singleCabinNonAC": 800,
+      "singleCabinNonAC": {
+        "min": 400,
+        "max": 800
+      },
       "singleCabinAC": 1000,
       "doubleCabinNonAC": 1300,
       "doubleCabinAC": 1500,
@@ -289,22 +276,32 @@
       "from": "Dhaka",
       "to": "Chandpur"
     },
+    "description": "MV Bagdadia 8 runs the Dhaka ⇄ Chandpur water route for Bagdadia Group, carrying on to Charvairabi, with the trip taking about 3 hours 30 minutes — nearer 4 hours when the river and weather are against it. The recorded slot is 02:00 PM from Sadarghat and 09:30 AM back from Chandpur, but the vessel also works a morning departure around 10:30–10:40 AM and a late-night one around 11:30 PM depending on the sub-route and seasonal adjustments. Open deck is ৳200, an economy seat ৳250–300 and the AC chair or special seat ৳350–400; a non-AC single cabin runs ৳700–800, the AC single ৳1,000, the doubles ৳1,300 non-AC and ৳1,500 with AC, the AC family cabin ৳2,000 and the VIP cabin ৳3,500. The three-floor, twin-engine launch cruises at about 16 knots and carries TV, a generator and life jackets. For the day's exact departure slot and cabin availability, call 01711132644.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "02:00 PM",
-        "fromDestination": "09:30 AM"
+      "dhaka_to_chandpur": {
+        "departure": "02:00 PM",
+        "duration": "3h 30m"
       },
-      "duration": {
-        "toDestination": "3h 30m",
-        "toDhaka": "3h 30m"
+      "chandpur_to_dhaka": {
+        "departure": "09:30 AM",
+        "duration": "3h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
       "deck": 200,
-      "economyChair": 300,
-      "businessClassAC": 400,
-      "singleCabinNonAC": 800,
+      "economyChair": {
+        "min": 250,
+        "max": 300
+      },
+      "businessClassAC": {
+        "min": 350,
+        "max": 400
+      },
+      "singleCabinNonAC": {
+        "min": 700,
+        "max": 800
+      },
       "singleCabinAC": 1000,
       "doubleCabinNonAC": 1300,
       "doubleCabinAC": 1500,
@@ -335,22 +332,32 @@
       "from": "Dhaka",
       "to": "Chandpur"
     },
+    "description": "MV Bagdadia 9 works the Dhaka ⇄ Chandpur waterway for Bagdadia Group, carrying on to Nilkamal and Char Bhairabi, and runs as a day and night passenger service. It leaves Sadarghat at 03:30 PM and starts back from Chandpur at 10:00 AM, taking about 3 hours 30 minutes either way. Open deck is ৳200, an economy seat ৳250–300 and the AC chair ৳350–400; a non-AC single cabin runs ৳700–800, the AC single ৳1,000, the doubles ৳1,300 non-AC and ৳1,500 with AC, the AC family cabin ৳2,000 and the VIP cabin ৳3,500. The three-floor, twin-engine launch cruises at about 16 knots and carries TV, a generator and life jackets. For the day's exact departure slot and cabin availability, call 01711132644.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "03:30 PM",
-        "fromDestination": "10:00 AM"
+      "dhaka_to_chandpur": {
+        "departure": "03:30 PM",
+        "duration": "3h 30m"
       },
-      "duration": {
-        "toDestination": "3h 30m",
-        "toDhaka": "3h 30m"
+      "chandpur_to_dhaka": {
+        "departure": "10:00 AM",
+        "duration": "3h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
       "deck": 200,
-      "economyChair": 300,
-      "businessClassAC": 400,
-      "singleCabinNonAC": 800,
+      "economyChair": {
+        "min": 250,
+        "max": 300
+      },
+      "businessClassAC": {
+        "min": 350,
+        "max": 400
+      },
+      "singleCabinNonAC": {
+        "min": 700,
+        "max": 800
+      },
       "singleCabinAC": 1000,
       "doubleCabinNonAC": 1300,
       "doubleCabinAC": 1500,
@@ -381,14 +388,15 @@
       "from": "Dhaka",
       "to": "Chandpur"
     },
+    "description": "MV Bagdadia 12 runs overnight on the Dhaka ⇄ Chandpur route for Bagdadia Group, leaving Sadarghat at 07:30 PM and starting back from Chandpur at 01:30 PM. The passage takes about 3 hours 30 minutes in either direction. Deck is ৳200, an economy chair ৳300 and AC business class ৳400; single cabins are ৳800 non-AC and ৳1,000 with AC, doubles ৳1,300 and ৳1,500, the AC family cabin ৳2,000 and the VIP cabin ৳3,500. The three-floor, twin-engine launch cruises at about 16 knots and carries TV, a generator and life jackets. For the day's exact departure slot and cabin availability, call 01711132644.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "07:30 PM",
-        "fromDestination": "01:30 PM"
+      "dhaka_to_chandpur": {
+        "departure": "07:30 PM",
+        "duration": "3h 30m"
       },
-      "duration": {
-        "toDestination": "3h 30m",
-        "toDhaka": "3h 30m"
+      "chandpur_to_dhaka": {
+        "departure": "01:30 PM",
+        "duration": "3h 30m"
       }
     },
     "fares": {
@@ -427,14 +435,15 @@
       "from": "Dhaka",
       "to": "Bhola"
     },
+    "description": "MV Crystal Cruise runs overnight between Dhaka and Bhola for Crystal Group, leaving Sadarghat at 08:30 PM and Bhola at 09:00 AM, with the river journey taking about 6 hours each way. Deck is ৳350 and an economy chair ৳600; single cabins are ৳1,000 non-AC and ৳1,200 with AC, doubles ৳2,000 and ৳2,400, the AC family cabin ৳2,500 and the VIP cabin ৳4,000. Fares move with the season, so confirm the current sheet at the Sadarghat terminal or through an authorised ticketing agent before travelling. The four-floor, twin-engine vessel cruises at about 18 knots and carries AC, TV, CCTV and a generator. For bookings and cabin availability, call 01718747674.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "08:30 PM",
-        "fromDestination": "09:00 AM"
+      "dhaka_to_bhola": {
+        "departure": "08:30 PM",
+        "duration": "6h"
       },
-      "duration": {
-        "toDestination": "6h",
-        "toDhaka": "6h"
+      "bhola_to_dhaka": {
+        "departure": "09:00 AM",
+        "duration": "6h"
       }
     },
     "fares": {
@@ -474,19 +483,23 @@
       "from": "Dhaka",
       "to": "Chandpur"
     },
+    "description": "MV Deshantor works the Dhaka ⇄ Chandpur water route, leaving Sadarghat on the late-afternoon slot at 05:30 PM and starting back from Chandpur early at 06:45 AM; the run down takes about 4 hours and the return about 3 hours 30 minutes. Deck has no fixed price and goes for roughly ৳150–200, an economy seat is ৳250 and AC business class ৳350; single cabins are ৳800 non-AC and ৳1,000 with AC, doubles ৳1,200 and ৳1,500, the AC family cabin ৳2,500 and the VIP cabin ৳4,000. Departure times can shift with weather, river conditions or ghat authority decisions. The three-floor, twin-engine launch cruises at about 16 knots and carries TV, a generator and life jackets. No counter number is on record for this launch — ask at the Sadarghat ghat office for the day's slot and cabin availability.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "05:30 PM",
-        "fromDestination": "06:45 AM"
+      "dhaka_to_chandpur": {
+        "departure": "05:30 PM",
+        "duration": "4h"
       },
-      "duration": {
-        "toDestination": "4h",
-        "toDhaka": "3h 30m"
+      "chandpur_to_dhaka": {
+        "departure": "06:45 AM",
+        "duration": "3h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 200,
+      "deck": {
+        "min": 150,
+        "max": 200
+      },
       "economyChair": 250,
       "businessClassAC": 350,
       "singleCabinNonAC": 800,
@@ -520,14 +533,15 @@
       "from": "Dhaka",
       "to": "Barishal"
     },
+    "description": "MV Dipraj runs nightly between Dhaka and Barishal for Dipraj Shipping Lines, casting off from Sadarghat at 08:30 PM and leaving Barishal River Port at the same hour, with the crossing taking about 6 hours 30 minutes. Deck is ৳300 in line with the BIWTA-regulated rate for the route; single cabins are ৳1,000 non-AC and ৳1,200 with AC, doubles ৳1,800 and ৳2,200, the AC family cabin ৳3,500 and the VIP cabin ৳5,500. The three-floor, twin-engine launch cruises at about 16 knots and carries AC, TV, a generator and life jackets. No counter number is on record for this launch — ask at the Sadarghat ghat office for the day's slot and cabin availability.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "08:30 PM",
-        "fromDestination": "08:30 PM"
+      "dhaka_to_barishal": {
+        "departure": "08:30 PM",
+        "duration": "6h 30m"
       },
-      "duration": {
-        "toDestination": "6h 30m",
-        "toDhaka": "6h 30m"
+      "barishal_to_dhaka": {
+        "departure": "08:30 PM",
+        "duration": "6h 30m"
       }
     },
     "fares": {
@@ -567,19 +581,23 @@
       "from": "Dhaka",
       "to": "Muladi"
     },
+    "description": "MV Dipraj 4 is recorded on the Dhaka ⇄ Muladi route for Dipraj Shipping Lines, leaving Sadarghat at 08:00 PM and Muladi at 05:30 PM on an 8-hour run. The vessel has since changed ownership and been renamed, and now works a Dhaka – Muladi – Chandpur rotation, so no fixed schedule is confirmed under this name and the timings here should be treated as historical. Deck has no fixed price and goes for roughly ৳300–400; single cabins are ৳1,000 non-AC and ৳1,200 with AC, doubles ৳1,800 and ৳2,200, the AC family cabin ৳3,500 and the VIP cabin ৳4,500. The three-floor, twin-engine launch cruises at about 16 knots and carries AC, TV, a generator and life jackets. No counter number is on record — confirm current operation at the Sadarghat ghat office.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "08:00 PM",
-        "fromDestination": "05:30 PM"
+      "dhaka_to_muladi": {
+        "departure": "08:00 PM",
+        "duration": "8h"
       },
-      "duration": {
-        "toDestination": "8h",
-        "toDhaka": "8h"
+      "muladi_to_dhaka": {
+        "departure": "05:30 PM",
+        "duration": "8h"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 350,
+      "deck": {
+        "min": 300,
+        "max": 400
+      },
       "economyChair": null,
       "businessClassAC": null,
       "singleCabinNonAC": 1000,
@@ -614,25 +632,47 @@
       "from": "Dhaka",
       "to": "Chandpur"
     },
+    "description": "MV Eagle 3 runs the Dhaka ⇄ Chandpur river route for Eagle Group, leaving Sadarghat at 02:30 PM and starting back from Chandpur at 09:00 AM, with the trip taking about 3 hours 30 minutes. None of the seating classes carry a fixed price: deck goes for roughly ৳100–200, a second-class or economy seat ৳150–300 and a business-class seat ৳250–400; single cabins run ৳400–800 non-AC and ৳500–1,000 with AC, doubles ৳800–1,300 and ৳1,000–1,500, with the AC family cabin at ৳2,000 and the VIP cabin at ৳3,500. The three-floor, twin-engine launch cruises at about 16 knots and carries TV, a generator and life jackets. For the day's exact departure slot and cabin availability, call 01711311449.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "09:00 AM",
-        "fromDestination": "03:00 PM"
+      "dhaka_to_chandpur": {
+        "departure": "02:30 PM",
+        "duration": "3h 30m"
       },
-      "duration": {
-        "toDestination": "3h 30m",
-        "toDhaka": "3h 30m"
+      "chandpur_to_dhaka": {
+        "departure": "09:00 AM",
+        "duration": "3h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 200,
-      "economyChair": 300,
-      "businessClassAC": 400,
-      "singleCabinNonAC": 800,
-      "singleCabinAC": 1000,
-      "doubleCabinNonAC": 1300,
-      "doubleCabinAC": 1500,
+      "deck": {
+        "min": 100,
+        "max": 200
+      },
+      "economyChair": {
+        "min": 150,
+        "max": 300
+      },
+      "businessClassAC": {
+        "min": 250,
+        "max": 400
+      },
+      "singleCabinNonAC": {
+        "min": 400,
+        "max": 800
+      },
+      "singleCabinAC": {
+        "min": 500,
+        "max": 1000
+      },
+      "doubleCabinNonAC": {
+        "min": 800,
+        "max": 1300
+      },
+      "doubleCabinAC": {
+        "min": 1000,
+        "max": 1500
+      },
       "familyCabinAC": 2000,
       "vipCabin": 3500
     },
@@ -660,14 +700,15 @@
       "from": "Dhaka",
       "to": "Chandpur"
     },
+    "description": "MV Eagle 4 works the Dhaka ⇄ Chandpur route for Eagle Group, boarding at both Sadarghat and Basila. It leaves Dhaka at 10:30 AM and starts back from Chandpur at 04:30 PM, taking about 3 hours 30 minutes; during BIWTA-coordinated special services such as the Eid rush it runs an 11:00 AM departure from Basila and Sadarghat instead. Deck is ৳200, an economy chair ৳300 and AC business class ৳400; single cabins are ৳800 non-AC and ৳1,000 with AC, doubles ৳1,300 and ৳1,500, the AC family cabin ৳2,000 and the VIP cabin ৳3,500 — cabin prices track government inland water transport fare adjustments. The three-floor, twin-engine launch cruises at about 16 knots and carries TV, a generator and life jackets. For the day's exact departure slot and cabin availability, call 01711311449.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "10:30 AM",
-        "fromDestination": "04:30 PM"
+      "dhaka_to_chandpur": {
+        "departure": "10:30 AM",
+        "duration": "3h 30m"
       },
-      "duration": {
-        "toDestination": "3h 30m",
-        "toDhaka": "3h 30m"
+      "chandpur_to_dhaka": {
+        "departure": "04:30 PM",
+        "duration": "3h 30m"
       }
     },
     "fares": {
@@ -706,14 +747,15 @@
       "from": "Dhaka",
       "to": "Chandpur"
     },
+    "description": "MV Eagle 5 is recorded on the Dhaka ⇄ Chandpur route for Eagle Group, leaving Sadarghat at 11:30 AM and Chandpur at 05:15 PM on a 3 hour 30 minute run, though the vessel is also reported working southern river ports such as Kalaiya on evening and night slots, and exact departure times shift with tide, weather and terminal rules. Deck is ৳200, an economy chair ৳300 and AC business class ৳400; single cabins are ৳800 non-AC and ৳1,000 with AC, doubles ৳1,300 and ৳1,500, the AC family cabin ৳2,000 and the VIP cabin ৳3,500. Tickets are handled at the Sadarghat vessel counters or by phone with the operator, as online booking is limited. The three-floor, twin-engine launch cruises at about 16 knots and carries TV, a generator and life jackets. For the day's exact departure slot and cabin availability, call 01711311449.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "11:30 AM",
-        "fromDestination": "05:15 PM"
+      "dhaka_to_chandpur": {
+        "departure": "11:30 AM",
+        "duration": "3h 30m"
       },
-      "duration": {
-        "toDestination": "3h 30m",
-        "toDhaka": "3h 30m"
+      "chandpur_to_dhaka": {
+        "departure": "05:15 PM",
+        "duration": "3h 30m"
       }
     },
     "fares": {
@@ -752,24 +794,37 @@
       "from": "Dhaka",
       "to": "Chandpur"
     },
+    "description": "MV Eagle 7 runs the Dhaka ⇄ Chandpur river route for Eagle Group, leaving Sadarghat at 04:30 PM and starting back from Chandpur at 08:00 AM; the trip takes about 3 hours 30 minutes, nearer 4 hours when the river and weather are against it. Deck has no fixed price and goes for roughly ৳100–200 and a chair ৳130–300, with AC business class at ৳400; a non-AC single cabin runs ৳400–800 and the AC single ৳1,000, the non-AC double ৳800–1,300 and the AC double ৳1,500, the AC family cabin ৳2,000 and the VIP cabin ৳3,500. The three-floor, twin-engine launch cruises at about 16 knots and carries TV, a generator and life jackets. For the day's exact departure slot and cabin availability, call 01711311449.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "02:30 PM",
-        "fromDestination": "08:00 AM"
+      "dhaka_to_chandpur": {
+        "departure": "04:30 PM",
+        "duration": "3h 30m"
       },
-      "duration": {
-        "toDestination": "3h 30m",
-        "toDhaka": "3h 30m"
+      "chandpur_to_dhaka": {
+        "departure": "08:00 AM",
+        "duration": "3h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 200,
-      "economyChair": 300,
+      "deck": {
+        "min": 100,
+        "max": 200
+      },
+      "economyChair": {
+        "min": 130,
+        "max": 300
+      },
       "businessClassAC": 400,
-      "singleCabinNonAC": 800,
+      "singleCabinNonAC": {
+        "min": 400,
+        "max": 800
+      },
       "singleCabinAC": 1000,
-      "doubleCabinNonAC": 1300,
+      "doubleCabinNonAC": {
+        "min": 800,
+        "max": 1300
+      },
       "doubleCabinAC": 1500,
       "familyCabinAC": 2000,
       "vipCabin": 3500
@@ -798,19 +853,23 @@
       "from": "Dhaka",
       "to": "Monpura ⇄ Hatiya"
     },
+    "description": "MV Farhan 3 runs the Dhaka ⇄ Monpura ⇄ Hatiya route for Farhan Navigation, leaving Sadarghat at 05:30 PM and starting back from Hatiya at 08:00 AM on a 9-hour run; it sometimes shifts to around 06:30 PM when working an internal Dhaka–Ilisha alignment. Deck has no fixed price and goes for roughly ৳350–500 against the government-fixed rate, an economy chair is ৳500 and AC business class ৳700; single cabins are ৳1,000 non-AC and ৳1,200 with AC, doubles ৳2,000 and ৳2,400, the AC family cabin ৳3,500 and the VIP cabin ৳5,500. The three-floor, twin-engine launch cruises at about 16 knots and carries AC, TV, CCTV, a generator and life jackets. For seasonal adjustments and cabin availability, call 01785-630366 or 01785-630365.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "05:30 PM",
-        "fromDestination": "08:00 AM"
+      "dhaka_to_monpura_hatiya": {
+        "departure": "05:30 PM",
+        "duration": "9h"
       },
-      "duration": {
-        "toDestination": "9h",
-        "toDhaka": "9h"
+      "monpura_hatiya_to_dhaka": {
+        "departure": "08:00 AM",
+        "duration": "9h"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 350,
+      "deck": {
+        "min": 350,
+        "max": 500
+      },
       "economyChair": 500,
       "businessClassAC": 700,
       "singleCabinNonAC": 1000,
@@ -846,14 +905,15 @@
       "from": "Dhaka",
       "to": "Char Fasson (Betua)"
     },
+    "description": "MV Farhan 6 runs the Dhaka ⇄ Char Fasson ⇄ Betua route for Farhan Navigation, leaving Sadarghat at 06:00 PM — the boarding window runs to about 07:30 PM — and starting back from Betua at 08:30 AM, with the passage taking about 9 hours 30 minutes. Deck is ৳350, an economy chair or semi-cabin ৳500 and AC business class ৳700; single cabins are ৳1,000 non-AC and ৳1,200 with AC, doubles ৳2,000 and ৳2,400, the AC family cabin ৳3,500 and the VIP cabin ৳5,500. Prices and exact departure minutes vary over national holidays, peak seasons and rough river conditions, so check at the Sadarghat counter before travelling. The three-floor, twin-engine launch cruises at about 16 knots and carries AC, TV, CCTV, a generator and life jackets. For bookings and cabin availability, call 01755-949060 or 01755-949062.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "06:00 PM",
-        "fromDestination": "08:30 AM"
+      "dhaka_to_charfasson_betua": {
+        "departure": "06:00 PM",
+        "duration": "9h 30m"
       },
-      "duration": {
-        "toDestination": "9h 30m",
-        "toDhaka": "9h 30m"
+      "charfasson_betua_to_dhaka": {
+        "departure": "08:30 AM",
+        "duration": "9h 30m"
       }
     },
     "fares": {
@@ -894,14 +954,15 @@
       "from": "Dhaka",
       "to": "Barisal"
     },
+    "description": "MV Farhan 8 runs the Dhaka ⇄ Barishal route for Farhan Navigation, leaving Sadarghat at 08:30 PM and Barishal at 07:30 PM, with the overnight crossing taking about 7 hours. Deck is ৳350, an economy chair ৳500 and AC business class ৳700; single cabins are ৳1,000 non-AC and ৳1,200 with AC, doubles ৳2,000 and ৳2,400, the AC family cabin ৳3,500 and the VIP cabin ৳5,500. The three-floor, twin-engine launch cruises at about 17 knots and carries AC, TV, CCTV, a generator and life jackets. For the day's exact departure slot and cabin availability, call 01799-864222 or 01742-713737.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "08:30 PM",
-        "fromDestination": "07:30 PM"
+      "dhaka_to_barishal": {
+        "departure": "08:30 PM",
+        "duration": "7h"
       },
-      "duration": {
-        "toDestination": "7h",
-        "toDhaka": "7h"
+      "barishal_to_dhaka": {
+        "departure": "07:30 PM",
+        "duration": "7h"
       }
     },
     "fares": {
@@ -942,19 +1003,23 @@
       "from": "Dhaka",
       "to": "Jhalakathi"
     },
+    "description": "MV Farhan 9 is recorded on the Dhaka ⇄ Jhalakathi route for Farhan Navigation, leaving Sadarghat at 08:00 PM and starting back at 07:00 PM on an 8-hour run. The same vessel is also reported working a daily Dhaka – Fatullah – Kaliganj – Ilisha (Bhola) rotation, departing Dhaka at 11:45 AM and Fatullah at 12:10 PM, returning from Ilisha at 10:00 PM and Kaliganj at 10:30 PM, so confirm which service is running before travelling. Deck has no fixed price and goes for roughly ৳350–400, an economy chair is ৳500 and AC business class ৳700; single cabins are ৳1,000 non-AC and ৳1,200 with AC, doubles ৳2,000 and ৳2,400, the AC family cabin ৳3,500 and the VIP cabin ৳5,500. The three-floor, twin-engine launch cruises at about 16 knots and carries AC, TV, CCTV, a generator and life jackets. For cabin booking call 01760-873181, or the supervisor on 01778-378213.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "08:00 PM",
-        "fromDestination": "07:00 PM"
+      "dhaka_to_jhalakathi": {
+        "departure": "08:00 PM",
+        "duration": "8h"
       },
-      "duration": {
-        "toDestination": "8h",
-        "toDhaka": "8h"
+      "jhalakathi_to_dhaka": {
+        "departure": "07:00 PM",
+        "duration": "8h"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 350,
+      "deck": {
+        "min": 350,
+        "max": 400
+      },
       "economyChair": 500,
       "businessClassAC": 700,
       "singleCabinNonAC": 1000,
@@ -990,19 +1055,23 @@
       "from": "Dhaka",
       "to": "Char Fasson ⇄ Betua"
     },
+    "description": "MV Farhan 10 is recorded on the Dhaka ⇄ Char Fasson ⇄ Betua route for Farhan Navigation, leaving Sadarghat at 05:45 PM and starting back at 07:30 AM on a 9 hour 30 minute run. The vessel is also reported working the long Dhaka – Munshiganj – Kaliganj – Ilisha – Daulatkhan – Hakimuddin – Tazumuddin – Monpura – Dhalchar – Hatiya rotation, leaving Dhaka around 06:30 PM and returning from Hatiya around 01:00 PM the next day, with departures occasionally pulled earlier by shallow water near the Monpura channels. Deck has no fixed price and goes for roughly ৳350–500, an economy chair is ৳500 and AC business class ৳700; single cabins are ৳1,000 non-AC and ৳1,200 with AC, doubles ৳2,000 and ৳2,400, the AC family cabin ৳3,500 and the VIP cabin ৳5,500–6,000. The three-floor, twin-engine launch cruises at about 16 knots and carries AC, TV, CCTV, a generator and life jackets. For bookings and cabin availability, call 01749-883587 or 01776-589350.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "05:45 PM",
-        "fromDestination": "07:30 AM"
+      "dhaka_to_charfasson_betua": {
+        "departure": "05:45 PM",
+        "duration": "9h 30m"
       },
-      "duration": {
-        "toDestination": "9h 30m",
-        "toDhaka": "9h 30m"
+      "charfasson_betua_to_dhaka": {
+        "departure": "07:30 AM",
+        "duration": "9h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 350,
+      "deck": {
+        "min": 350,
+        "max": 500
+      },
       "economyChair": 500,
       "businessClassAC": 700,
       "singleCabinNonAC": 1000,
@@ -1010,7 +1079,10 @@
       "doubleCabinNonAC": 2000,
       "doubleCabinAC": 2400,
       "familyCabinAC": 3500,
-      "vipCabin": 5500
+      "vipCabin": {
+        "min": 5500,
+        "max": 6000
+      }
     },
     "amenities": [
       "AC",
@@ -1038,14 +1110,15 @@
       "from": "Dhaka",
       "to": "Barishal"
     },
+    "description": "MV Green Line 2 is a Green Line Water Wings day water-bus, recorded on the Dhaka ⇄ Barishal route and reported also serving Bhola's Elisha Ghat. It leaves Dhaka at 08:30 AM and starts back at 02:30 PM, taking about 5 hours. Only seated classes are sold — there is no deck or cabin accommodation on this vessel — at ৳800 for economy and ৳1,200 for AC business class; exact prices vary by season and counter, so confirm with Green Line Waterways or an authorised agent. The two-floor, twin-engine catamaran runs at about 25 knots and carries AC, a restaurant, TV, WiFi and CCTV. For bookings and seat availability, call 01730060076.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "03:00 PM",
-        "fromDestination": "08:00 AM"
+      "dhaka_to_barishal": {
+        "departure": "08:30 AM",
+        "duration": "5h"
       },
-      "duration": {
-        "toDestination": "5h",
-        "toDhaka": "5h"
+      "barishal_to_dhaka": {
+        "departure": "02:30 PM",
+        "duration": "5h"
       }
     },
     "fares": {
@@ -1086,14 +1159,15 @@
       "from": "Dhaka",
       "to": "Barishal"
     },
+    "description": "MV Green Line 3 is a Green Line Water Wings day water-bus on the Dhaka ⇄ Barishal route, leaving Sadarghat at 08:00 AM to reach Barishal around 2:00 PM and starting back from Barishal Launch Terminal at 03:00 PM, arriving in Dhaka around 9:00 PM — roughly 6 hours each way. Only seated classes are sold — there is no deck or cabin accommodation on this vessel — at ৳800 for economy on the lower deck and ৳1,200 for AC business class with airline-style seating upstairs; fares shift slightly with seasonal updates and holiday surges handled at the Green Line counter in Dhaka. The two-floor, twin-engine catamaran runs at about 25 knots and carries AC, a restaurant, TV, WiFi and CCTV. For bookings and seat availability, call 01730060004.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "03:00 PM",
-        "fromDestination": "08:00 AM"
+      "dhaka_to_barishal": {
+        "departure": "08:00 AM",
+        "duration": "6h"
       },
-      "duration": {
-        "toDestination": "5h",
-        "toDhaka": "5h"
+      "barishal_to_dhaka": {
+        "departure": "03:00 PM",
+        "duration": "6h"
       }
     },
     "fares": {
@@ -1134,14 +1208,15 @@
       "from": "Dhaka",
       "to": "Chandpur"
     },
+    "description": "MV Imam Hasan works the Dhaka ⇄ Chandpur route for Bikrampur Shipping Corporation, leaving Sadarghat at 06:00 AM and starting back from Chandpur at 12:00 PM. The passage takes about 3 hours 30 minutes in either direction. Deck is ৳200, an economy chair ৳300 and AC business class ৳400; single cabins are ৳800 non-AC and ৳1,000 with AC, doubles ৳1,300 and ৳1,500, the AC family cabin ৳2,000 and the VIP cabin ৳3,500. The three-floor, twin-engine launch cruises at about 16 knots and carries TV, a generator and life jackets. For the day's exact departure slot and cabin availability, call 01812703047.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "06:00 AM",
-        "fromDestination": "12:00 PM"
+      "dhaka_to_chandpur": {
+        "departure": "06:00 AM",
+        "duration": "3h 30m"
       },
-      "duration": {
-        "toDestination": "3h 30m",
-        "toDhaka": "3h 30m"
+      "chandpur_to_dhaka": {
+        "departure": "12:00 PM",
+        "duration": "3h 30m"
       }
     },
     "fares": {
@@ -1180,27 +1255,37 @@
       "from": "Dhaka",
       "to": "Chandpur"
     },
+    "description": "MV Imam Hasan 2 runs a daily Dhaka ⇄ Chandpur service for Bikrampur Shipping Corporation, leaving Sadarghat at 11:00 AM and starting back from Chandpur at 11:10 PM, with the trip taking about 3 hours 30 minutes. Deck has no fixed price and goes for roughly ৳150–200, an economy chair is ৳300 and AC business class ৳400; single cabins are ৳800 non-AC and ৳1,000 with AC, the non-AC double ৳1,300 and the AC double ৳1,500–1,800, the AC family cabin ৳2,000 and the VIP cabin ৳3,000–4,000. Fares drift with fuel price adjustments, weekend demand and holiday rushes. The three-floor, twin-engine launch cruises at about 16 knots and carries TV and a generator. Cabins can be booked through apps such as Shohoz, or call the operator on 01812703047 to check availability.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "11:00 AM",
-        "fromDestination": "03:30 PM"
+      "dhaka_to_chandpur": {
+        "departure": "11:00 AM",
+        "duration": "3h 30m"
       },
-      "duration": {
-        "toDestination": "3h 30m",
-        "toDhaka": "3h 30m"
+      "chandpur_to_dhaka": {
+        "departure": "11:10 PM",
+        "duration": "3h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 200,
+      "deck": {
+        "min": 150,
+        "max": 200
+      },
       "economyChair": 300,
       "businessClassAC": 400,
       "singleCabinNonAC": 800,
       "singleCabinAC": 1000,
       "doubleCabinNonAC": 1300,
-      "doubleCabinAC": 1500,
+      "doubleCabinAC": {
+        "min": 1500,
+        "max": 1800
+      },
       "familyCabinAC": 2000,
-      "vipCabin": 3500
+      "vipCabin": {
+        "min": 3000,
+        "max": 4000
+      }
     },
     "amenities": [
       "TV",
@@ -1225,25 +1310,38 @@
       "from": "Dhaka",
       "to": "Chandpur"
     },
+    "description": "MV Imam Hasan 5 is recorded on the Dhaka ⇄ Chandpur route for Bikrampur Shipping Corporation, leaving Sadarghat at 11:45 AM and starting back at 05:00 PM on a 3 hour 30 minute run; the vessel primarily serves the Shariatpur route and is redeployed to alternative ghats during peak holiday rushes, when it departs Bosila Launch Ghat at 08:30 AM and runs Bosila – Sadarghat – Shariatpur. None of the main classes carry a fixed price: deck goes for roughly ৳200–250, an economy chair is ৳300 and AC business class ৳400, a non-AC single cabin ৳800 and the AC single ৳1,000–1,200, doubles ৳1,300–1,800 non-AC and ৳1,500–2,200 with AC, the AC family cabin ৳2,000 and the VIP cabin ৳3,500. The three-floor, twin-engine launch cruises at about 16 knots and carries TV and a generator. For the day's exact departure slot and cabin availability, call 01812703047.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "11:45 AM",
-        "fromDestination": "05:00 PM"
+      "dhaka_to_chandpur": {
+        "departure": "11:45 AM",
+        "duration": "3h 30m"
       },
-      "duration": {
-        "toDestination": "3h 30m",
-        "toDhaka": "3h 30m"
+      "chandpur_to_dhaka": {
+        "departure": "05:00 PM",
+        "duration": "3h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 200,
+      "deck": {
+        "min": 200,
+        "max": 250
+      },
       "economyChair": 300,
       "businessClassAC": 400,
       "singleCabinNonAC": 800,
-      "singleCabinAC": 1000,
-      "doubleCabinNonAC": 1300,
-      "doubleCabinAC": 1500,
+      "singleCabinAC": {
+        "min": 1000,
+        "max": 1200
+      },
+      "doubleCabinNonAC": {
+        "min": 1300,
+        "max": 1800
+      },
+      "doubleCabinAC": {
+        "min": 1500,
+        "max": 2200
+      },
       "familyCabinAC": 2000,
       "vipCabin": 3500
     },
@@ -1270,14 +1368,15 @@
       "from": "Dhaka",
       "to": "Mridharhat"
     },
+    "description": "MV Jhanda 2 is recorded on the Dhaka ⇄ Mridharhat route, leaving Sadarghat at 02:00 PM and starting back at 08:00 AM, taking about 5 hours 30 minutes down and 5 hours back. No official schedule or fare chart for this vessel is centrally published or indexed, and it has also been reported working a Muladi – Chandpur rotation, so every figure here should be treated as indicative and confirmed at the terminal before travelling. Deck is recorded at ৳250, with single cabins ৳900 non-AC and ৳1,200 with AC, doubles ৳1,600 and ৳2,000, the AC family cabin ৳3,000 and the VIP cabin ৳4,500. The three-floor, twin-engine launch cruises at about 15 knots and carries TV, a generator and life jackets. No counter number is on record — ask at the Sadarghat ghat office for the day's slot and cabin availability.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "02:00 PM",
-        "fromDestination": "08:00 AM"
+      "dhaka_to_mridharhat": {
+        "departure": "02:00 PM",
+        "duration": "5h 30m"
       },
-      "duration": {
-        "toDestination": "5h 30m",
-        "toDhaka": "5h"
+      "mridharhat_to_dhaka": {
+        "departure": "08:00 AM",
+        "duration": "5h"
       }
     },
     "fares": {
@@ -1316,27 +1415,43 @@
       "from": "Dhaka",
       "to": "Barishal"
     },
+    "description": "MV Kalam Khan 7, also listed as M Khan 7, runs the Dhaka ⇄ Barishal route for Mahfuz Khan Ltd on an alternating-date rotation: it leaves Sadarghat on even-numbered dates between 08:30 PM and 09:00 PM, and Barishal on odd-numbered dates at 09:00 PM, with the crossing taking about 5 hours 30 minutes. Deck has no fixed price and goes for roughly ৳300–350; a non-AC single cabin runs ৳1,000–1,400 and the AC single ৳1,500, the non-AC double ৳2,000–2,400 and the AC double ৳2,500, the AC family cabin ৳2,500–3,500 and the VIP cabin ৳6,000–15,000 depending on the luxury grade. A sofa-zone seat is also sold at about ৳600. Exact times and availability move with weather and river conditions. The three-floor, twin-engine launch cruises at about 18 knots and carries AC, a restaurant, CCTV, a VIP suite, a prayer room and a generator. For the day's exact departure slot and cabin availability, call 01712053123.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "09:00 PM",
-        "fromDestination": "09:00 PM"
+      "dhaka_to_barishal": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       },
-      "duration": {
-        "toDestination": "5h 30m",
-        "toDhaka": "5h 30m"
+      "barishal_to_dhaka": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 350,
+      "deck": {
+        "min": 300,
+        "max": 350
+      },
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1400,
+      "singleCabinNonAC": {
+        "min": 1000,
+        "max": 1400
+      },
       "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2400,
+      "doubleCabinNonAC": {
+        "min": 2000,
+        "max": 2400
+      },
       "doubleCabinAC": 2500,
-      "familyCabinAC": 3500,
-      "vipCabin": 7000
+      "familyCabinAC": {
+        "min": 2500,
+        "max": 3500
+      },
+      "vipCabin": {
+        "min": 6000,
+        "max": 15000
+      }
     },
     "amenities": [
       "AC",
@@ -1365,27 +1480,43 @@
       "from": "Dhaka",
       "to": "Barishal"
     },
+    "description": "MV Kirtankhola 2 runs nightly between Dhaka and Barishal for Kirtankhola Navigation, leaving Sadarghat at 09:00 PM and Barishal at the same hour, reaching the far end in the early morning. The recorded crossing is 5 hours 30 minutes, though the run is often quoted at nearer 7 hours with a 4:00 AM arrival. Deck has no fixed price and goes for roughly ৳200–350; a non-AC single cabin is ৳1,400 and the AC single ৳1,000–1,500, the non-AC double ৳2,400 and the AC double ৳1,800–2,500, the AC family or semi-VIP cabin ৳3,200–3,500 and the VIP cabin ৳4,000–7,000. The three-floor, twin-engine launch cruises at about 18 knots and carries AC, a restaurant, CCTV and a generator. For the day's exact departure slot and cabin availability, call 01712495145.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "09:00 PM",
-        "fromDestination": "09:00 PM"
+      "dhaka_to_barishal": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       },
-      "duration": {
-        "toDestination": "5h 30m",
-        "toDhaka": "5h 30m"
+      "barishal_to_dhaka": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 350,
+      "deck": {
+        "min": 200,
+        "max": 350
+      },
       "economyChair": null,
       "businessClassAC": null,
       "singleCabinNonAC": 1400,
-      "singleCabinAC": 1500,
+      "singleCabinAC": {
+        "min": 1000,
+        "max": 1500
+      },
       "doubleCabinNonAC": 2400,
-      "doubleCabinAC": 2500,
-      "familyCabinAC": 3500,
-      "vipCabin": 7000
+      "doubleCabinAC": {
+        "min": 1800,
+        "max": 2500
+      },
+      "familyCabinAC": {
+        "min": 3200,
+        "max": 3500
+      },
+      "vipCabin": {
+        "min": 4000,
+        "max": 7000
+      }
     },
     "amenities": [
       "AC",
@@ -1412,27 +1543,40 @@
       "from": "Dhaka",
       "to": "Barishal"
     },
+    "description": "MV Kirtankhola 10 runs nightly between Dhaka and Barishal for Kirtankhola Navigation, leaving Sadarghat at 09:00 PM — boarding from about 08:00 PM — and Barishal Launch Ghat at 09:00 PM, with the crossing taking about 5 hours 30 minutes, longer when the river is rough. Deck has no fixed price and goes for roughly ৳250–400; a non-AC single cabin runs ৳1,000–1,600 and the AC single ৳1,500, the non-AC double ৳2,000–2,500 and the AC double ৳2,500, the AC family cabin ৳4,000 and the VIP cabin ৳8,000. The three-floor, twin-engine launch cruises at about 19 knots and carries AC, a restaurant, CCTV, fire safety gear and a medical kit. For the day's exact departure slot and cabin availability, call 01733337553.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "09:00 PM",
-        "fromDestination": "09:00 PM"
+      "dhaka_to_barishal": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       },
-      "duration": {
-        "toDestination": "5h 30m",
-        "toDhaka": "5h 30m"
+      "barishal_to_dhaka": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 350,
+      "deck": {
+        "min": 250,
+        "max": 400
+      },
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1400,
+      "singleCabinNonAC": {
+        "min": 1000,
+        "max": 1600
+      },
       "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2400,
+      "doubleCabinNonAC": {
+        "min": 2000,
+        "max": 2500
+      },
       "doubleCabinAC": 2500,
       "familyCabinAC": 4000,
-      "vipCabin": 8000
+      "vipCabin": {
+        "min": 4000,
+        "max": 8000
+      }
     },
     "amenities": [
       "AC",
@@ -1460,27 +1604,43 @@
       "from": "Dhaka",
       "to": "Patuakhali"
     },
+    "description": "MV Kuakata 1 runs the Dhaka ⇄ Patuakhali route for Kuakata Group by way of the Pirojpur and Boga riverways, leaving Sadarghat at 06:30 PM — the boarding window runs from about 06:00 PM to 07:00 PM — and starting back at 05:00 PM, with the overnight passage taking about 10 hours. Sailings are subject to river conditions and port authority signals. Deck has no fixed price and goes for roughly ৳300–450; a non-AC single cabin runs ৳1,000–1,200 and the AC single ৳1,300, the non-AC double ৳1,500–2,000 and the AC double ৳2,500, the AC family or semi-VIP cabin ৳1,800–3,500 and the VIP cabin ৳2,500–7,000. The four-floor, twin-engine launch cruises at about 17 knots and carries AC, TV and a generator. No counter number is on record — cabins are booked at the Sadarghat counters or by phone with the launch representatives, as online ticketing is limited.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "06:30 PM",
-        "fromDestination": "05:00 PM"
+      "dhaka_to_patuakhali": {
+        "departure": "06:30 PM",
+        "duration": "10h"
       },
-      "duration": {
-        "toDestination": "10h",
-        "toDhaka": "10h"
+      "patuakhali_to_dhaka": {
+        "departure": "05:00 PM",
+        "duration": "10h"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 450,
+      "deck": {
+        "min": 300,
+        "max": 450
+      },
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1100,
+      "singleCabinNonAC": {
+        "min": 1000,
+        "max": 1200
+      },
       "singleCabinAC": 1300,
-      "doubleCabinNonAC": 2000,
+      "doubleCabinNonAC": {
+        "min": 1500,
+        "max": 2000
+      },
       "doubleCabinAC": 2500,
-      "familyCabinAC": 3500,
-      "vipCabin": 7000
+      "familyCabinAC": {
+        "min": 1800,
+        "max": 3500
+      },
+      "vipCabin": {
+        "min": 2500,
+        "max": 7000
+      }
     },
     "amenities": [
       "AC",
@@ -1506,14 +1666,15 @@
       "from": "Dhaka",
       "to": "Chandpur"
     },
+    "description": "MV Lamia works the Dhaka ⇄ Chandpur water route, leaving Sadarghat at 08:00 AM and starting back from Chandpur at 01:30 PM; the run down takes about 4 hours and the return about 3 hours 30 minutes. Deck is ৳200, following the government-regulated river fare for the distance bracket, with an economy chair at ৳250 and AC business class at ৳350; single cabins are ৳800 non-AC and ৳1,000 with AC, doubles ৳1,200 and ৳1,500, the AC family cabin ৳2,500 and the VIP cabin ৳4,000. Cabin prices are confirmed at the Sadarghat terminal counter, which is where bookings are taken. The three-floor, twin-engine launch cruises at about 15 knots and carries TV, a generator and life jackets. No counter number is on record for this launch — ask at the ghat office for the day's slot.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "08:00 AM",
-        "fromDestination": "01:30 PM"
+      "dhaka_to_chandpur": {
+        "departure": "08:00 AM",
+        "duration": "4h"
       },
-      "duration": {
-        "toDestination": "4h",
-        "toDhaka": "3h 30m"
+      "chandpur_to_dhaka": {
+        "departure": "01:30 PM",
+        "duration": "3h 30m"
       }
     },
     "fares": {
@@ -1552,14 +1713,15 @@
       "from": "Dhaka",
       "to": "Barishal"
     },
+    "description": "MV M Khan 7 runs the Dhaka ⇄ Barishal route for M Khan Shipping Lines on an alternating-date rotation: it leaves Sadarghat on even-numbered dates at 08:30 PM and Barishal on odd-numbered dates at 09:00 PM, with the crossing taking about 6 hours 30 minutes. Deck is ৳300; a non-AC single cabin runs ৳1,000–1,100 and the AC single ৳1,500, the non-AC double ৳2,000–2,200 and the AC double ৳2,400, the AC family or semi-VIP cabin ৳3,500 and the VIP cabin ৳6,000–15,000 depending on class and size. An AC sofa-zone seat is also sold at about ৳600. Schedules can change on weather or port authority decisions. The four-floor, twin-engine launch cruises at about 18 knots and carries AC, TV, a restaurant, CCTV and a generator. For the day's exact departure slot and cabin availability, call 01332528601.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "09:00 PM",
-        "fromDestination": "09:00 PM"
+      "dhaka_to_barishal": {
+        "departure": "09:00 PM",
+        "duration": "6h 30m"
       },
-      "duration": {
-        "toDestination": "6h 30m",
-        "toDhaka": "6h 30m"
+      "barishal_to_dhaka": {
+        "departure": "09:00 PM",
+        "duration": "6h 30m"
       }
     },
     "fares": {
@@ -1567,12 +1729,21 @@
       "deck": 300,
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1000,
+      "singleCabinNonAC": {
+        "min": 1000,
+        "max": 1100
+      },
       "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2000,
+      "doubleCabinNonAC": {
+        "min": 2000,
+        "max": 2200
+      },
       "doubleCabinAC": 2400,
       "familyCabinAC": 3500,
-      "vipCabin": 7000
+      "vipCabin": {
+        "min": 6000,
+        "max": 15000
+      }
     },
     "amenities": [
       "AC",
@@ -1600,14 +1771,15 @@
       "from": "Dhaka",
       "to": "Barishal"
     },
+    "description": "MV Manami is a luxury double-bottomed launch on the Dhaka ⇄ Barishal route for Salam Shipping Lines Limited, calling at Chandpur on the way. It leaves Sadarghat at 09:00 PM — departures run as late as 09:55 PM — and Barishal's Bandar Road Ghat at the same hour, with the crossing taking about 5 hours 30 minutes; schedules vary with weather and river conditions. Deck is ৳350 and an economy chair ৳800; single cabins are ৳1,300 non-AC and ৳1,400 with AC, doubles ৳2,400 and ৳2,500, the AC family cabin ৳3,000 and the luxury VIP duplex ৳8,000. The four-floor, twin-engine vessel cruises at about 20 knots and carries AC, TV, a restaurant, free WiFi, CCTV, a prayer room and a generator, with an onboard ATM and limited medical hours. For the day's exact departure slot and cabin availability, call 01329643771.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "09:00 PM",
-        "fromDestination": "09:00 PM"
+      "dhaka_to_barishal": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       },
-      "duration": {
-        "toDestination": "5h 30m",
-        "toDhaka": "5h 30m"
+      "barishal_to_dhaka": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       }
     },
     "fares": {
@@ -1650,19 +1822,23 @@
       "from": "Dhaka",
       "to": "Borhanuddin"
     },
+    "description": "MV Manik 1 runs the Dhaka ⇄ Borhanuddin route for Swan Shipping Lines by way of Gangapur in Bhola, leaving Sadarghat at 06:30 PM — the boarding window runs to about 07:15 PM — and starting back from Borhanuddin at 05:30 PM; the run down takes about 9 hours and the return about 8 hours 30 minutes. Deck has no fixed price and goes for roughly ৳400–500; single cabins are ৳1,000 non-AC and ৳1,400 with AC, doubles ৳2,000 and ৳2,400, the AC family cabin ৳3,800 and the VIP cabin ৳5,000. The three-floor, twin-engine launch cruises at about 16 knots and carries AC, TV, a generator and life jackets. No counter number is on record for this launch — ask at the Sadarghat ghat office for the day's slot and cabin availability.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "06:30 PM",
-        "fromDestination": "05:30 PM"
+      "dhaka_to_borhanuddin": {
+        "departure": "06:30 PM",
+        "duration": "9h"
       },
-      "duration": {
-        "toDestination": "9h",
-        "toDhaka": "8h 30m"
+      "borhanuddin_to_dhaka": {
+        "departure": "05:30 PM",
+        "duration": "8h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 400,
+      "deck": {
+        "min": 400,
+        "max": 500
+      },
       "economyChair": null,
       "businessClassAC": null,
       "singleCabinNonAC": 1000,
@@ -1697,14 +1873,15 @@
       "from": "Dhaka",
       "to": "Patarhat"
     },
+    "description": "MV Manik 5 is recorded on the Dhaka ⇄ Patarhat route for Swan Shipping Lines, leaving Sadarghat at 07:00 PM and starting back at 05:30 PM; the run down takes about 9 hours and the return about 8 hours 30 minutes. The vessel also works a Dhaka – Shoula – Muladi service by way of Nemarhat and Sluicegate, leaving Dhaka around 08:30 PM and Muladi around 07:30 PM, so confirm which rotation is running. Deck is ৳400; single cabins are ৳1,000 non-AC and ৳1,400 with AC, doubles ৳2,000 and ৳2,400, the AC family cabin ৳3,800 and the VIP cabin ৳4,000–5,000. Fares are subject to authority revisions on fuel costs or occasions such as Eid. The three-floor, twin-engine launch cruises at about 16 knots and carries AC, TV, a generator and life jackets. No counter number is on record — ask at the Sadarghat ghat office for the day's slot.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "07:00 PM",
-        "fromDestination": "05:30 PM"
+      "dhaka_to_patarhat": {
+        "departure": "07:00 PM",
+        "duration": "9h"
       },
-      "duration": {
-        "toDestination": "9h",
-        "toDhaka": "8h 30m"
+      "patarhat_to_dhaka": {
+        "departure": "05:30 PM",
+        "duration": "8h 30m"
       }
     },
     "fares": {
@@ -1717,7 +1894,10 @@
       "doubleCabinNonAC": 2000,
       "doubleCabinAC": 2400,
       "familyCabinAC": 3800,
-      "vipCabin": 5000
+      "vipCabin": {
+        "min": 4000,
+        "max": 5000
+      }
     },
     "amenities": [
       "AC",
@@ -1744,19 +1924,23 @@
       "from": "Dhaka",
       "to": "Ghosherhat"
     },
+    "description": "MV Manik 9 is recorded on the Dhaka ⇄ Ghosherhat route for MK Shipping Line, leaving Sadarghat at 06:30 PM — the boarding window runs from about 06:00 PM to 07:15 PM — and starting back at 05:00 PM; the run down takes about 10 hours and the return about 9 hours 30 minutes. The vessel is also reported working a Dhaka ⇄ Lalmohan (Bhola) service returning around 04:30 PM, so confirm the destination before travelling. Deck has no fixed price and goes for roughly ৳450–500; single cabins are ৳1,100 non-AC and ৳1,500 with AC, doubles ৳2,200 and ৳2,600, the AC family cabin ৳4,000 and the VIP cabin ৳5,500. The three-floor, twin-engine launch cruises at about 16 knots and carries AC, TV, a generator and life jackets. No counter number is on record — ask at the Sadarghat ghat office for the day's slot and cabin availability.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "06:30 PM",
-        "fromDestination": "05:00 PM"
+      "dhaka_to_ghosherhat": {
+        "departure": "06:30 PM",
+        "duration": "10h"
       },
-      "duration": {
-        "toDestination": "10h",
-        "toDhaka": "9h 30m"
+      "ghosherhat_to_dhaka": {
+        "departure": "05:00 PM",
+        "duration": "9h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 450,
+      "deck": {
+        "min": 450,
+        "max": 500
+      },
       "economyChair": null,
       "businessClassAC": null,
       "singleCabinNonAC": 1100,
@@ -1791,27 +1975,40 @@
       "from": "Dhaka",
       "to": "Lalmohan"
     },
+    "description": "MV Manik 11 is a coastal passenger launch on the Dhaka ⇄ Lalmohan route for Manik Group, leaving Sadarghat at 07:15 PM — evening departures across the fleet run between about 06:45 PM and 08:30 PM on a rotational pairing with other vessels — and starting back from Lalmohan at 04:30 PM; the run down takes about 10 hours and the return about 9 hours 30 minutes. It also serves Bhola and Nazirpur landings on some rotations. Deck has no fixed price and goes for roughly ৳150–500, with a non-AC chair at ৳400 and an AC business chair at ৳500; a single cabin runs ৳1,000–1,200, a double ৳1,800–2,500, the AC family cabin ৳4,000 and the VIP cabin ৳4,000–6,000. Schedules and fares are adjusted seasonally and by route assignment at the terminal. The three-floor, twin-engine launch cruises at about 17 knots and carries AC, TV, CCTV, a generator and life jackets. For the day's exact departure slot and cabin availability, call 01766960869.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "07:15 PM",
-        "fromDestination": "04:30 PM"
+      "dhaka_to_lalmohan": {
+        "departure": "07:15 PM",
+        "duration": "10h"
       },
-      "duration": {
-        "toDestination": "10h",
-        "toDhaka": "9h 30m"
+      "lalmohan_to_dhaka": {
+        "departure": "04:30 PM",
+        "duration": "9h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 500,
-      "economyChair": null,
-      "businessClassAC": null,
-      "singleCabinNonAC": 1200,
+      "deck": {
+        "min": 150,
+        "max": 500
+      },
+      "economyChair": 400,
+      "businessClassAC": 500,
+      "singleCabinNonAC": {
+        "min": 1000,
+        "max": 1200
+      },
       "singleCabinAC": 1200,
-      "doubleCabinNonAC": 2200,
+      "doubleCabinNonAC": {
+        "min": 1800,
+        "max": 2500
+      },
       "doubleCabinAC": 2200,
       "familyCabinAC": 4000,
-      "vipCabin": 6000
+      "vipCabin": {
+        "min": 4000,
+        "max": 6000
+      }
     },
     "amenities": [
       "AC",
@@ -1839,14 +2036,15 @@
       "from": "Dhaka",
       "to": "Chandpur"
     },
+    "description": "MV Mayur 1 is recorded on the Dhaka ⇄ Chandpur route for Mayur Group, leaving Sadarghat at 08:30 AM and starting back from Chandpur at 02:00 PM on a 3 hour 30 minute run. No real-time schedule or fare chart for this particular vessel is listed on BIWTA or public transport directories, and Mayur-series boats are rotated across the southern Barisal, Bhola and Chandpur waterways, so confirm the assignment before travelling. On the Chandpur run deck is ৳180, an economy chair ৳250 and AC business class ৳400; single cabins are ৳700 non-AC and ৳800 with AC, doubles ৳1,400 and ৳1,600, the AC family cabin ৳2,500 and the VIP cabin ৳3,500. The three-floor, twin-engine launch cruises at about 16 knots and carries TV, a generator and life jackets. For the day's exact departure slot and cabin availability, call 01711-008777.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "08:30 AM",
-        "fromDestination": "02:00 PM"
+      "dhaka_to_chandpur": {
+        "departure": "08:30 AM",
+        "duration": "3h 30m"
       },
-      "duration": {
-        "toDestination": "3h 30m",
-        "toDhaka": "3h 30m"
+      "chandpur_to_dhaka": {
+        "departure": "02:00 PM",
+        "duration": "3h 30m"
       }
     },
     "fares": {
@@ -1885,14 +2083,15 @@
       "from": "Dhaka",
       "to": "Chandpur"
     },
+    "description": "MV Mayur 2 runs the Dhaka ⇄ Chandpur route for Mayur Group, leaving Sadarghat at 12:30 PM and starting back from Chandpur at 12:40 AM, with the trip taking about 3 hours 30 minutes. Fares are fixed: ৳180 for deck, ৳250 for an economy chair and ৳400 for AC business class; single cabins are ৳700 non-AC and ৳800 with AC, doubles ৳1,400 and ৳1,600, the AC family cabin ৳2,500 and the VIP cabin ৳3,500. The three-floor, twin-engine launch cruises at about 16 knots and carries TV, a generator and life jackets. For the day's exact departure slot and cabin availability, call 01759-944144.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "12:30 PM",
-        "fromDestination": "12:40 AM"
+      "dhaka_to_chandpur": {
+        "departure": "12:30 PM",
+        "duration": "3h 30m"
       },
-      "duration": {
-        "toDestination": "3h 30m",
-        "toDhaka": "3h 30m"
+      "chandpur_to_dhaka": {
+        "departure": "12:40 AM",
+        "duration": "3h 30m"
       }
     },
     "fares": {
@@ -1931,24 +2130,34 @@
       "from": "Dhaka",
       "to": "Chandpur"
     },
+    "description": "MV Mayur 7, also spelled Moyur 7, runs the Dhaka ⇄ Chandpur route for Mayur Group, leaving Sadarghat at 01:30 PM and starting back from Chandpur late at 12:15 AM, with the trip taking about 3 hours 30 minutes. Deck is ৳180 and a chair ৳250–300, with AC business class at ৳400; a non-AC single cabin runs ৳700–850 and the AC single ৳800, the non-AC double ৳1,400–1,700 and the AC double ৳1,600, the AC family cabin ৳2,500 and the VIP cabin ৳3,500. Prices rise a little over holidays and peak seasons such as Eid, so check with the counter for real-time cabin availability. The three-floor, twin-engine launch cruises at about 16 knots and carries TV, a generator and life jackets. For the day's exact departure slot, call 01711-008777.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "01:30 PM",
-        "fromDestination": "12:15 AM"
+      "dhaka_to_chandpur": {
+        "departure": "01:30 PM",
+        "duration": "3h 30m"
       },
-      "duration": {
-        "toDestination": "3h 30m",
-        "toDhaka": "3h 30m"
+      "chandpur_to_dhaka": {
+        "departure": "12:15 AM",
+        "duration": "3h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
       "deck": 180,
-      "economyChair": 250,
+      "economyChair": {
+        "min": 250,
+        "max": 300
+      },
       "businessClassAC": 400,
-      "singleCabinNonAC": 700,
+      "singleCabinNonAC": {
+        "min": 700,
+        "max": 850
+      },
       "singleCabinAC": 800,
-      "doubleCabinNonAC": 1400,
+      "doubleCabinNonAC": {
+        "min": 1400,
+        "max": 1700
+      },
       "doubleCabinAC": 1600,
       "familyCabinAC": 2500,
       "vipCabin": 3500
@@ -1977,24 +2186,34 @@
       "from": "Dhaka",
       "to": "Chandpur"
     },
+    "description": "MV Mayur 10 is a luxury launch on the Dhaka ⇄ Chandpur route for Mayur Group, carrying on to Shariatpur's Eidgah Ferry Ghat. It leaves Sadarghat at 12:30 PM and starts back from Chandpur at 12:30 AM, taking about 3 hours; timings shift a little on low passenger turnouts or when the fleet rotation is shared with MV Mayur 7, and an evening slot around 05:30 PM is sometimes run instead. Deck has no fixed price and goes for roughly ৳180–200, with an economy chair at ৳250 and AC business class at ৳400; a non-AC single cabin runs ৳700–900 and the AC single ৳800, the non-AC double ৳1,300–1,600 and the AC double ৳1,600, the AC family cabin ৳2,500 and the VIP cabin ৳3,500. The four-floor, twin-engine launch cruises at about 18 knots and carries TV, a generator, life jackets, radar, GPS, an echo sounder and CC cameras. For the day's exact departure slot and cabin availability, call 01711-008777.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "12:30 PM",
-        "fromDestination": "11:30 PM"
+      "dhaka_to_chandpur": {
+        "departure": "12:30 PM",
+        "duration": "3h"
       },
-      "duration": {
-        "toDestination": "3h",
-        "toDhaka": "3h"
+      "chandpur_to_dhaka": {
+        "departure": "12:30 AM",
+        "duration": "3h"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 180,
+      "deck": {
+        "min": 180,
+        "max": 200
+      },
       "economyChair": 250,
       "businessClassAC": 400,
-      "singleCabinNonAC": 700,
+      "singleCabinNonAC": {
+        "min": 700,
+        "max": 900
+      },
       "singleCabinAC": 800,
-      "doubleCabinNonAC": 1400,
+      "doubleCabinNonAC": {
+        "min": 1300,
+        "max": 1600
+      },
       "doubleCabinAC": 1600,
       "familyCabinAC": 2500,
       "vipCabin": 3500
@@ -2027,14 +2246,15 @@
       "from": "Dhaka",
       "to": "Chandpur"
     },
+    "description": "MV Meghna Rani runs the Dhaka ⇄ Chandpur route for Meghna Group, leaving Sadarghat at 08:00 AM and starting back from Chandpur at 01:00 PM, with the trip taking about 3 hours 30 minutes. Deck is ৳200 per person, an economy chair ৳300 and AC business class ৳400; single cabins are ৳800 non-AC and ৳1,000 with AC, doubles ৳1,300 and ৳1,500, the AC family cabin ৳2,000 and the VIP cabin ৳3,500. The three-floor, twin-engine launch cruises at about 15 knots and carries TV, a generator and life jackets. For the day's exact departure slot and cabin availability, call 01711311449.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "08:00 AM",
-        "fromDestination": "01:00 PM"
+      "dhaka_to_chandpur": {
+        "departure": "08:00 AM",
+        "duration": "3h 30m"
       },
-      "duration": {
-        "toDestination": "3h 30m",
-        "toDhaka": "3h 30m"
+      "chandpur_to_dhaka": {
+        "departure": "01:00 PM",
+        "duration": "3h 30m"
       }
     },
     "fares": {
@@ -2073,14 +2293,15 @@
       "from": "Dhaka",
       "to": "Chandpur"
     },
+    "description": "MV Mitali 7 runs the Dhaka ⇄ Chandpur route down the Meghna for Bengal Shipping Company, leaving Sadarghat at 09:50 AM — boarding from about 09:40 AM — and starting back from Chandpur at 10:00 PM, with the trip taking about 3 hours 30 minutes. Deck is ৳100, a second-class chair ৳150 and AC business class ৳250, with a relax chair sold at about ৳200; a non-AC single cabin is ৳500 and the AC single ৳500–700, the non-AC double ৳800 and the AC double ৳1,000–1,200, the AC family cabin ৳1,400–1,600 and the VIP cabin ৳1,800–2,000. The three-floor, twin-engine launch cruises at about 16 knots and carries TV, a generator and life jackets. For the day's exact departure slot and cabin availability, call 01775001272.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "09:50 AM",
-        "fromDestination": "10:00 PM"
+      "dhaka_to_chandpur": {
+        "departure": "09:50 AM",
+        "duration": "3h 30m"
       },
-      "duration": {
-        "toDestination": "3h 30m",
-        "toDhaka": "3h 30m"
+      "chandpur_to_dhaka": {
+        "departure": "10:00 PM",
+        "duration": "3h 30m"
       }
     },
     "fares": {
@@ -2089,11 +2310,23 @@
       "economyChair": 150,
       "businessClassAC": 250,
       "singleCabinNonAC": 500,
-      "singleCabinAC": 700,
+      "singleCabinAC": {
+        "min": 500,
+        "max": 700
+      },
       "doubleCabinNonAC": 800,
-      "doubleCabinAC": 1200,
-      "familyCabinAC": 1400,
-      "vipCabin": 2000
+      "doubleCabinAC": {
+        "min": 1000,
+        "max": 1200
+      },
+      "familyCabinAC": {
+        "min": 1400,
+        "max": 1600
+      },
+      "vipCabin": {
+        "min": 1800,
+        "max": 2000
+      }
     },
     "amenities": [
       "TV",
@@ -2119,14 +2352,15 @@
       "from": "Dhaka",
       "to": "Chandpur"
     },
+    "description": "MV New Al-Borak runs the Dhaka ⇄ Chandpur route for Al-Borak Group, leaving Sadarghat at 06:45 PM and starting back from Chandpur at 10:30 AM, with the trip taking about 3 hours 30 minutes. Fares are fixed: ৳200 for deck, ৳300 for an economy chair and ৳400 for AC business class; single cabins are ৳800 non-AC and ৳1,000 with AC, doubles ৳1,300 and ৳1,500, the AC family cabin ৳2,500 and the VIP cabin ৳3,500. The three-floor, twin-engine launch cruises at about 17 knots and carries AC, TV, a generator and life jackets. For the day's exact departure slot and cabin availability, call 01717002029.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "06:45 PM",
-        "fromDestination": "10:30 AM"
+      "dhaka_to_chandpur": {
+        "departure": "06:45 PM",
+        "duration": "3h 30m"
       },
-      "duration": {
-        "toDestination": "3h 30m",
-        "toDhaka": "3h 30m"
+      "chandpur_to_dhaka": {
+        "departure": "10:30 AM",
+        "duration": "3h 30m"
       }
     },
     "fares": {
@@ -2166,27 +2400,43 @@
       "from": "Dhaka",
       "to": "Barishal"
     },
+    "description": "MV Parabat 8 runs the southern night route from Dhaka to Barishal for Parabat Group, carrying on to Hularhat and Bhandaria. It leaves Sadarghat at 09:00 PM with boarding from earlier in the evening, and the return legs start at the same hour, with the crossing taking about 5 hours 30 minutes depending on river currents and the stops worked. Sailings follow BIWTA rules and weather. Deck has no fixed price and goes for roughly ৳300–350; a non-AC single cabin runs ৳1,000–1,400 and the AC single ৳1,200–1,500, the non-AC double ৳2,400 and the AC double ৳2,000–2,500, the AC family cabin ৳3,500 and the VIP cabin ৳5,000–7,000. Fares shift over national holidays, the Eid rush and official fuel price adjustments. The three-floor, twin-engine launch cruises at about 18 knots and carries AC, TV, CCTV, a prayer room and a generator. For the day's exact departure slot and cabin availability, call 01715384131.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "09:00 PM",
-        "fromDestination": "09:00 PM"
+      "dhaka_to_barishal": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       },
-      "duration": {
-        "toDestination": "5h 30m",
-        "toDhaka": "5h 30m"
+      "barishal_to_dhaka": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 350,
+      "deck": {
+        "min": 300,
+        "max": 350
+      },
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1400,
-      "singleCabinAC": 1500,
+      "singleCabinNonAC": {
+        "min": 1000,
+        "max": 1400
+      },
+      "singleCabinAC": {
+        "min": 1200,
+        "max": 1500
+      },
       "doubleCabinNonAC": 2400,
-      "doubleCabinAC": 2500,
+      "doubleCabinAC": {
+        "min": 2000,
+        "max": 2500
+      },
       "familyCabinAC": 3500,
-      "vipCabin": 7000
+      "vipCabin": {
+        "min": 5000,
+        "max": 7000
+      }
     },
     "amenities": [
       "AC",
@@ -2214,27 +2464,40 @@
       "from": "Dhaka",
       "to": "Barishal"
     },
+    "description": "MV Parabat 9 runs nightly between Dhaka and Barishal for Parabat Group, leaving Sadarghat at 09:00 PM — departures are also quoted from about 08:45 PM — and starting back from Barishal on the evening slot, reaching the far end around 4:00 to 5:00 AM after about 5 hours 30 minutes. Deck has no fixed price and goes for roughly ৳200–350; a non-AC single cabin runs ৳1,000–1,400 and the AC single ৳1,500, the non-AC double ৳1,800–2,500 and the AC double ৳2,500, the AC family cabin ৳3,500 and the VIP cabin ৳4,000–8,000 depending on scale and size. The three-floor, twin-engine launch cruises at about 18 knots and carries AC, TV, CCTV, a prayer room and a generator. For seat availability and advance booking, call 01711346080.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "09:00 PM",
-        "fromDestination": "09:00 PM"
+      "dhaka_to_barishal": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       },
-      "duration": {
-        "toDestination": "5h 30m",
-        "toDhaka": "5h 30m"
+      "barishal_to_dhaka": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 350,
+      "deck": {
+        "min": 200,
+        "max": 350
+      },
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1400,
+      "singleCabinNonAC": {
+        "min": 1000,
+        "max": 1400
+      },
       "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2400,
+      "doubleCabinNonAC": {
+        "min": 1800,
+        "max": 2500
+      },
       "doubleCabinAC": 2500,
       "familyCabinAC": 3500,
-      "vipCabin": 7000
+      "vipCabin": {
+        "min": 4000,
+        "max": 8000
+      }
     },
     "amenities": [
       "AC",
@@ -2262,24 +2525,34 @@
       "from": "Dhaka",
       "to": "Barishal"
     },
+    "description": "MV Parabat 10 runs nightly between Dhaka and Barishal for Parabat Group, leaving Sadarghat at 09:00 PM — departures are also quoted from about 08:30 PM — and Barishal at the same hour, reaching the far end around 4:00 AM after about 5 hours 30 minutes, longer when the river runs badly. Deck has no fixed price and goes for roughly ৳300–450; a non-AC single cabin runs ৳900–1,400 and the AC single ৳1,500, the non-AC double ৳1,800–2,400 and the AC double ৳2,500, the AC family cabin ৳3,500 and the VIP cabin ৳7,000. The three-floor, twin-engine launch cruises at about 18 knots and carries AC, TV, CCTV, a prayer room and a generator. For the day's exact departure slot and cabin availability, call 01552429746.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "09:00 PM",
-        "fromDestination": "09:00 PM"
+      "dhaka_to_barishal": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       },
-      "duration": {
-        "toDestination": "5h 30m",
-        "toDhaka": "5h 30m"
+      "barishal_to_dhaka": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 350,
+      "deck": {
+        "min": 300,
+        "max": 450
+      },
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1400,
+      "singleCabinNonAC": {
+        "min": 900,
+        "max": 1400
+      },
       "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2400,
+      "doubleCabinNonAC": {
+        "min": 1800,
+        "max": 2400
+      },
       "doubleCabinAC": 2500,
       "familyCabinAC": 3500,
       "vipCabin": 7000
@@ -2310,24 +2583,34 @@
       "from": "Dhaka",
       "to": "Barishal"
     },
+    "description": "MV Parabat 11 runs the Dhaka ⇄ Barishal route for Parabat Group on a rotation shared with the rest of the fleet, leaving Sadarghat at 09:00 PM — the window opens around 08:30 PM — and Barishal River Port at the same hour on alternate days, with the crossing taking about 5 hours 30 minutes. Deck has no fixed price and goes for roughly ৳350–450; a non-AC single cabin runs ৳1,000–1,400 and the AC single ৳1,500, the non-AC double ৳1,800–2,400 and the AC double ৳2,500, the AC family cabin ৳3,500 and the VIP cabin ৳7,500. Fares vary a little over national holidays, Eid and Inland Water Transport Authority revisions. The three-floor, twin-engine launch cruises at about 18 knots and carries AC, TV, CCTV, a prayer room and a generator. For the day's exact departure slot and cabin availability, call 01711344745.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "09:00 PM",
-        "fromDestination": "09:00 PM"
+      "dhaka_to_barishal": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       },
-      "duration": {
-        "toDestination": "5h 30m",
-        "toDhaka": "5h 30m"
+      "barishal_to_dhaka": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 350,
+      "deck": {
+        "min": 350,
+        "max": 450
+      },
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1400,
+      "singleCabinNonAC": {
+        "min": 1000,
+        "max": 1400
+      },
       "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2400,
+      "doubleCabinNonAC": {
+        "min": 1800,
+        "max": 2400
+      },
       "doubleCabinAC": 2500,
       "familyCabinAC": 3500,
       "vipCabin": 7500
@@ -2358,24 +2641,34 @@
       "from": "Dhaka",
       "to": "Barishal"
     },
+    "description": "MV Parabat 12 runs the evening Dhaka ⇄ Barishal service for Parabat Group, leaving Sadarghat at 09:00 PM — the window opens around 08:30 PM — and Barishal Launch Ghat at the same hour, arriving the next morning after about 5 hours 30 minutes, longer when the river is against it. Deck has no fixed price and goes for roughly ৳350–400; a non-AC single cabin runs ৳1,200–1,400 and the AC single ৳1,500, the non-AC double ৳2,200–2,400 and the AC double ৳2,500, the AC family cabin ৳4,000 and the VIP cabin ৳8,000. Tickets are sold at the Sadarghat and Barishal counters or through authorised local agents. The three-floor, twin-engine launch cruises at about 19 knots and carries AC, TV, CCTV, a restaurant, a prayer room and a generator. For bookings and cabin availability, call 01789448088.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "09:00 PM",
-        "fromDestination": "09:00 PM"
+      "dhaka_to_barishal": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       },
-      "duration": {
-        "toDestination": "5h 30m",
-        "toDhaka": "5h 30m"
+      "barishal_to_dhaka": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 350,
+      "deck": {
+        "min": 350,
+        "max": 400
+      },
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1400,
+      "singleCabinNonAC": {
+        "min": 1200,
+        "max": 1400
+      },
       "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2400,
+      "doubleCabinNonAC": {
+        "min": 2200,
+        "max": 2400
+      },
       "doubleCabinAC": 2500,
       "familyCabinAC": 4000,
       "vipCabin": 8000
@@ -2407,27 +2700,43 @@
       "from": "Dhaka",
       "to": "Patuakhali"
     },
+    "description": "MV Parabat 14 works the southern coastal run from Dhaka to Patuakhali for Parabat Group, also serving landings such as Kalaiya in Baufal and the Rangabali side. It leaves Sadarghat at 07:30 PM — evening departures across this route are also quoted around 09:00 PM — and starts back at 05:30 PM, taking about 9 hours 30 minutes down and 9 hours back, with frequency set by water traffic guidelines and weather. Deck has no fixed price and goes for roughly ৳300–350; a non-AC single cabin runs ৳900–1,300 and the AC single ৳1,600, the non-AC double ৳2,000–2,400 and the AC double ৳2,800, the AC family or semi-VIP cabin ৳3,500–4,000 and the VIP cabin ৳5,000–10,000 depending on the bed configuration. The three-floor, twin-engine launch cruises at about 17 knots and carries AC, TV, CCTV, a prayer room and a generator. For the day's exact departure slot and cabin availability, call 01712495144.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "07:30 PM",
-        "fromDestination": "05:30 PM"
+      "dhaka_to_patuakhali": {
+        "departure": "07:30 PM",
+        "duration": "9h 30m"
       },
-      "duration": {
-        "toDestination": "9h 30m",
-        "toDhaka": "9h"
+      "patuakhali_to_dhaka": {
+        "departure": "05:30 PM",
+        "duration": "9h"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 350,
+      "deck": {
+        "min": 300,
+        "max": 350
+      },
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1300,
+      "singleCabinNonAC": {
+        "min": 900,
+        "max": 1300
+      },
       "singleCabinAC": 1600,
-      "doubleCabinNonAC": 2400,
+      "doubleCabinNonAC": {
+        "min": 2000,
+        "max": 2400
+      },
       "doubleCabinAC": 2800,
-      "familyCabinAC": 4000,
-      "vipCabin": 7000
+      "familyCabinAC": {
+        "min": 3500,
+        "max": 4000
+      },
+      "vipCabin": {
+        "min": 5000,
+        "max": 10000
+      }
     },
     "amenities": [
       "AC",
@@ -2455,14 +2764,15 @@
       "from": "Dhaka",
       "to": "Ilisha"
     },
+    "description": "MV Parabat 15 runs overnight on the Dhaka ⇄ Ilisha route for Parabat Group, leaving Sadarghat at 08:00 PM and starting back from Ilisha at 08:30 PM. The passage takes about 5 hours in either direction. Deck is ৳350; single cabins are ৳1,200 non-AC and ৳1,400 with AC, doubles ৳2,200 and ৳2,400, the AC family cabin ৳3,500 and the VIP cabin ৳6,000. The three-floor, twin-engine launch cruises at about 18 knots and carries AC, TV, CCTV, a generator and a prayer room. For the day's exact departure slot and cabin availability, call 01711311029.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "08:00 PM",
-        "fromDestination": "08:30 PM"
+      "dhaka_to_ilisha": {
+        "departure": "08:00 PM",
+        "duration": "5h"
       },
-      "duration": {
-        "toDestination": "5h",
-        "toDhaka": "5h"
+      "ilisha_to_dhaka": {
+        "departure": "08:30 PM",
+        "duration": "5h"
       }
     },
     "fares": {
@@ -2503,14 +2813,15 @@
       "from": "Dhaka",
       "to": "Barishal"
     },
+    "description": "MV Parabat 18 runs the daily Dhaka ⇄ Barishal service for Parabat Group, leaving Sadarghat at 09:00 PM and Barishal Terminal at the same hour, with the crossing taking about 5 hours 30 minutes. Deck is ৳350, a single cabin ৳1,400 non-AC and ৳1,400–1,500 with AC, a double ৳2,400 non-AC and ৳2,400–2,500 with AC, the AC family cabin ৳4,000 and the VIP cabins ৳5,000–10,000 depending on size and luxury tier; a single large-bed cabin is sold at about ৳1,600 and a deluxe cabin at about ৳2,000. Fares vary a little over holidays such as Eid and peak seasons. The four-floor launch runs three engines at about 19 knots and carries AC, TV, CCTV, a restaurant, a VIP suite, a prayer room and a generator. For bookings and seat confirmations, call 01711276597.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "09:00 PM",
-        "fromDestination": "09:00 PM"
+      "dhaka_to_barishal": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       },
-      "duration": {
-        "toDestination": "5h 30m",
-        "toDhaka": "5h 30m"
+      "barishal_to_dhaka": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       }
     },
     "fares": {
@@ -2519,11 +2830,20 @@
       "economyChair": null,
       "businessClassAC": null,
       "singleCabinNonAC": 1400,
-      "singleCabinAC": 1500,
+      "singleCabinAC": {
+        "min": 1400,
+        "max": 1500
+      },
       "doubleCabinNonAC": 2400,
-      "doubleCabinAC": 2500,
+      "doubleCabinAC": {
+        "min": 2400,
+        "max": 2500
+      },
       "familyCabinAC": 4000,
-      "vipCabin": 8500
+      "vipCabin": {
+        "min": 5000,
+        "max": 10000
+      }
     },
     "amenities": [
       "AC",
@@ -2553,27 +2873,43 @@
       "from": "Dhaka",
       "to": "Patuakhali"
     },
+    "description": "MV Prince Awlad 7 runs the Dhaka ⇄ Patuakhali route for Prince Awlad Group by way of Boga, leaving Sadarghat at 07:00 PM and starting back from Patuakhali at 05:45 PM on a 10-hour overnight run. Deck has no fixed price and goes for roughly ৳450–500, an economy chair is ৳600 and AC business class ৳800; a non-AC single cabin runs ৳1,100–1,300 and the AC single ৳1,500, the non-AC double ৳2,200–2,400 and the AC double ৳2,800, the AC family cabin ৳3,000–3,500 and the VIP cabin ৳5,000–6,000. The four-floor, twin-engine launch cruises at about 17 knots and carries AC, TV, a generator and life jackets. For the day's exact departure slot and cabin availability, call 01714-906692.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "06:30 PM",
-        "fromDestination": "05:00 PM"
+      "dhaka_to_patuakhali": {
+        "departure": "07:00 PM",
+        "duration": "10h"
       },
-      "duration": {
-        "toDestination": "10h",
-        "toDhaka": "10h"
+      "patuakhali_to_dhaka": {
+        "departure": "05:45 PM",
+        "duration": "10h"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 450,
+      "deck": {
+        "min": 450,
+        "max": 500
+      },
       "economyChair": 600,
       "businessClassAC": 800,
-      "singleCabinNonAC": 1200,
+      "singleCabinNonAC": {
+        "min": 1100,
+        "max": 1300
+      },
       "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2200,
+      "doubleCabinNonAC": {
+        "min": 2200,
+        "max": 2400
+      },
       "doubleCabinAC": 2800,
-      "familyCabinAC": 3500,
-      "vipCabin": 6000
+      "familyCabinAC": {
+        "min": 3000,
+        "max": 3500
+      },
+      "vipCabin": {
+        "min": 5000,
+        "max": 6000
+      }
     },
     "amenities": [
       "AC",
@@ -2600,14 +2936,15 @@
       "from": "Dhaka",
       "to": "Patuakhali"
     },
+    "description": "MV Prince Awlad 10 runs the Dhaka ⇄ Patuakhali route for Prince Awlad Group by way of Barisal, leaving Sadarghat at 06:30 PM and starting back from Patuakhali at 05:00 PM, with the overnight passage taking about 10 hours in either direction. Deck is ৳450, an economy chair ৳600 and AC business class ৳800; single cabins are ৳1,200 non-AC and ৳1,500 with AC, doubles ৳2,200 and ৳2,800, the AC family cabin ৳3,500 and the VIP cabin ৳6,000. The four-floor, twin-engine launch cruises at about 17 knots and carries AC, TV, a generator and life jackets. For the day's exact departure slot and cabin availability, call 01714-906692.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "06:30 PM",
-        "fromDestination": "05:00 PM"
+      "dhaka_to_patuakhali": {
+        "departure": "06:30 PM",
+        "duration": "10h"
       },
-      "duration": {
-        "toDestination": "10h",
-        "toDhaka": "10h"
+      "patuakhali_to_dhaka": {
+        "departure": "05:00 PM",
+        "duration": "10h"
       }
     },
     "fares": {
@@ -2647,19 +2984,23 @@
       "from": "Dhaka",
       "to": "Chandpur"
     },
+    "description": "MV Prince of Rasel 3 works the Dhaka ⇄ Chandpur river route, leaving Sadarghat at 12:30 AM and starting back from Chandpur at 11:00 AM; the run down takes about 4 hours and the return about 3 hours 30 minutes. Deck has no fixed price and follows the government-regulated rate at roughly ৳100–200, with an economy chair at ৳250 and AC business class at ৳350; single cabins are ৳800 non-AC and ৳1,000 with AC, doubles ৳1,200 and ৳1,500, the AC family cabin ৳2,500 and the VIP cabin ৳4,000. Cabin prices are reset by the operator with seasonal demand, so confirm at Sadarghat before travelling. The three-floor, twin-engine launch cruises at about 16 knots and carries TV, a generator and life jackets. For precise cabin availability and current pricing, call the counter on 01712735300 or 01711320452.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "12:30 AM",
-        "fromDestination": "11:00 AM"
+      "dhaka_to_chandpur": {
+        "departure": "12:30 AM",
+        "duration": "4h"
       },
-      "duration": {
-        "toDestination": "4h",
-        "toDhaka": "3h 30m"
+      "chandpur_to_dhaka": {
+        "departure": "11:00 AM",
+        "duration": "3h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 200,
+      "deck": {
+        "min": 100,
+        "max": 200
+      },
       "economyChair": 250,
       "businessClassAC": 350,
       "singleCabinNonAC": 800,
@@ -2693,19 +3034,23 @@
       "from": "Dhaka",
       "to": "Barguna"
     },
+    "description": "MV Pubali 1 runs the Dhaka ⇄ Barguna route for Padma River Transport & Co., calling at Betagi, Bamna, Fuljhuri and Kakchira along the way. It leaves Sadarghat at 06:00 PM on a roughly 12-hour run and starts back from Barguna at 04:00 PM, taking about 11 hours 30 minutes. Deck has no fixed price and goes for roughly ৳350–500, subject to BIWTA adjustments; single cabins are ৳1,200 non-AC and ৳1,500 with AC, doubles ৳2,400 and ৳2,800, the AC family cabin ৳3,000 and the VIP cabin ৳5,000. Cabin rates vary by tier and season, so check at the Sadarghat counter or through an authorised ticketing platform. The three-floor, twin-engine launch cruises at about 16 knots and carries TV, a generator and life jackets. For the day's exact departure slot, call 01732601926.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "06:00 PM",
-        "fromDestination": "04:00 PM"
+      "dhaka_to_barguna": {
+        "departure": "06:00 PM",
+        "duration": "12h"
       },
-      "duration": {
-        "toDestination": "12h",
-        "toDhaka": "11h 30m"
+      "barguna_to_dhaka": {
+        "departure": "04:00 PM",
+        "duration": "11h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 400,
+      "deck": {
+        "min": 350,
+        "max": 500
+      },
       "economyChair": null,
       "businessClassAC": null,
       "singleCabinNonAC": 1200,
@@ -2740,19 +3085,23 @@
       "from": "Dhaka",
       "to": "Khepupara"
     },
+    "description": "MV Pubali 6 works the long southern run between Dhaka and Khepupara for Padma Waterways Co., reaching towards Payra Port and calling at Dashmina, Char Kajol, Baliatoli and Koralia. It leaves Sadarghat at 05:30 PM on a roughly 13-hour passage and starts back from Khepupara at 03:00 PM, taking about 12 hours 30 minutes. Deck has no fixed price and goes for roughly ৳500–740 depending on class; single cabins are ৳1,200 non-AC and ৳1,500 with AC, doubles ৳2,200 and ৳2,600, the AC family cabin ৳4,000 and the VIP cabin ৳6,000. Cabin quotes and availability come from the Sadarghat counter directly. The three-floor, twin-engine launch cruises at about 16 knots and carries TV, a generator and life jackets. No counter number is on record for this launch — ask at the Sadarghat ghat office for the day's slot.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "05:30 PM",
-        "fromDestination": "03:00 PM"
+      "dhaka_to_khepupara": {
+        "departure": "05:30 PM",
+        "duration": "13h"
       },
-      "duration": {
-        "toDestination": "13h",
-        "toDhaka": "12h 30m"
+      "khepupara_to_dhaka": {
+        "departure": "03:00 PM",
+        "duration": "12h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 500,
+      "deck": {
+        "min": 500,
+        "max": 740
+      },
       "economyChair": null,
       "businessClassAC": null,
       "singleCabinNonAC": 1200,
@@ -2787,27 +3136,43 @@
       "from": "Dhaka",
       "to": "Patuakhali"
     },
+    "description": "MV Pubali 12 runs the Dhaka ⇄ Patuakhali route for Padma Waterways Co. by way of Boga, leaving Sadarghat at 07:00 PM and starting back from Patuakhali at 05:45 PM; the run down takes about 10 hours and the return about 9 hours 30 minutes, and times shift with weather and river conditions. Deck has no fixed price and goes for roughly ৳400–500; a single cabin runs ৳1,100–1,300 non-AC and ৳1,500 with AC, the non-AC double ৳2,200–2,500 and the AC double ৳2,800, the AC family or semi-VIP cabin ৳3,000–5,000 and the VIP cabin ৳6,000–7,000. The three-floor, twin-engine launch cruises at about 16 knots and carries TV, a generator and life jackets. For the day's exact departure slot and cabin availability, call 01752822996.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "06:00 PM",
-        "fromDestination": "05:20 PM"
+      "dhaka_to_patuakhali": {
+        "departure": "07:00 PM",
+        "duration": "10h"
       },
-      "duration": {
-        "toDestination": "10h",
-        "toDhaka": "9h 30m"
+      "patuakhali_to_dhaka": {
+        "departure": "05:45 PM",
+        "duration": "9h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 400,
+      "deck": {
+        "min": 400,
+        "max": 500
+      },
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1100,
+      "singleCabinNonAC": {
+        "min": 1100,
+        "max": 1300
+      },
       "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2200,
+      "doubleCabinNonAC": {
+        "min": 2200,
+        "max": 2500
+      },
       "doubleCabinAC": 2800,
-      "familyCabinAC": 4000,
-      "vipCabin": 6000
+      "familyCabinAC": {
+        "min": 3000,
+        "max": 5000
+      },
+      "vipCabin": {
+        "min": 6000,
+        "max": 7000
+      }
     },
     "amenities": [
       "AC",
@@ -2835,14 +3200,15 @@
       "from": "Dhaka",
       "to": "Chandpur"
     },
+    "description": "MV Raf Raf works the Dhaka ⇄ Chandpur river route for Raf Raf Group, leaving Sadarghat at 03:30 PM and starting back from Chandpur at 08:00 AM, with the trip taking about 3 hours 20 minutes either way; departure times across the Raf Raf fleet are staggered by vessel. Deck is ৳100, an economy chair ৳200 and AC business class ৳400; single cabins are ৳800 non-AC and ৳1,000 with AC, doubles ৳1,200 and ৳1,500, the AC family cabin ৳3,000 and the VIP cabin ৳3,500. Cabin rates are best confirmed at the Sadarghat counter. The three-floor, twin-engine launch cruises at about 15 knots and carries TV and a generator. For the day's exact departure slot and cabin availability, call 01818-002029.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "03:30 PM",
-        "fromDestination": "08:00 AM"
+      "dhaka_to_chandpur": {
+        "departure": "03:30 PM",
+        "duration": "3h 20m"
       },
-      "duration": {
-        "toDestination": "3h 20m",
-        "toDhaka": "3h 20m"
+      "chandpur_to_dhaka": {
+        "departure": "08:00 AM",
+        "duration": "3h 20m"
       }
     },
     "fares": {
@@ -2880,14 +3246,15 @@
       "from": "Dhaka",
       "to": "Chandpur"
     },
+    "description": "MV Raf Raf 2, also spelled Roff Roff 2, works the Dhaka ⇄ Chandpur route for Raf Raf Group, leaving Sadarghat at midnight and starting back from Chandpur at 12:00 PM, with the trip taking about 3 hours 20 minutes either way. Deck is ৳100, an economy chair ৳200 and AC business class ৳400; single cabins are ৳800 non-AC and ৳1,000 with AC, doubles ৳1,200 and ৳1,500, the AC family cabin ৳3,000 and the VIP cabin ৳3,500. Cabin prices follow standard BIWTA water transport rates and adjust by season, so confirm on site at Sadarghat or by phone. The three-floor, twin-engine launch cruises at about 15 knots and carries TV and a generator. For booking and enquiries, call 01818-002029, 01765-010077 or 01776626611.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "08:00 AM",
-        "fromDestination": "12:00 PM"
+      "dhaka_to_chandpur": {
+        "departure": "12:00 AM",
+        "duration": "3h 20m"
       },
-      "duration": {
-        "toDestination": "3h 20m",
-        "toDhaka": "3h 20m"
+      "chandpur_to_dhaka": {
+        "departure": "12:00 PM",
+        "duration": "3h 20m"
       }
     },
     "fares": {
@@ -2925,14 +3292,15 @@
       "from": "Dhaka",
       "to": "Chandpur"
     },
+    "description": "MV Raf Raf 7, often spelled Roff Roff 7, works the Dhaka ⇄ Chandpur river route for Raf Raf Group, leaving Sadarghat at 06:45 PM and starting back from Chandpur at 06:00 AM; the trip takes about 3 hours 15 minutes, nearer 4 hours when the river is against it. Deck is ৳100 at the government-regulated rate and is normally paid on board once the launch is under way, with an economy chair at ৳200 and AC business class at ৳400; single cabins are ৳800 non-AC and ৳1,000 with AC, doubles ৳1,200 and ৳1,500, the AC family cabin ৳3,000 and the VIP cabin ৳3,500. Cabins are booked at the Sadarghat or Chandpur counters. The three-floor, twin-engine launch cruises at about 15 knots and carries TV and a generator. For bookings, call 01818-002029 or 01776626611.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "07:45 PM",
-        "fromDestination": "06:00 AM"
+      "dhaka_to_chandpur": {
+        "departure": "06:45 PM",
+        "duration": "3h 15m"
       },
-      "duration": {
-        "toDestination": "3h 15m",
-        "toDhaka": "3h 15m"
+      "chandpur_to_dhaka": {
+        "departure": "06:00 AM",
+        "duration": "3h 15m"
       }
     },
     "fares": {
@@ -2971,14 +3339,15 @@
       "from": "Dhaka",
       "to": "Hularhat (Pirojpur)"
     },
+    "description": "MV Rajdut 7, also known as Rajdut Prime, runs the Dhaka ⇄ Hularhat ⇄ Bhandaria route for Rajdut Group, calling at Fatullah, Munshiganj, Chandpur, Mirerhat, Banaripara, Swarupkati, Inderhat and Kawkhali. It leaves Sadarghat at 06:30 PM — the window runs to about 07:00 PM, typically on odd dates — and starts back from Hularhat and Bhandaria at 05:00 PM on even dates; the run down takes about 10 hours 30 minutes and the return about 9 hours 30 minutes. Deck is ৳400; a non-AC single cabin runs ৳1,000–1,200 and the AC single ৳1,500, the non-AC double ৳2,000–2,200 and the AC double ৳2,600, the AC family cabin ৳3,500 and the VIP cabin ৳6,000. Fares rise a little over peak holiday rushes such as Eid. The three-floor, twin-engine launch cruises at about 16 knots and carries AC, TV, a generator and life jackets. No counter number is on record — ask at the Sadarghat ghat office for the day's slot and cabin availability.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "06:30 PM",
-        "fromDestination": "05:00 PM"
+      "dhaka_to_hularhat": {
+        "departure": "06:30 PM",
+        "duration": "10h 30m"
       },
-      "duration": {
-        "toDestination": "10h 30m",
-        "toDhaka": "9h 30m"
+      "hularhat_to_dhaka": {
+        "departure": "05:00 PM",
+        "duration": "9h 30m"
       }
     },
     "fares": {
@@ -2986,9 +3355,15 @@
       "deck": 400,
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1200,
+      "singleCabinNonAC": {
+        "min": 1000,
+        "max": 1200
+      },
       "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2200,
+      "doubleCabinNonAC": {
+        "min": 2000,
+        "max": 2200
+      },
       "doubleCabinAC": 2600,
       "familyCabinAC": 3500,
       "vipCabin": 6000
@@ -3018,14 +3393,15 @@
       "from": "Dhaka",
       "to": "Bhashanchar (Mehendiganj)"
     },
+    "description": "MV Samrat 2 is recorded on the Dhaka ⇄ Bhashanchar (Mehendiganj) route for Samrat Enterprise, leaving Sadarghat at 09:30 PM and starting back at 05:00 PM; the run down takes about 8 hours and the return about 7 hours 30 minutes. The vessel is rotated across southern waterways and also works a Dhaka ⇄ Barguna service leaving around 06:00 PM, so the assigned route sets the slot — journeys run 8 to 12 hours depending on the destination, and schedules change on weather, fog or river authority orders. Deck is ৳350 and follows the government per-kilometre rate; single cabins are ৳800 non-AC and ৳1,000 with AC, doubles ৳1,500 and ৳1,800, the AC family cabin ৳3,000 and the VIP cabin ৳4,000. The three-floor, twin-engine launch cruises at about 15 knots and carries TV, a generator and life jackets. Confirm the day's departure platform and availability at the Sadarghat terminal, or call 01793228908.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "09:30 PM",
-        "fromDestination": "05:00 PM"
+      "dhaka_to_bhashanchar": {
+        "departure": "09:30 PM",
+        "duration": "8h"
       },
-      "duration": {
-        "toDestination": "8h",
-        "toDhaka": "7h 30m"
+      "bhashanchar_to_dhaka": {
+        "departure": "05:00 PM",
+        "duration": "7h 30m"
       }
     },
     "fares": {
@@ -3065,14 +3441,15 @@
       "from": "Dhaka",
       "to": "Bhashanchar (Mehendiganj)"
     },
+    "description": "MV Samrat 7 runs the Dhaka ⇄ Bhashanchar (Mehendiganj) route for Samrat Enterprise, calling at Shoula, Thanarhat and Hizla. It leaves Sadarghat at 09:30 PM and starts back from Bhashanchar at 05:00 PM, with the run down taking about 8 hours and the return about 7 hours 30 minutes. Deck is ৳350, cheaper over short wharf distances and usually paid at the terminal counter; single cabins are ৳800 non-AC and ৳1,000 with AC, doubles ৳1,500 and ৳1,800, the AC family cabin ৳3,000 and the VIP cabin ৳4,000. The three-floor, twin-engine launch cruises at about 15 knots and carries TV, a generator and life jackets. No counter number is on record for this launch — ask at the Sadarghat ghat office for the day's slot and cabin availability.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "09:30 PM",
-        "fromDestination": "05:00 PM"
+      "dhaka_to_bhashanchar": {
+        "departure": "09:30 PM",
+        "duration": "8h"
       },
-      "duration": {
-        "toDestination": "8h",
-        "toDhaka": "7h 30m"
+      "bhashanchar_to_dhaka": {
+        "departure": "05:00 PM",
+        "duration": "7h 30m"
       }
     },
     "fares": {
@@ -3112,14 +3489,15 @@
       "from": "Dhaka",
       "to": "Chandpur"
     },
+    "description": "MV Shampa, also spelled Sampa, works the Dhaka ⇄ Chandpur waterway, leaving Sadarghat at 12:30 AM — the late slot opens from about 10:30 PM — and starting back from Chandpur at 11:00 AM; the run down takes about 4 hours and the return about 3 hours 30 minutes, depending on river and weather. Deck starts at ৳200, with an economy chair at ৳250 and AC business class at ৳350; single cabins are ৳800 non-AC and ৳1,000 with AC, doubles ৳1,200 and ৳1,500, the AC family cabin ৳2,500 and the VIP cabin ৳4,000. Exact cabin rates vary and are generally bought at the Sadarghat terminal counters or through local agents. The three-floor, twin-engine launch cruises at about 16 knots and carries TV, a generator and life jackets. No counter number is on record — ask at the ghat office for the day's slot.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "12:30 AM",
-        "fromDestination": "11:00 AM"
+      "dhaka_to_chandpur": {
+        "departure": "12:30 AM",
+        "duration": "4h"
       },
-      "duration": {
-        "toDestination": "4h",
-        "toDhaka": "3h 30m"
+      "chandpur_to_dhaka": {
+        "departure": "11:00 AM",
+        "duration": "3h 30m"
       }
     },
     "fares": {
@@ -3158,25 +3536,38 @@
       "from": "Dhaka",
       "to": "Shariatpur"
     },
+    "description": "MV Sonar Tari 1 is recorded on the Dhaka ⇄ Shariatpur route for Sonar Tari Group, leaving Sadarghat at 08:30 AM and starting back at 01:30 PM on a 3 hour 30 minute run; the vessel is also reported working the 68-kilometre Dhaka–Chandpur corridor, departing Sadarghat around 07:20 AM and Chandpur around 03:40 PM. Deck has no fixed price and goes for roughly ৳150–200, with an economy chair at ৳250 and an AC chair at ৳350; a non-AC single cabin is ৳700 and the AC single ৳800–900, the non-AC double ৳1,200–1,300 and the AC double ৳1,400–1,500, the AC family cabin ৳1,800 and the VIP cabin ৳3,000. The three-floor, twin-engine launch cruises at about 16 knots and carries TV, a generator and life jackets. No counter number is on record — ask at the Sadarghat ghat office for the day's slot and cabin availability.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "08:30 AM",
-        "fromDestination": "01:30 PM"
+      "dhaka_to_shariatpur": {
+        "departure": "08:30 AM",
+        "duration": "3h 30m"
       },
-      "duration": {
-        "toDestination": "3h 30m",
-        "toDhaka": "3h 30m"
+      "shariatpur_to_dhaka": {
+        "departure": "01:30 PM",
+        "duration": "3h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 150,
+      "deck": {
+        "min": 150,
+        "max": 200
+      },
       "economyChair": 250,
       "businessClassAC": 350,
       "singleCabinNonAC": 700,
-      "singleCabinAC": 900,
-      "doubleCabinNonAC": 1200,
-      "doubleCabinAC": 1400,
+      "singleCabinAC": {
+        "min": 800,
+        "max": 900
+      },
+      "doubleCabinNonAC": {
+        "min": 1200,
+        "max": 1300
+      },
+      "doubleCabinAC": {
+        "min": 1400,
+        "max": 1500
+      },
       "familyCabinAC": 1800,
       "vipCabin": 3000
     },
@@ -3205,27 +3596,43 @@
       "from": "Dhaka",
       "to": "Shariatpur"
     },
+    "description": "MV Sonar Tari 2 is recorded on the Dhaka ⇄ Shariatpur route for Sonar Tari Group, leaving Sadarghat at 10:00 AM and starting back at 02:40 PM on a 3 hour 30 minute run; the vessel is also reported working the Dhaka–Chandpur corridor on the same afternoon turnaround. None of the classes carry a fixed price: deck goes for roughly ৳100–200 and a chair ৳250–350, a non-AC single cabin ৳500–800 and the AC single ৳550–1,000, with the non-AC double at ৳1,200, the AC double at ৳1,400, the AC family cabin at ৳1,800 and the VIP cabin at ৳2,000–3,000. The three-floor, twin-engine launch cruises at about 16 knots and carries TV, a generator and life jackets. For bookings and enquiries, call 01716-501077.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "10:00 AM",
-        "fromDestination": "03:00 PM"
+      "dhaka_to_shariatpur": {
+        "departure": "10:00 AM",
+        "duration": "3h 30m"
       },
-      "duration": {
-        "toDestination": "3h 30m",
-        "toDhaka": "3h 30m"
+      "shariatpur_to_dhaka": {
+        "departure": "02:40 PM",
+        "duration": "3h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 150,
-      "economyChair": 250,
+      "deck": {
+        "min": 100,
+        "max": 200
+      },
+      "economyChair": {
+        "min": 250,
+        "max": 350
+      },
       "businessClassAC": 350,
-      "singleCabinNonAC": 700,
-      "singleCabinAC": 900,
+      "singleCabinNonAC": {
+        "min": 500,
+        "max": 800
+      },
+      "singleCabinAC": {
+        "min": 550,
+        "max": 1000
+      },
       "doubleCabinNonAC": 1200,
       "doubleCabinAC": 1400,
       "familyCabinAC": 1800,
-      "vipCabin": 3000
+      "vipCabin": {
+        "min": 2000,
+        "max": 3000
+      }
     },
     "amenities": [
       "TV",
@@ -3238,7 +3645,7 @@
       "speedKnots": "14",
       "engines": 2
     },
-    "contact": null,
+    "contact": "01716-501077",
     "status": "active",
     "image": "/launch-image/MV Sonar Tari 2.jpg"
   },
@@ -3252,27 +3659,49 @@
       "from": "Dhaka",
       "to": "Shariatpur"
     },
+    "description": "MV Sonar Tari 3 is recorded on the Dhaka ⇄ Shariatpur route for Sonar Tari Group, leaving Sadarghat at 11:30 AM and starting back at 04:30 PM on a 3 hour 30 minute run; the vessel is also reported working the Dhaka–Chandpur corridor on the fleet's staggered early-to-mid afternoon slots, a passage of about 3 hours 30 minutes to 4 hours. None of the classes carry a fixed price: deck goes for roughly ৳100–200 and a chair ৳150–250, with an AC chair at ৳350; a non-AC single cabin runs ৳500–700 and the AC single ৳550–900, the non-AC double ৳800–1,200 and the AC double ৳1,000–1,400, the AC family cabin ৳1,800 and the VIP cabin ৳2,000–3,000. The three-floor, twin-engine launch cruises at about 16 knots and carries TV, a generator and life jackets. No counter number is on record — ask at the Sadarghat ghat office for the day's slot.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "11:30 AM",
-        "fromDestination": "04:30 PM"
+      "dhaka_to_shariatpur": {
+        "departure": "11:30 AM",
+        "duration": "3h 30m"
       },
-      "duration": {
-        "toDestination": "3h 30m",
-        "toDhaka": "3h 30m"
+      "shariatpur_to_dhaka": {
+        "departure": "04:30 PM",
+        "duration": "3h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 150,
-      "economyChair": 250,
+      "deck": {
+        "min": 100,
+        "max": 200
+      },
+      "economyChair": {
+        "min": 150,
+        "max": 250
+      },
       "businessClassAC": 350,
-      "singleCabinNonAC": 700,
-      "singleCabinAC": 900,
-      "doubleCabinNonAC": 1200,
-      "doubleCabinAC": 1400,
+      "singleCabinNonAC": {
+        "min": 500,
+        "max": 700
+      },
+      "singleCabinAC": {
+        "min": 550,
+        "max": 900
+      },
+      "doubleCabinNonAC": {
+        "min": 800,
+        "max": 1200
+      },
+      "doubleCabinAC": {
+        "min": 1000,
+        "max": 1400
+      },
       "familyCabinAC": 1800,
-      "vipCabin": 3000
+      "vipCabin": {
+        "min": 2000,
+        "max": 3000
+      }
     },
     "amenities": [
       "TV",
@@ -3299,27 +3728,43 @@
       "from": "Dhaka",
       "to": "Shariatpur"
     },
+    "description": "MV Sonar Tari 4 is recorded on the Dhaka ⇄ Shariatpur route for Sonar Tari Group, leaving Sadarghat at 01:00 PM and starting back at 06:00 PM on a 3 hour 30 minute run; the fleet also works the Dhaka–Chandpur corridor on morning and evening rotations, with an early Dhaka slot around 07:00–07:20 AM and a Chandpur return around 06:00 AM. None of the lower classes carry a fixed price: deck goes for roughly ৳100–150 and a reserved chair ৳150–250, with an AC chair at ৳350; a non-AC single cabin runs ৳500–700 and the AC single ৳550–900, the non-AC double ৳1,200 and the AC double ৳1,400, the AC family cabin ৳1,800 and the VIP cabin ৳2,000–3,000. The three-floor, twin-engine launch cruises at about 16 knots and carries TV, a generator and life jackets. No counter number is on record — ask at the Sadarghat ghat office for the day's slot.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "01:00 PM",
-        "fromDestination": "06:00 PM"
+      "dhaka_to_shariatpur": {
+        "departure": "01:00 PM",
+        "duration": "3h 30m"
       },
-      "duration": {
-        "toDestination": "3h 30m",
-        "toDhaka": "3h 30m"
+      "shariatpur_to_dhaka": {
+        "departure": "06:00 PM",
+        "duration": "3h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 150,
-      "economyChair": 250,
+      "deck": {
+        "min": 100,
+        "max": 150
+      },
+      "economyChair": {
+        "min": 150,
+        "max": 250
+      },
       "businessClassAC": 350,
-      "singleCabinNonAC": 700,
-      "singleCabinAC": 900,
+      "singleCabinNonAC": {
+        "min": 500,
+        "max": 700
+      },
+      "singleCabinAC": {
+        "min": 550,
+        "max": 900
+      },
       "doubleCabinNonAC": 1200,
       "doubleCabinAC": 1400,
       "familyCabinAC": 1800,
-      "vipCabin": 3000
+      "vipCabin": {
+        "min": 2000,
+        "max": 3000
+      }
     },
     "amenities": [
       "TV",
@@ -3346,19 +3791,23 @@
       "from": "Dhaka",
       "to": "Patuakhali"
     },
+    "description": "MV Sundarban 8 runs the Dhaka ⇄ Patuakhali route for Sundarban Navigation, leaving Sadarghat at 07:30 PM and starting back from Patuakhali at 05:30 PM, with the overnight passage taking about 9 hours in either direction; departure times move a little with weather and river conditions. Deck has no fixed price and goes for roughly ৳300–450; single cabins are ৳1,300 non-AC and ৳1,600 with AC, doubles ৳2,400 and ৳2,800, the AC family cabin ৳4,000 and the VIP cabin ৳6,500. Cabin prices vary by tier, so check at the Sadarghat counter or an authorised ticketing platform for real-time availability. The three-floor, twin-engine launch cruises at about 15-17 knots and carries AC, a restaurant, CCTV, a prayer room and a generator. For the day's exact departure slot and cabin availability, call +8801716444367.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "07:30 PM",
-        "fromDestination": "05:30 PM"
+      "dhaka_to_patuakhali": {
+        "departure": "07:30 PM",
+        "duration": "9h"
       },
-      "duration": {
-        "toDestination": "9h",
-        "toDhaka": "9h"
+      "patuakhali_to_dhaka": {
+        "departure": "05:30 PM",
+        "duration": "9h"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 350,
+      "deck": {
+        "min": 300,
+        "max": 450
+      },
       "economyChair": null,
       "businessClassAC": null,
       "singleCabinNonAC": 1300,
@@ -3394,27 +3843,40 @@
       "from": "Dhaka",
       "to": "Barishal"
     },
+    "description": "MV Sundarban 10 runs the main Dhaka ⇄ Barishal night route for Sundarban Navigation, leaving Sadarghat at 09:00 PM — departures are also quoted from about 08:00 PM — and Barishal at the same hour, arriving early the next morning after about 5 hours 30 minutes. Deck has no fixed price and goes for roughly ৳250–350, with a sofa seat sold at about ৳600; a non-AC single cabin runs ৳1,000–1,400 and the AC single ৳1,500, the non-AC double ৳1,800–2,400 and the AC double ৳2,500, the AC family or semi-VIP cabin ৳3,500 and the VIP duplex ৳5,000–7,000. The three-floor, twin-engine launch cruises at about 18 knots and carries AC, a restaurant, a prayer room, CCTV, a VIP suite and a generator. For bookings, call the Barishal counter on 01711358838, the Dhaka counter on 01716-444367 or the hotline on 01758-113011.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "09:00 PM",
-        "fromDestination": "09:00 PM"
+      "dhaka_to_barishal": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       },
-      "duration": {
-        "toDestination": "5h 30m",
-        "toDhaka": "5h 30m"
+      "barishal_to_dhaka": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 350,
+      "deck": {
+        "min": 250,
+        "max": 350
+      },
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1400,
+      "singleCabinNonAC": {
+        "min": 1000,
+        "max": 1400
+      },
       "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2400,
+      "doubleCabinNonAC": {
+        "min": 1800,
+        "max": 2400
+      },
       "doubleCabinAC": 2500,
       "familyCabinAC": 3500,
-      "vipCabin": 7000
+      "vipCabin": {
+        "min": 5000,
+        "max": 7000
+      }
     },
     "amenities": [
       "AC",
@@ -3443,25 +3905,38 @@
       "from": "Dhaka",
       "to": "Barishal"
     },
+    "description": "MV Sundarban 11 runs the Dhaka ⇄ Barishal night route for Sundarban Navigation, leaving Sadarghat at 09:00 PM — across the season the window has run from about 05:00 PM to 08:45 PM depending on rotation — and Barishal at the same evening hour, with the crossing taking about 5 hours 30 minutes. Deck has no fixed price and goes for roughly ৳150–350; a non-AC single cabin runs ৳1,000–1,400 and the AC single ৳1,500, the non-AC double ৳2,000–2,400 and the AC double ৳2,500–4,500, the AC family cabin ৳3,500 and the VIP cabin ৳7,000. Fares and slots are subject to change by BIWTA or Sundarban Navigation on weather, fuel costs and festive seasons, and peak over national holidays and Eid. The three-floor, twin-engine launch cruises at about 18 knots and carries AC, a restaurant, CCTV, a prayer room and a generator. For the day's exact departure slot and cabin availability, call 01718664700.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "09:00 PM",
-        "fromDestination": "09:00 PM"
+      "dhaka_to_barishal": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       },
-      "duration": {
-        "toDestination": "5h 30m",
-        "toDhaka": "5h 30m"
+      "barishal_to_dhaka": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 350,
+      "deck": {
+        "min": 150,
+        "max": 350
+      },
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1400,
+      "singleCabinNonAC": {
+        "min": 1000,
+        "max": 1400
+      },
       "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2400,
-      "doubleCabinAC": 2500,
+      "doubleCabinNonAC": {
+        "min": 2000,
+        "max": 2400
+      },
+      "doubleCabinAC": {
+        "min": 2500,
+        "max": 4500
+      },
       "familyCabinAC": 3500,
       "vipCabin": 7000
     },
@@ -3491,14 +3966,15 @@
       "from": "Dhaka",
       "to": "Jhalokathi"
     },
+    "description": "MV Sundarban 12 runs overnight from Dhaka to Jhalakathi for Sundarban Navigation, working down the Barisal corridor by way of Chandpur and Charfashion. It leaves Sadarghat at 06:00 PM and starts back at the same hour, with the passage taking about 8 hours 30 minutes and arrival early the next morning. Deck is ৳400, with a sofa-zone seat sold at about ৳600; a non-AC single cabin runs ৳1,200–1,600 and the AC single ৳1,500, the non-AC double ৳2,400–3,350 and the AC double ৳2,500, the AC family or semi-VIP cabin ৳2,700–3,500 and the VIP twin-bed cabin ৳5,000–9,000, with a duplex cabin quoted at ৳9,000–11,000. Fares rise a little over national holidays, weekends and the Eid rush. The three-floor, twin-engine launch cruises at about 17 knots and carries AC, a restaurant, CCTV, a prayer room and a generator. For the day's exact departure slot and cabin availability, call 01724955600.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "06:00 PM",
-        "fromDestination": "06:00 PM"
+      "dhaka_to_jhalakathi": {
+        "departure": "06:00 PM",
+        "duration": "8h 30m"
       },
-      "duration": {
-        "toDestination": "8h 30m",
-        "toDhaka": "8h 30m"
+      "jhalakathi_to_dhaka": {
+        "departure": "06:00 PM",
+        "duration": "8h 30m"
       }
     },
     "fares": {
@@ -3506,12 +3982,24 @@
       "deck": 400,
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1400,
+      "singleCabinNonAC": {
+        "min": 1200,
+        "max": 1600
+      },
       "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2400,
+      "doubleCabinNonAC": {
+        "min": 2400,
+        "max": 3350
+      },
       "doubleCabinAC": 2500,
-      "familyCabinAC": 2700,
-      "vipCabin": 6500
+      "familyCabinAC": {
+        "min": 2700,
+        "max": 3500
+      },
+      "vipCabin": {
+        "min": 5000,
+        "max": 9000
+      }
     },
     "amenities": [
       "AC",
@@ -3539,14 +4027,15 @@
       "from": "Dhaka",
       "to": "Patuakhali"
     },
+    "description": "MV Sundarban 14 runs the Dhaka ⇄ Patuakhali route for Sundarban Navigation, leaving Sadarghat at 07:30 PM — evening departures have also been quoted from about 05:30 PM — and starting back at 05:30 PM; the run down takes about 9 hours 30 minutes and the return about 9 hours. Deck is ৳350; a non-AC single cabin runs ৳1,100–1,300 and the AC single ৳1,600, the non-AC double ৳2,000–2,400 and the AC double ৳2,800, the AC family or semi-VIP cabin ৳2,500–4,000 and the VIP cabin ৳5,500–7,000, with an XL cabin sold at about ৳3,500. Fares and exact departure minutes vary over national holidays, Eid and BIWTA adjustments. The three-floor, twin-engine launch cruises at about 17 knots and carries AC, a restaurant, CCTV, a prayer room and a generator. For the day's exact departure slot and cabin availability, call 01711358838.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "07:30 PM",
-        "fromDestination": "05:30 PM"
+      "dhaka_to_patuakhali": {
+        "departure": "07:30 PM",
+        "duration": "9h 30m"
       },
-      "duration": {
-        "toDestination": "9h 30m",
-        "toDhaka": "9h"
+      "patuakhali_to_dhaka": {
+        "departure": "05:30 PM",
+        "duration": "9h"
       }
     },
     "fares": {
@@ -3554,12 +4043,24 @@
       "deck": 350,
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1300,
+      "singleCabinNonAC": {
+        "min": 1100,
+        "max": 1300
+      },
       "singleCabinAC": 1600,
-      "doubleCabinNonAC": 2400,
+      "doubleCabinNonAC": {
+        "min": 2000,
+        "max": 2400
+      },
       "doubleCabinAC": 2800,
-      "familyCabinAC": 4000,
-      "vipCabin": 7000
+      "familyCabinAC": {
+        "min": 2500,
+        "max": 4000
+      },
+      "vipCabin": {
+        "min": 5500,
+        "max": 7000
+      }
     },
     "amenities": [
       "AC",
@@ -3587,14 +4088,15 @@
       "from": "Dhaka",
       "to": "Barishal"
     },
+    "description": "MV Sundarban 15 runs the Dhaka ⇄ Barishal night route for Sundarban Navigation, leaving Sadarghat at 09:00 PM — boarding from about 08:30 PM — and Barishal at the same hour, reaching the far end around 5:00 to 6:00 AM after about 5 hours 30 minutes. Fares are fixed: ৳350 for an open deck ticket, ৳1,400 and ৳1,500 for the non-AC and AC single cabins, ৳2,400 and ৳2,500 for the doubles, ৳3,500 for the AC family cabin and ৳7,000 for the VIP cabin. The three-floor, twin-engine launch cruises at about 18 knots and carries AC, a restaurant, CCTV, a prayer room and a generator. For the day's exact departure slot and cabin availability, call 01322859915.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "09:00 PM",
-        "fromDestination": "09:00 PM"
+      "dhaka_to_barishal": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       },
-      "duration": {
-        "toDestination": "5h 30m",
-        "toDhaka": "5h 30m"
+      "barishal_to_dhaka": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       }
     },
     "fares": {
@@ -3635,27 +4137,43 @@
       "from": "Dhaka",
       "to": "Barishal"
     },
+    "description": "MV Sundarban 16 runs the Dhaka ⇄ Barishal night route for Sundarban Navigation, leaving Sadarghat and Barishal terminal at 09:00 PM every evening, with the crossing taking about 5 hours 30 minutes. Deck has no fixed price and goes for roughly ৳350–400 against the government standard, with a sofa or chair-zone seat at about ৳600; a non-AC single cabin runs ৳1,000–1,400 and the AC single ৳1,500, the non-AC double ৳1,800–2,400 and the AC double ৳2,500, the AC family or semi-VIP cabin ৳3,000–3,500 and the VIP cabin ৳5,000–8,000, with a VIP twin bed at ৳7,000–9,000 and a duplex at ৳9,000–11,000. Fares fluctuate over peak holiday seasons such as Eid and special weekend trips. The four-floor launch runs three engines at about 19 knots and carries AC, a restaurant, CCTV, a prayer room, a VIP suite and a generator. For the day's exact departure slot and cabin availability, call 01752555325.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "09:00 PM",
-        "fromDestination": "09:00 PM"
+      "dhaka_to_barishal": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       },
-      "duration": {
-        "toDestination": "5h 30m",
-        "toDhaka": "5h 30m"
+      "barishal_to_dhaka": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 350,
+      "deck": {
+        "min": 350,
+        "max": 400
+      },
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1400,
+      "singleCabinNonAC": {
+        "min": 1000,
+        "max": 1400
+      },
       "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2400,
+      "doubleCabinNonAC": {
+        "min": 1800,
+        "max": 2400
+      },
       "doubleCabinAC": 2500,
-      "familyCabinAC": 3500,
-      "vipCabin": 8000
+      "familyCabinAC": {
+        "min": 3000,
+        "max": 3500
+      },
+      "vipCabin": {
+        "min": 5000,
+        "max": 8000
+      }
     },
     "amenities": [
       "AC",
@@ -3684,14 +4202,15 @@
       "from": "Dhaka",
       "to": "Barishal"
     },
+    "description": "MV Suravi 7 runs overnight on the Dhaka ⇄ Barishal route for Surovi Navigation, leaving Sadarghat at 08:30 PM and starting back from Barishal at 08:30 PM. The passage takes about 6 hours 30 minutes in either direction. Deck is ৳300; single cabins are ৳1,000 non-AC and ৳1,200 with AC, doubles ৳1,800 and ৳2,200, the AC family cabin ৳3,500 and the VIP cabin ৳6,000. The four-floor, twin-engine launch cruises at about 18 knots and carries AC, TV, a generator, a restaurant and life jackets. No counter number is on record for this launch — ask at the Sadarghat ghat office for the day's slot and cabin availability.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "08:30 PM",
-        "fromDestination": "08:30 PM"
+      "dhaka_to_barishal": {
+        "departure": "08:30 PM",
+        "duration": "6h 30m"
       },
-      "duration": {
-        "toDestination": "6h 30m",
-        "toDhaka": "6h 30m"
+      "barishal_to_dhaka": {
+        "departure": "08:30 PM",
+        "duration": "6h 30m"
       }
     },
     "fares": {
@@ -3732,14 +4251,15 @@
       "from": "Dhaka",
       "to": "Barishal"
     },
+    "description": "MV Suravi 8 runs overnight on the Dhaka ⇄ Barishal route for Surovi Navigation, leaving Sadarghat at 08:00 PM and starting back from Barishal at 08:30 PM. The passage takes about 6 hours 30 minutes in either direction. Deck is ৳300; single cabins are ৳1,000 non-AC and ৳1,200 with AC, doubles ৳1,800 and ৳2,200, the AC family cabin ৳3,500 and the VIP cabin ৳6,000. The four-floor, twin-engine launch cruises at about 17 knots and carries AC, TV, a generator, a sofa zone and life jackets. For the day's exact departure slot and cabin availability, call 01726200222.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "08:00 PM",
-        "fromDestination": "08:30 PM"
+      "dhaka_to_barishal": {
+        "departure": "08:00 PM",
+        "duration": "6h 30m"
       },
-      "duration": {
-        "toDestination": "6h 30m",
-        "toDhaka": "6h 30m"
+      "barishal_to_dhaka": {
+        "departure": "08:30 PM",
+        "duration": "6h 30m"
       }
     },
     "fares": {
@@ -3780,14 +4300,15 @@
       "from": "Dhaka",
       "to": "Barishal"
     },
+    "description": "MV Suravi 9 runs overnight on the Dhaka ⇄ Barishal route for Surovi Navigation, leaving Sadarghat at 09:00 PM and starting back from Barishal at 09:00 PM. The passage takes about 6 hours 30 minutes in either direction. Deck is ৳300; single cabins are ৳1,000 non-AC and ৳1,200 with AC, doubles ৳1,800 and ৳2,200, the AC family cabin ৳3,500 and the VIP cabin ৳6,500. The four-floor, twin-engine launch cruises at about 18 knots and carries AC, TV, a generator, a sofa zone and life jackets. For the day's exact departure slot and cabin availability, call 01711983534.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "09:00 PM",
-        "fromDestination": "09:00 PM"
+      "dhaka_to_barishal": {
+        "departure": "09:00 PM",
+        "duration": "6h 30m"
       },
-      "duration": {
-        "toDestination": "6h 30m",
-        "toDhaka": "6h 30m"
+      "barishal_to_dhaka": {
+        "departure": "09:00 PM",
+        "duration": "6h 30m"
       }
     },
     "fares": {
@@ -3828,27 +4349,40 @@
       "from": "Dhaka",
       "to": "Barishal"
     },
+    "description": "MV Surovi 7 is a luxury launch on the Dhaka ⇄ Barishal route for Surovi Group, leaving Sadarghat at 08:00 PM — the window runs to about 09:00 PM — and Barishal at 08:30 PM, reaching the far end around 4:00 to 5:00 AM; the run down takes about 8 hours 30 minutes and the return about 7 hours 30 minutes. Deck has no fixed price and goes for roughly ৳150–400, with sofa seating at about ৳450–600; a non-AC single cabin runs ৳800–1,300 and the AC single ৳1,500, the non-AC or deluxe double ৳1,600–3,000 and the AC double ৳2,600, the AC family cabin ৳3,500 and the semi-VIP, VIP or business-class duplex ৳3,500–8,000. Prices rise over major holidays such as Eid. The four-floor, twin-engine launch cruises at about 18 knots and carries AC, TV and a generator. No counter number is on record — ask at the Sadarghat ghat office for the day's slot and cabin availability.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "08:00 PM",
-        "fromDestination": "08:30 PM"
+      "dhaka_to_barishal": {
+        "departure": "08:00 PM",
+        "duration": "8h 30m"
       },
-      "duration": {
-        "toDestination": "8h 30m",
-        "toDhaka": "7h 30m"
+      "barishal_to_dhaka": {
+        "departure": "08:30 PM",
+        "duration": "7h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 400,
+      "deck": {
+        "min": 150,
+        "max": 400
+      },
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1200,
+      "singleCabinNonAC": {
+        "min": 800,
+        "max": 1300
+      },
       "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2200,
+      "doubleCabinNonAC": {
+        "min": 1600,
+        "max": 3000
+      },
       "doubleCabinAC": 2600,
       "familyCabinAC": 3500,
-      "vipCabin": 6000
+      "vipCabin": {
+        "min": 3500,
+        "max": 8000
+      }
     },
     "amenities": [
       "AC",
@@ -3874,27 +4408,43 @@
       "from": "Dhaka",
       "to": "Barishal"
     },
+    "description": "MV Surovi 8 runs overnight between Dhaka and Barishal for Surovi Group, leaving Sadarghat at 08:15 PM — the window runs to about 08:45 PM — and Barishal at 08:45 PM, arriving around 4:00 to 5:00 AM; the run down takes about 8 hours 30 minutes and the return about 7 hours 30 minutes. Deck has no fixed price and goes for roughly ৳200–450, with a sofa seat at about ৳500–600; a non-AC single cabin runs ৳850–1,200 and the AC single ৳1,500, the non-AC double ৳1,600–2,500 and the AC double ৳2,600, the AC family cabin ৳3,000–3,500 and the VIP cabin ৳5,000–6,000. Tickets are sold at the Sadarghat counter, through authorised agents or on booking platforms, and rise over major holidays such as Eid. The four-floor, twin-engine launch cruises at about 18 knots and carries AC, TV and a generator. For bookings and cabin availability, call 01711453989 or 01712772786.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "08:15 PM",
-        "fromDestination": "08:45 PM"
+      "dhaka_to_barishal": {
+        "departure": "08:15 PM",
+        "duration": "8h 30m"
       },
-      "duration": {
-        "toDestination": "8h 30m",
-        "toDhaka": "7h 30m"
+      "barishal_to_dhaka": {
+        "departure": "08:45 PM",
+        "duration": "7h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 400,
+      "deck": {
+        "min": 200,
+        "max": 450
+      },
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1200,
+      "singleCabinNonAC": {
+        "min": 850,
+        "max": 1200
+      },
       "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2200,
+      "doubleCabinNonAC": {
+        "min": 1600,
+        "max": 2500
+      },
       "doubleCabinAC": 2600,
-      "familyCabinAC": 3500,
-      "vipCabin": 6000
+      "familyCabinAC": {
+        "min": 3000,
+        "max": 3500
+      },
+      "vipCabin": {
+        "min": 5000,
+        "max": 6000
+      }
     },
     "amenities": [
       "AC",
@@ -3906,7 +4456,7 @@
       "speedKnots": "18",
       "engines": 2
     },
-    "contact": null,
+    "contact": "01711453989, 01712772786",
     "status": "active",
     "image": "/launch-image/MV Surovi 8.jpg"
   },
@@ -3920,27 +4470,43 @@
       "from": "Dhaka",
       "to": "Barishal"
     },
+    "description": "MV Surovi 9 runs overnight between Dhaka and Barishal for Surovi Group, leaving Sadarghat at 08:30 PM — the window runs to about 09:00 PM — and Barishal at 08:30 PM, arriving around 4:00 to 5:00 AM; the run down takes about 8 hours 30 minutes and the return about 7 hours 30 minutes. Deck has no fixed price and goes for roughly ৳200–400, with a sofa seat at about ৳500–600; a non-AC single cabin runs ৳850–1,200 and the AC single ৳1,500, the non-AC double ৳1,600–2,600 and the AC double ৳2,600, the AC family or semi-VIP cabin ৳2,000–3,500 and the VIP cabin ৳3,000–6,500 depending on room size and amenities. Fares move a little with peak holiday seasons and fuel price adjustments. The four-floor, twin-engine launch cruises at about 18 knots and carries AC, TV, a generator and life jackets. No counter number is on record — ask at the Sadarghat ghat office for the day's slot and cabin availability.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "08:30 PM",
-        "fromDestination": "08:30 PM"
+      "dhaka_to_barishal": {
+        "departure": "08:30 PM",
+        "duration": "8h 30m"
       },
-      "duration": {
-        "toDestination": "8h 30m",
-        "toDhaka": "7h 30m"
+      "barishal_to_dhaka": {
+        "departure": "08:30 PM",
+        "duration": "7h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 400,
+      "deck": {
+        "min": 200,
+        "max": 400
+      },
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1200,
+      "singleCabinNonAC": {
+        "min": 850,
+        "max": 1200
+      },
       "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2200,
+      "doubleCabinNonAC": {
+        "min": 1600,
+        "max": 2600
+      },
       "doubleCabinAC": 2600,
-      "familyCabinAC": 3500,
-      "vipCabin": 6000
+      "familyCabinAC": {
+        "min": 2000,
+        "max": 3500
+      },
+      "vipCabin": {
+        "min": 3000,
+        "max": 6500
+      }
     },
     "amenities": [
       "AC",
@@ -3967,27 +4533,40 @@
       "from": "Dhaka",
       "to": "Barishal"
     },
+    "description": "MV Surovi 10 runs the Dhaka ⇄ Barishal water route for Surovi Group, leaving Sadarghat at 08:45 PM and Barishal River Port at 09:00 PM, with the overnight passage taking about 8 hours 30 minutes down and 7 hours 30 minutes back. Deck has no fixed price and goes for roughly ৳200–400, with a sofa or chair seat at about ৳450–600; a non-AC single cabin runs ৳1,200–1,600 and the AC single ৳1,500, the non-AC double ৳2,200–2,800 and the AC double ৳2,600, the AC family cabin ৳3,500 and the VIP or deluxe AC cabin ৳3,000–6,000. Exact cabin pricing moves with seasonal demand and must be verified at the Sadarghat counter or with an authorised agent. The four-floor, twin-engine launch cruises at about 19 knots and carries AC, TV, a generator and a prayer room. No counter number is on record — ask at the Sadarghat ghat office for the day's slot and cabin availability.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "08:45 PM",
-        "fromDestination": "09:00 PM"
+      "dhaka_to_barishal": {
+        "departure": "08:45 PM",
+        "duration": "8h 30m"
       },
-      "duration": {
-        "toDestination": "8h 30m",
-        "toDhaka": "7h 30m"
+      "barishal_to_dhaka": {
+        "departure": "09:00 PM",
+        "duration": "7h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 400,
+      "deck": {
+        "min": 200,
+        "max": 400
+      },
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1200,
+      "singleCabinNonAC": {
+        "min": 1200,
+        "max": 1600
+      },
       "singleCabinAC": 1500,
-      "doubleCabinNonAC": 2200,
+      "doubleCabinNonAC": {
+        "min": 2200,
+        "max": 2800
+      },
       "doubleCabinAC": 2600,
       "familyCabinAC": 3500,
-      "vipCabin": 6000
+      "vipCabin": {
+        "min": 3000,
+        "max": 6000
+      }
     },
     "amenities": [
       "AC",
@@ -4014,24 +4593,40 @@
       "from": "Dhaka",
       "to": "Chandpur"
     },
+    "description": "MV Taqwa works the Dhaka ⇄ Chandpur route, carrying on to Char Bhairabi. It leaves Sadarghat at 09:15 AM — morning departures have also been quoted to about 10:00 AM — and starts back at 09:30 AM; the run down takes about 4 hours and the return about 3 hours 30 minutes, with a later upstream slot from Char Bhairabi reported around 07:20 PM. None of the seating classes carry a fixed price: deck goes for roughly ৳100–200, a non-AC or second-class chair ৳150–250 and an AC business chair ৳250–350; a first-class non-AC single cabin runs ৳300–800 and the AC single ৳1,000, the non-AC double ৳600–1,200 and the AC double ৳1,500, the AC family cabin ৳2,500 and the VIP cabin ৳4,000. The three-floor, twin-engine launch cruises at about 15 knots and carries TV, a generator and life jackets. No counter number is on record — ask at the Sadarghat ghat office for the day's slot and cabin availability.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "09:15 AM",
-        "fromDestination": "09:30 AM"
+      "dhaka_to_chandpur": {
+        "departure": "09:15 AM",
+        "duration": "4h"
       },
-      "duration": {
-        "toDestination": "4h",
-        "toDhaka": "3h 30m"
+      "chandpur_to_dhaka": {
+        "departure": "09:30 AM",
+        "duration": "3h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 200,
-      "economyChair": 250,
-      "businessClassAC": 350,
-      "singleCabinNonAC": 800,
+      "deck": {
+        "min": 100,
+        "max": 200
+      },
+      "economyChair": {
+        "min": 150,
+        "max": 250
+      },
+      "businessClassAC": {
+        "min": 250,
+        "max": 350
+      },
+      "singleCabinNonAC": {
+        "min": 300,
+        "max": 800
+      },
       "singleCabinAC": 1000,
-      "doubleCabinNonAC": 1200,
+      "doubleCabinNonAC": {
+        "min": 600,
+        "max": 1200
+      },
       "doubleCabinAC": 1500,
       "familyCabinAC": 2500,
       "vipCabin": 4000
@@ -4060,27 +4655,40 @@
       "from": "Dhaka",
       "to": "Hularhat (Pirojpur)"
     },
+    "description": "MV Tipu runs the Dhaka ⇄ Hularhat (Pirojpur) route for Tipu Group, leaving Sadarghat at 06:30 PM — the fleet's evening window runs to about 07:00 PM — and starting back at 02:30 PM; the run down takes about 10 hours 30 minutes and the return about 9 hours 30 minutes. Over major holidays such as Eid the vessel has also worked a morning Basila – Sadarghat – Hakimuddin service departing around 07:00 AM. Deck has no fixed price and goes for roughly ৳300–400; a non-AC single cabin runs ৳1,000–1,200 and the AC single ৳1,400, the non-AC double ৳2,000–2,800 and the AC double ৳2,600, the AC family cabin ৳3,800 and the VIP cabin ৳4,000–6,000. The three-floor, twin-engine launch cruises at about 16 knots and carries AC, TV, CCTV and a generator. For the day's exact departure slot and cabin availability, call 01718742299.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "06:30 PM",
-        "fromDestination": "02:30 PM"
+      "dhaka_to_hularhat": {
+        "departure": "06:30 PM",
+        "duration": "10h 30m"
       },
-      "duration": {
-        "toDestination": "10h 30m",
-        "toDhaka": "9h 30m"
+      "hularhat_to_dhaka": {
+        "departure": "02:30 PM",
+        "duration": "9h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 400,
+      "deck": {
+        "min": 300,
+        "max": 400
+      },
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1000,
+      "singleCabinNonAC": {
+        "min": 1000,
+        "max": 1200
+      },
       "singleCabinAC": 1400,
-      "doubleCabinNonAC": 2000,
+      "doubleCabinNonAC": {
+        "min": 2000,
+        "max": 2800
+      },
       "doubleCabinAC": 2600,
       "familyCabinAC": 3800,
-      "vipCabin": 5000
+      "vipCabin": {
+        "min": 4000,
+        "max": 6000
+      }
     },
     "amenities": [
       "AC",
@@ -4107,27 +4715,40 @@
       "from": "Dhaka",
       "to": "Hularhat (Pirojpur)"
     },
+    "description": "MV Tipu 6 is recorded on the Dhaka ⇄ Hularhat (Pirojpur) route for Tipu Group, leaving Sadarghat at 06:45 PM and starting back at 02:45 PM; the run down takes about 10 hours 30 minutes and the return about 9 hours 30 minutes. Under BIWTA's special Eid deployments the vessel has instead worked the Basila – Sadarghat – Elisha (Bhola) route, leaving Basila Launch Ghat at 12:00 PM. Deck has no fixed price and goes for roughly ৳300–400; a non-AC single cabin runs ৳1,000–1,200 and the AC single ৳1,400, the non-AC double ৳2,000–2,400 and the AC double ৳2,600, the AC family cabin ৳3,800 and the VIP cabin ৳4,500–5,000. Prices are set by class at the river station ticket booths and vary by counter, destination terminal and seasonal rush. The three-floor, twin-engine launch cruises at about 16 knots and carries AC, TV and a generator. No counter number is on record — ask at the Sadarghat ghat office for the day's slot and cabin availability.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "06:45 PM",
-        "fromDestination": "02:45 PM"
+      "dhaka_to_hularhat": {
+        "departure": "06:45 PM",
+        "duration": "10h 30m"
       },
-      "duration": {
-        "toDestination": "10h 30m",
-        "toDhaka": "9h 30m"
+      "hularhat_to_dhaka": {
+        "departure": "02:45 PM",
+        "duration": "9h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 400,
+      "deck": {
+        "min": 300,
+        "max": 400
+      },
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1000,
+      "singleCabinNonAC": {
+        "min": 1000,
+        "max": 1200
+      },
       "singleCabinAC": 1400,
-      "doubleCabinNonAC": 2000,
+      "doubleCabinNonAC": {
+        "min": 2000,
+        "max": 2400
+      },
       "doubleCabinAC": 2600,
       "familyCabinAC": 3800,
-      "vipCabin": 5000
+      "vipCabin": {
+        "min": 4500,
+        "max": 5000
+      }
     },
     "amenities": [
       "AC",
@@ -4153,24 +4774,34 @@
       "from": "Dhaka",
       "to": "Barisal"
     },
+    "description": "MV Tipu 7 runs the Dhaka ⇄ Barishal route for Tipu Group, leaving Sadarghat at 09:00 PM and Barishal at the same hour, with the crossing taking about 5 hours 30 minutes; a 06:30 PM slot is run on some seasonal adjustments. Deck has no fixed price and goes for roughly ৳300–350; a non-AC single cabin runs ৳1,000–1,500 and the AC single ৳1,400, the non-AC double ৳1,800–2,500 and the AC double ৳2,500, the AC family cabin ৳4,000 and the VIP cabin ৳5,000. Fares and departure times shift on adverse weather, peak holiday rushes such as Eid, and updates from Tipu Group and BIWTA. The three-floor, twin-engine launch cruises at about 18 knots and carries AC, TV, a restaurant and a generator. No counter number is on record — ask at the Sadarghat ghat office for the day's slot and cabin availability.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "09:00 PM",
-        "fromDestination": "09:00 PM"
+      "dhaka_to_barishal": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       },
-      "duration": {
-        "toDestination": "5h 30m",
-        "toDhaka": "5h 30m"
+      "barishal_to_dhaka": {
+        "departure": "09:00 PM",
+        "duration": "5h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 350,
+      "deck": {
+        "min": 300,
+        "max": 350
+      },
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1000,
+      "singleCabinNonAC": {
+        "min": 1000,
+        "max": 1500
+      },
       "singleCabinAC": 1400,
-      "doubleCabinNonAC": 2000,
+      "doubleCabinNonAC": {
+        "min": 1800,
+        "max": 2500
+      },
       "doubleCabinAC": 2500,
       "familyCabinAC": 4000,
       "vipCabin": 5000
@@ -4200,19 +4831,23 @@
       "from": "Dhaka",
       "to": "Hularhat (Pirojpur)"
     },
+    "description": "MV Tipu 12 runs the Dhaka ⇄ Hularhat ⇄ Bhandaria route for Tipu Group, leaving Sadarghat at 06:30 PM and starting back from Bhandaria at 02:30 PM; the roughly 286-kilometre waterway takes about 10 hours 30 minutes down and 9 hours 30 minutes back, and up to 12 hours in poor conditions. Deck has no fixed price and goes for roughly ৳300–400; single cabins are ৳1,000 non-AC and ৳1,500 with AC, doubles ৳2,000 and ৳2,600, the AC family cabin ৳4,000 and the AC VIP cabin ৳4,500. Daily timetables for individual fleet numbers move with river currents, BIWTA directives and seasonal demand. The three-floor, twin-engine launch cruises at about 17 knots and carries AC, TV, CCTV and a generator. For the day's exact departure slot and cabin availability, call 01718742299.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "06:30 PM",
-        "fromDestination": "02:30 PM"
+      "dhaka_to_hularhat": {
+        "departure": "06:30 PM",
+        "duration": "10h 30m"
       },
-      "duration": {
-        "toDestination": "10h 30m",
-        "toDhaka": "9h 30m"
+      "hularhat_to_dhaka": {
+        "departure": "02:30 PM",
+        "duration": "9h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 400,
+      "deck": {
+        "min": 300,
+        "max": 400
+      },
       "economyChair": null,
       "businessClassAC": null,
       "singleCabinNonAC": 1000,
@@ -4247,27 +4882,40 @@
       "from": "Dhaka",
       "to": "Betua (Charfasson)"
     },
+    "description": "MV Tipu 13 runs the Dhaka ⇄ Char Fasson ⇄ Betua route for Tipu Group, calling at Daulatkhan, Hakimuddin and Mangal Sikdar. It leaves Sadarghat at 07:45 PM, weather permitting, and starts back from Betua at 04:45 PM; the run down takes about 10 hours 30 minutes and the return about 10 hours. Deck has no fixed price and goes for roughly ৳300–500; a non-AC single cabin runs ৳1,000–1,200 and the AC single ৳1,600, the non-AC double ৳1,800–2,400 and the AC double ৳2,800, the AC family cabin ৳4,500 and the VIP cabin ৳5,000–6,000. Prices move with operator policy and holiday seasons. The three-floor, twin-engine launch cruises at about 16 knots and carries AC, TV, a restaurant and a generator. For the day's exact departure slot and cabin availability, call 01851828307.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "06:00 PM",
-        "fromDestination": "02:00 PM"
+      "dhaka_to_charfasson_betua": {
+        "departure": "07:45 PM",
+        "duration": "10h 30m"
       },
-      "duration": {
-        "toDestination": "10h 30m",
-        "toDhaka": "10h"
+      "charfasson_betua_to_dhaka": {
+        "departure": "04:45 PM",
+        "duration": "10h"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 400,
+      "deck": {
+        "min": 300,
+        "max": 500
+      },
       "economyChair": null,
       "businessClassAC": null,
-      "singleCabinNonAC": 1200,
+      "singleCabinNonAC": {
+        "min": 1000,
+        "max": 1200
+      },
       "singleCabinAC": 1600,
-      "doubleCabinNonAC": 2400,
+      "doubleCabinNonAC": {
+        "min": 1800,
+        "max": 2400
+      },
       "doubleCabinAC": 2800,
       "familyCabinAC": 4500,
-      "vipCabin": 6000
+      "vipCabin": {
+        "min": 5000,
+        "max": 6000
+      }
     },
     "amenities": [
       "AC",
@@ -4294,27 +4942,37 @@
       "from": "Dhaka",
       "to": "Betua (Charfasson)"
     },
+    "description": "MV Tipu 14 runs the Dhaka ⇄ Char Fasson ⇄ Betua route for Tipu Group, calling at Daulatkhan, Hakimuddin and Mangal Sikdar. It leaves Sadarghat at 06:30 PM and starts back from Betua Ghat at 02:30 PM; the run down takes about 10 hours 30 minutes and the return about 10 hours. Deck has no fixed price and goes for roughly ৳400–500; a non-AC single cabin is ৳1,200 and the AC single ৳1,600, the non-AC double ৳2,000–2,400 and the AC double ৳2,800, the AC family cabin ৳4,500 and the AC VIP cabin ৳4,000–6,000. Fares vary a little over peak holiday seasons such as Eid, so reconfirm before booking. The three-floor, twin-engine launch cruises at about 17 knots and carries AC, TV, a restaurant and a generator. For cabin booking call 01325893926 or 01851-828307, or the supervisor on 01759-132818.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "06:30 PM",
-        "fromDestination": "02:30 PM"
+      "dhaka_to_charfasson_betua": {
+        "departure": "06:30 PM",
+        "duration": "10h 30m"
       },
-      "duration": {
-        "toDestination": "10h 30m",
-        "toDhaka": "10h"
+      "charfasson_betua_to_dhaka": {
+        "departure": "02:30 PM",
+        "duration": "10h"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 400,
+      "deck": {
+        "min": 400,
+        "max": 500
+      },
       "economyChair": null,
       "businessClassAC": null,
       "singleCabinNonAC": 1200,
       "singleCabinAC": 1600,
-      "doubleCabinNonAC": 2400,
+      "doubleCabinNonAC": {
+        "min": 2000,
+        "max": 2400
+      },
       "doubleCabinAC": 2800,
       "familyCabinAC": 4500,
-      "vipCabin": 6000
+      "vipCabin": {
+        "min": 4000,
+        "max": 6000
+      }
     },
     "amenities": [
       "AC",
@@ -4341,19 +4999,23 @@
       "from": "Dhaka",
       "to": "Chandpur"
     },
+    "description": "MV Zam Zam 1, also listed as MV Ab-e-Jam-Jam 1, runs the Dhaka ⇄ Chandpur river route for Zam Zam Group — the operator also appears as Jamjam Group. It leaves Sadarghat at 09:15 AM and starts back from Chandpur at 06:00 AM, with the day trip taking about 3 hours 30 minutes either way; an afternoon return from Chandpur around 01:00 PM is also listed on some rosters. Deck has no fixed price and goes for roughly ৳150–400, with an economy chair at ৳300 and AC business class at ৳400; single cabins are ৳800 non-AC and ৳1,000 with AC, doubles ৳1,300 and ৳1,500, the AC family cabin ৳2,000 and the VIP cabin ৳3,500. Cabin pricing is set by the operator and finalised at the Sadarghat ticket counters rather than online. The three-floor, twin-engine launch cruises at about 16 knots and carries TV, a generator and life jackets. For the day's exact departure slot and cabin availability, call 01711311449, 01714248589 or 01945337370.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "09:15 AM",
-        "fromDestination": "06:00 AM"
+      "dhaka_to_chandpur": {
+        "departure": "09:15 AM",
+        "duration": "3h 30m"
       },
-      "duration": {
-        "toDestination": "3h 30m",
-        "toDhaka": "3h 30m"
+      "chandpur_to_dhaka": {
+        "departure": "06:00 AM",
+        "duration": "3h 30m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 200,
+      "deck": {
+        "min": 150,
+        "max": 400
+      },
       "economyChair": 300,
       "businessClassAC": 400,
       "singleCabinNonAC": 800,
@@ -4373,7 +5035,7 @@
       "speedKnots": "16",
       "engines": 2
     },
-    "contact": "01711311449",
+    "contact": "01711311449, 01714248589",
     "status": "active",
     "image": "/launch-image/MV Zam Zam 1.jpg"
   },
@@ -4387,14 +5049,15 @@
       "from": "Dhaka",
       "to": "Elisha"
     },
+    "description": "MV Zam Zam 7, also written Ab-e Zam Zam 7, runs the Dhaka ⇄ Elisha route for Zam Zam Group, leaving Sadarghat at 09:00 PM and starting back at 08:30 AM, with the passage taking about 7 hours in either direction. Fares are fixed: ৳350 for deck, ৳450 for an economy chair and ৳600 for AC business class; single cabins are ৳1,200 non-AC and ৳1,400 with AC, doubles ৳2,200 and ৳2,400, the AC family cabin ৳3,500 and the VIP cabin ৳7,000. The four-floor, twin-engine launch cruises at about 17 knots and carries TV, a generator and life jackets. For the day's exact departure slot and cabin availability, call 01752555325.",
     "schedule": {
-      "departure": {
-        "fromDhaka": "09:00 PM",
-        "fromDestination": "08:30 AM"
+      "dhaka_to_elisha_bhola": {
+        "departure": "09:00 PM",
+        "duration": "7h"
       },
-      "duration": {
-        "toDestination": "7h",
-        "toDhaka": "7h"
+      "elisha_bhola_to_dhaka": {
+        "departure": "08:30 AM",
+        "duration": "7h"
       }
     },
     "fares": {

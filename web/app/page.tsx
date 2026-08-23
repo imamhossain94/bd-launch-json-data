@@ -37,6 +37,46 @@ export default function Home() {
       </header>
 
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <section
+          aria-labelledby="disclaimer-heading"
+          className="mb-8 rounded-2xl border border-amber-200 bg-amber-50 p-4 sm:p-5"
+        >
+          <div className="flex gap-3">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={1.8}
+              aria-hidden="true"
+              className="mt-0.5 h-5 w-5 shrink-0 text-amber-600"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z" />
+            </svg>
+            <div>
+              <h2 id="disclaimer-heading" className="text-sm font-semibold text-amber-900">
+                Please read before you travel
+              </h2>
+              <ul className="mt-2 space-y-1.5 text-sm leading-relaxed text-amber-900/90">
+                <li>
+                  <strong className="font-semibold">Fares may not be correct.</strong> Prices move with the
+                  season, fuel costs and BIWTA revisions. Where an operator has no fixed price, the fare is
+                  shown as a range (e.g. ৳150–350) rather than a single figure.
+                </li>
+                <li>
+                  <strong className="font-semibold">Schedules can be changed by the operator.</strong>{" "}
+                  Departures shift with weather, river conditions and port authority decisions, and vessels
+                  are sometimes rotated to other routes or run special holiday timings.
+                </li>
+                <li>
+                  This is a community-maintained dataset, not an official timetable or a booking service.
+                  Always confirm the day&apos;s departure and cabin availability at the Sadarghat counter or
+                  with the operator before travelling.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
         <LaunchExplorer ships={ships} routes={routes} />
       </div>
 
@@ -48,7 +88,7 @@ export default function Home() {
         >
           bd-launch-json-data
         </a>{" "}
-        dataset · Fares are indicative and may change.
+        dataset · Fares and schedules are indicative and may change without notice.
       </footer>
     </main>
   );
