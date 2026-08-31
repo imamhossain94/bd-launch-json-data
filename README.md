@@ -1,8 +1,8 @@
 # Bd Launch JSON Data
 
-A structured JSON dataset of passenger launches (river ferries) operating out of Dhaka, Bangladesh — schedules, fares, amenities, descriptions, and technical specs for **93 launches** across **20 routes** and **35 operators**.
+A structured JSON dataset of passenger launches (river ferries) operating out of Dhaka, Bangladesh — schedules, fares, amenities, descriptions, and technical specs for **88 launches** across **19 routes** and **35 operators**.
 
-> **Fares and schedules are indicative.** Prices may not be current, and operators change departures without notice. Confirm at the ghat counter before travelling.
+> **Fares and schedules are indicative.** Prices may not be current, and operators change departures without notice — post-Padma-Bridge most routes run on hull rotations rather than daily per-launch schedules. Every entry was cross-checked against independent public sources (ghat timetables, operator pages, booking sites, news archives) in **August 2026**; entries that could not be corroborated carry `status: "unverified"`. Confirm at the ghat counter before travelling.
 
 A companion Next.js app that renders this data as a browsable launch list lives in [`web/`](web/) and is ready to deploy on Vercel.
 
@@ -42,15 +42,17 @@ A companion Next.js app that renders this data as a browsable launch list lives 
 
 | Route | Launches |
 |---|---|
-| Dhaka ⇄ Chandpur | 32 |
-| Dhaka ⇄ Barishal | 29 |
-| Dhaka ⇄ Patuakhali | 7 |
+| Dhaka ⇄ Chandpur | 30 |
+| Dhaka ⇄ Barishal | 23 |
+| Dhaka ⇄ Patuakhali | 6 |
 | Dhaka ⇄ Hularhat (Pirojpur) | 4 |
-| Dhaka ⇄ Shariatpur | 4 |
-| Dhaka ⇄ Barisal | 2 |
+| Dhaka ⇄ Ilisha | 4 |
+| Dhaka ⇄ Char Fasson ⇄ Betua | 3 |
+| Dhaka ⇄ Monpura ⇄ Hatiya | 3 |
 | Dhaka ⇄ Bhashanchar (Mehendiganj) | 2 |
-| Dhaka ⇄ Betua (Charfasson) | 2 |
-| ...and 16 more single-launch routes | 16 |
+| Dhaka ⇄ Kalaiya | 2 |
+| Dhaka ⇄ Muladi | 2 |
+| ...and 9 more single-launch routes | 9 |
 
 The array is sorted alphabetically by `name` (natural sort, so "MV Bagdadia 9" sorts before "MV Bagdadia 10").
 
@@ -102,7 +104,11 @@ type Fare = number | { min: number; max: number } | null;
     engines: number;
   };
   contact: string | null;     // Phone number, when available
-  status: "active";
+  // "active"      -> corroborated by current sources (service may still be a rotation)
+  // "suspended"   -> service halted (permit cancelled or route collapsed); data historical
+  // "discontinued"-> service permanently withdrawn; data historical
+  // "unverified"  -> no independent source confirms this launch/route; treat with caution
+  status: "active" | "suspended" | "discontinued" | "unverified";
   image: string | null;       // Path relative to the repo root, e.g. "/launch-image/MV Sundarban 10.jpg"
 }
 ```
@@ -120,22 +126,22 @@ type Fare = number | { min: number; max: number } | null;
     "from": "Dhaka",
     "to": "Barishal"
   },
-  "description": "MV Sundarban 10 runs the main Dhaka ⇄ Barishal night route for Sundarban Navigation, leaving Sadarghat at 09:00 PM — departures are also quoted from about 08:00 PM — and Barishal at the same hour, arriving early the next morning after about 5 hours 30 minutes. Deck has no fixed price and goes for roughly ৳250–350, with a sofa seat sold at about ৳600; a non-AC single cabin runs ৳1,000–1,400 and the AC single ৳1,500, the non-AC double ৳1,800–2,400 and the AC double ৳2,500, the AC family or semi-VIP cabin ৳3,500 and the VIP duplex ৳5,000–7,000. The three-floor, twin-engine launch cruises at about 18 knots and carries AC, a restaurant, a prayer room, CCTV, a VIP suite and a generator. For bookings, call the Barishal counter on 01711358838, the Dhaka counter on 01716-444367 or the hotline on 01758-113011.",
+  "description": "MV Sundarban 10 serves the Dhaka ⇄ Barishal route for Sundarban Navigation. It is scheduled out of Dhaka Sadarghat at 09:00 PM and back from Barishal at 09:00 PM, with a one-way run of about 9 hours. Fares (indicative): deck ৳300–400, single cabin (non-AC) ৳1,000–1,400, single cabin (AC) ৳1,500, double cabin (non-AC) ৳1,800–2,400, double cabin (AC) ৳2,500, family cabin (AC) ৳3,500, VIP cabin ৳5,000–7,000. The launch has on board: AC, Restaurant, Prayer Room, CCTV, VIP Suite, Generator, Lift, WiFi, Food Court, Medical Service; a 4-floor hull with 2 engines rated around 18 knots. First launch in Bangladesh with a lift; 332 ft, ~1,400 passengers, twin 2,750 HP engines. Alternates daily with Sundarban 16 — one sails from Dhaka while the other leaves Barishal. For bookings call 01711358838.",
   "schedule": {
     "dhaka_to_barishal": {
       "departure": "09:00 PM",
-      "duration": "5h 30m"
+      "duration": "9h"
     },
     "barishal_to_dhaka": {
       "departure": "09:00 PM",
-      "duration": "5h 30m"
+      "duration": "9h"
     }
   },
   "fares": {
     "currency": "BDT",
     "deck": {
-      "min": 250,
-      "max": 350
+      "min": 300,
+      "max": 400
     },
     "economyChair": null,
     "businessClassAC": null,
@@ -161,10 +167,14 @@ type Fare = number | { min: number; max: number } | null;
     "Prayer Room",
     "CCTV",
     "VIP Suite",
-    "Generator"
+    "Generator",
+    "Lift",
+    "WiFi",
+    "Food Court",
+    "Medical Service"
   ],
   "specifications": {
-    "floors": 3,
+    "floors": 4,
     "speedKnots": "18",
     "engines": 2
   },
@@ -220,9 +230,16 @@ with open("ships.json", encoding="utf-8") as f:
     ships = json.load(f)
 
 chandpur_ships = [s for s in ships if s["route"]["id"] == "route_dhaka_chandpur"]
-avg_deck_fare = sum(
-    s["fares"]["deck"] for s in ships if s["fares"]["deck"] is not None
-) / sum(1 for s in ships if s["fares"]["deck"] is not None)
+
+# deck may be a fixed number, a {"min", "max"} range, or None
+def deck_floor(fare):
+    if fare is None:
+        return None
+    return fare["min"] if isinstance(fare, dict) else fare
+
+deck_floors = [deck_floor(s["fares"]["deck"]) for s in ships]
+deck_floors = [v for v in deck_floors if v is not None]
+avg_deck_fare = sum(deck_floors) / len(deck_floors)
 ```
 
 ## Contributing
