@@ -14,6 +14,13 @@ import {
 
 const MAX_VISIBLE_AMENITIES = 4;
 
+const STATUS_BADGES: Record<string, { label: string; className: string }> = {
+  active: { label: "Active", className: "bg-emerald-500/90" },
+  suspended: { label: "Suspended", className: "bg-red-500/90" },
+  discontinued: { label: "Discontinued", className: "bg-slate-500/90" },
+  unverified: { label: "Unverified", className: "bg-amber-500/90" },
+};
+
 export default function ShipCard({ ship }: { ship: Ship }) {
   const [expanded, setExpanded] = useState(false);
   const fare = lowestFare(ship);
@@ -51,10 +58,17 @@ export default function ShipCard({ ship }: { ship: Ship }) {
             </svg>
           </div>
         )}
-        <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-emerald-500/90 px-2.5 py-1 text-xs font-medium text-white shadow">
-          <span className="h-1.5 w-1.5 rounded-full bg-white" />
-          Active
-        </span>
+        {(() => {
+          const badge = STATUS_BADGES[ship.status] ?? STATUS_BADGES.active;
+          return (
+            <span
+              className={`absolute left-3 top-3 inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium text-white shadow ${badge.className}`}
+            >
+              <span className="h-1.5 w-1.5 rounded-full bg-white" />
+              {badge.label}
+            </span>
+          );
+        })()}
       </div>
 
       <div className="flex flex-1 flex-col gap-3 p-4">
