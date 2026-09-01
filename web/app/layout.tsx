@@ -13,6 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  // Resolves relative Open Graph image paths; override per deployment.
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
   title: "BD Launch Finder — Dhaka River Launch Schedules & Fares",
   description:
     "Browse passenger launch (river ferry) schedules, fares, and amenities for routes sailing out of Dhaka, Bangladesh.",

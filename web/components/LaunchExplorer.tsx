@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Route, Ship, lowestFare, outboundLeg } from "@/lib/ship-utils";
+import { Route, Ship, lowestFare, outboundLeg, parseClock } from "@/lib/ship-utils";
 import ShipCard from "@/components/ShipCard";
 
 type SortOption = "name" | "priceAsc" | "priceDesc" | "departure";
@@ -13,13 +13,10 @@ const SORT_LABELS: Record<SortOption, string> = {
   departure: "Earliest departure",
 };
 
-function parseTime(time: string): number {
-  const match = time.match(/(\d{1,2}):(\d{2})\s*(AM|PM)/i);
-  if (!match) return Number.MAX_SAFE_INTEGER;
-  let hours = parseInt(match[1], 10) % 12;
-  const minutes = parseInt(match[2], 10);
-  if (match[3].toUpperCase() === "PM") hours += 12;
-  return hours * 60 + minutes;
+/** Departure in minutes, with unparseable or missing times sorted last. */
+function sortableDeparture(ship: Ship): number {
+  const departure = outboundLeg(ship)?.departure;
+  return (departure ? parseClock(departure) : null) ?? Number.MAX_SAFE_INTEGER;
 }
 
 export default function LaunchExplorer({ ships, routes }: { ships: Ship[]; routes: Route[] }) {
@@ -49,9 +46,7 @@ export default function LaunchExplorer({ ships, routes }: { ships: Ship[]; route
           return sort === "priceAsc" ? fa - fb : fb - fa;
         }
         case "departure":
-          return (
-            parseTime(outboundLeg(a)?.departure ?? "") - parseTime(outboundLeg(b)?.departure ?? "")
-          );
+          return sortableDeparture(a) - sortableDeparture(b);
         default:
           return a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: "base" });
       }
