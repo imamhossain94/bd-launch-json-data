@@ -1,6 +1,4 @@
-"use client";
-
-import { useState } from "react";
+import Link from "next/link";
 import {
   Ship,
   fareLabel,
@@ -9,29 +7,23 @@ import {
   inboundLeg,
   lowestFare,
   outboundLeg,
+  statusMeta,
   telHref,
 } from "@/lib/ship-utils";
 
 const MAX_VISIBLE_AMENITIES = 4;
 
-const STATUS_BADGES: Record<string, { label: string; className: string }> = {
-  active: { label: "Active", className: "bg-emerald-500/90" },
-  suspended: { label: "Suspended", className: "bg-red-500/90" },
-  discontinued: { label: "Discontinued", className: "bg-slate-500/90" },
-  unverified: { label: "Unverified", className: "bg-amber-500/90" },
-};
-
 export default function ShipCard({ ship }: { ship: Ship }) {
-  const [expanded, setExpanded] = useState(false);
   const fare = lowestFare(ship);
   const phone = telHref(ship.contact);
   const outbound = outboundLeg(ship);
   const inbound = inboundLeg(ship);
+  const status = statusMeta(ship.status);
   const visibleAmenities = ship.amenities.slice(0, MAX_VISIBLE_AMENITIES);
   const extraAmenities = ship.amenities.length - visibleAmenities.length;
 
   return (
-    <article className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-shadow hover:shadow-lg">
+    <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:border-cyan-200 hover:shadow-lg focus-within:ring-2 focus-within:ring-cyan-500 focus-within:ring-offset-2">
       <div className="relative aspect-[16/10] w-full overflow-hidden bg-gradient-to-br from-cyan-700 to-slate-800">
         {ship.image ? (
           // eslint-disable-next-line @next/next/no-img-element
@@ -58,22 +50,25 @@ export default function ShipCard({ ship }: { ship: Ship }) {
             </svg>
           </div>
         )}
-        {(() => {
-          const badge = STATUS_BADGES[ship.status] ?? STATUS_BADGES.active;
-          return (
-            <span
-              className={`absolute left-3 top-3 inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium text-white shadow ${badge.className}`}
-            >
-              <span className="h-1.5 w-1.5 rounded-full bg-white" />
-              {badge.label}
-            </span>
-          );
-        })()}
+        <span
+          className={`absolute left-3 top-3 inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium text-white shadow ${status.overlay}`}
+        >
+          <span className="h-1.5 w-1.5 rounded-full bg-white" />
+          {status.label}
+        </span>
       </div>
 
       <div className="flex flex-1 flex-col gap-3 p-4">
         <div>
-          <h3 className="text-base font-semibold text-slate-900">{ship.name}</h3>
+          <h3 className="text-base font-semibold text-slate-900">
+            {/* Stretched link: the whole card opens the detail page. */}
+            <Link
+              href={`/launch/${ship.id}`}
+              className="outline-none transition-colors after:absolute after:inset-0 group-hover:text-cyan-800"
+            >
+              {ship.name}
+            </Link>
+          </h3>
           <p className="text-sm text-slate-500">{ship.operator}</p>
         </div>
 
@@ -86,18 +81,7 @@ export default function ShipCard({ ship }: { ship: Ship }) {
         </div>
 
         {ship.description && (
-          <div>
-            <p className={`text-sm leading-relaxed text-slate-600 ${expanded ? "" : "line-clamp-3"}`}>
-              {ship.description}
-            </p>
-            <button
-              type="button"
-              onClick={() => setExpanded((v) => !v)}
-              className="mt-1 text-xs font-medium text-cyan-700 hover:text-cyan-900 hover:underline"
-            >
-              {expanded ? "Show less" : "Read more"}
-            </button>
-          </div>
+          <p className="line-clamp-3 text-sm leading-relaxed text-slate-600">{ship.description}</p>
         )}
 
         <dl className="grid grid-cols-2 gap-2 rounded-lg bg-slate-50 p-2.5 text-xs">
@@ -162,9 +146,10 @@ export default function ShipCard({ ship }: { ship: Ship }) {
               )}
             </div>
             {phone ? (
+              // Sits above the stretched link so calling never navigates.
               <a
                 href={phone}
-                className="inline-flex items-center gap-1.5 rounded-full bg-cyan-700 px-3.5 py-2 text-xs font-medium text-white transition-colors hover:bg-cyan-800"
+                className="relative z-10 inline-flex items-center gap-1.5 rounded-full bg-cyan-700 px-3.5 py-2 text-xs font-medium text-white transition-colors hover:bg-cyan-800"
               >
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="h-3.5 w-3.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 5.5c0-1 .8-1.5 1.5-1.5H8l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3.5c0 .8-.7 1.5-1.5 1.5C9.5 20.5 3.5 14.5 3 5.5Z" />
@@ -176,7 +161,21 @@ export default function ShipCard({ ship }: { ship: Ship }) {
             )}
           </div>
 
-          <p className="mt-2 text-[11px] leading-snug text-slate-400">
+          <p className="mt-2 flex items-center gap-1 text-[11px] font-medium text-cyan-700">
+            View schedule, fares &amp; details
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              aria-hidden="true"
+              className="h-3 w-3 transition-transform group-hover:translate-x-0.5"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 12h15m0 0-5.5-5.5M19 12l-5.5 5.5" />
+            </svg>
+          </p>
+
+          <p className="mt-1 text-[11px] leading-snug text-slate-400">
             {hasRangedFare(ship)
               ? "Some classes have no fixed price. Fares and times are indicative — confirm with the operator."
               : "Fares and times are indicative — confirm with the operator before travelling."}

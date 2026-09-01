@@ -8,3 +8,14 @@ export function getShips(): Ship[] {
   const raw = fs.readFileSync(filePath, "utf-8");
   return JSON.parse(raw) as Ship[];
 }
+
+export function getShipById(id: string): Ship | undefined {
+  return getShips().find((ship) => ship.id === id);
+}
+
+/** Other launches sharing a route, for the "more on this route" list. */
+export function getRouteSiblings(ship: Ship, limit = 6): Ship[] {
+  return getShips()
+    .filter((other) => other.route.id === ship.route.id && other.id !== ship.id)
+    .slice(0, limit);
+}

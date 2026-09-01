@@ -4,7 +4,7 @@ A structured JSON dataset of passenger launches (river ferries) operating out of
 
 > **Fares and schedules are indicative.** Prices may not be current, and operators change departures without notice — post-Padma-Bridge most routes run on hull rotations rather than daily per-launch schedules. Every entry was cross-checked against independent public sources (ghat timetables, operator pages, booking sites, news archives) in **August 2026**; entries that could not be corroborated carry `status: "unverified"`. Confirm at the ghat counter before travelling.
 
-A companion Next.js app that renders this data as a browsable launch list lives in [`web/`](web/) and is ready to deploy on Vercel.
+A companion Next.js app that renders this data as a browsable launch list — with a per-launch detail page at `/launch/<id>` covering schedule, every fare class, amenities and specs — lives in [`web/`](web/) and is ready to deploy on Vercel.
 
 ## Preview
 <div style="gap: 8px; overflow-x: auto; width: 100%; padding: 10px 0; flex-wrap: wrap; align-content: center;">
@@ -42,11 +42,11 @@ A companion Next.js app that renders this data as a browsable launch list lives 
 
 | Route | Launches |
 |---|---|
-| Dhaka ⇄ Chandpur | 30 |
+| Dhaka ⇄ Chandpur | 31 |
 | Dhaka ⇄ Barishal | 23 |
 | Dhaka ⇄ Patuakhali | 6 |
 | Dhaka ⇄ Hularhat (Pirojpur) | 4 |
-| Dhaka ⇄ Ilisha | 4 |
+| Dhaka ⇄ Ilisha | 3 |
 | Dhaka ⇄ Char Fasson ⇄ Betua | 3 |
 | Dhaka ⇄ Monpura ⇄ Hatiya | 3 |
 | Dhaka ⇄ Bhashanchar (Mehendiganj) | 2 |

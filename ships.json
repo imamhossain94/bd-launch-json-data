@@ -4776,7 +4776,7 @@
       "from": "Dhaka",
       "to": "Chandpur"
     },
-    "description": "MV Zam Zam 1 serves the Dhaka ⇄ Chandpur route for Zam Zam Group. It is scheduled out of Dhaka Sadarghat at 09:15 AM and back from Chandpur at 11:20 PM, with a one-way run of about 3 hours 30 minutes. Fares (indicative): deck ৳150–200, economy chair ৳300, business-class AC chair ৳400, single cabin (non-AC) ৳800, single cabin (AC) ৳1,000, double cabin (non-AC) ৳1,300, double cabin (AC) ৳1,500, family cabin (AC) ৳2,000, VIP cabin ৳3,500. The launch has on board: TV, Generator, Life Jackets; a 3-floor hull with 2 engines rated around 16 knots. Distinct from MV Ab-e-Jamjam (a separate vessel that leaves Chandpur at 1:00 PM); Jomjom-1 holds the 11:20 PM night slot, alternating with Taqwa on the 9:15 AM Dhaka departure. For bookings call 01714248589.",
+    "description": "MV Zam Zam 1 serves the Dhaka ⇄ Chandpur route for Zam Zam Group. It is scheduled out of Dhaka Sadarghat at 09:15 AM and back from Chandpur at 11:20 PM, with a one-way run of about 3 hours 30 minutes. Fares (indicative): deck ৳150–200, economy chair ৳300, business-class AC chair ৳400, single cabin (non-AC) ৳800, single cabin (AC) ৳1,000, double cabin (non-AC) ৳1,300, double cabin (AC) ৳1,500, family cabin (AC) ৳2,000, VIP cabin ৳3,500. The launch has on board: TV, Generator, Life Jackets; a 3-floor hull with 2 engines rated around 16 knots. Distinct from MV Zam Zam 7 — the “Ab-e-Jamjam” of the ghat lists, which leaves Chandpur at 1:00 PM; Jomjom-1 holds the 11:20 PM night slot, alternating with Taqwa on the 9:15 AM Dhaka departure. For bookings call 01714248589.",
     "schedule": {
       "dhaka_to_chandpur": {
         "departure": "09:15 AM",
@@ -4821,35 +4821,63 @@
     "name": "MV Zam Zam 7",
     "operator": "Zam Zam Group",
     "route": {
-      "id": "route_dhaka_ilisha",
-      "label": "Dhaka ⇄ Ilisha",
+      "id": "route_dhaka_chandpur",
+      "label": "Dhaka ⇄ Chandpur",
       "from": "Dhaka",
-      "to": "Ilisha (Bhola)"
+      "to": "Chandpur"
     },
-    "description": "MV Zam Zam 7 is listed for the Dhaka ⇄ Ilisha route under Zam Zam Group, but no current independent source confirms this service — treat every figure below as unverified and confirm at the ghat before travelling. Fares (indicative): deck ৳350, economy chair ৳450, business-class AC chair ৳600, single cabin (non-AC) ৳1,200, single cabin (AC) ৳1,400, double cabin (non-AC) ৳2,200, double cabin (AC) ৳2,400, family cabin (AC) ৳3,500, VIP cabin ৳7,000. The launch has on board: TV, Generator, Life Jackets; a 4-floor hull with 2 engines rated around 17 knots. The Jom Jom brand is real on this corridor, but the hull documented there is Jom Jom 3 (an 8:45 AM day launch); no source mentions a “Zam Zam 7”, so the hull number — and every figure here — needs verification. “Elisha” and “Ilisha” are the same ghat at Bhola Sadar; the canonical spelling Ilisha is used now. Operator contact: 01752555325.",
+    "description": "MV Zam Zam 7 — also written MV Ab-e Zam Zam 7 (আব এ জমজম ৭) — serves the Dhaka ⇄ Chandpur route for Zam Zam Group. It is scheduled out of Dhaka Sadarghat at 11:30 PM and back from Chandpur at 1:00 PM, with a one-way run of about 3 hours 30 minutes (3 hours 20 minutes on the up-run to Dhaka). Fares (indicative): deck ৳150–200, economy chair ৳150–300, business-class AC chair ৳270–400, single cabin (non-AC) ৳500–800, single cabin (AC) ৳600–900, double cabin (non-AC) ৳1,000–1,600, double cabin (AC) ৳1,200–1,500, family cabin (AC) ৳1,500–2,000, VIP cabin ৳2,200–3,500. The launch has on board: AC, TV, Generator, Life Jackets; a 4-floor hull with 2 engines rated around 17 knots. Billed as Chandpur's first four-storey luxury launch; Chandpur ghat timetables list it simply as “Ab-e-Jamjam” on the 1:00 PM Chandpur and 11:00–11:30 PM Dhaka slots, which is why it is easily confused with Zam Zam 1 (9:15 AM ex-Dhaka, 11:20 PM ex-Chandpur). It spent a short 2025 posting on the Dhaka ⇄ Ilisha (Bhola) run — Dhaka 1:00 PM, Ilisha 11:00 PM — and returned to Chandpur in October 2025; fares are corridor-level ranges rather than a confirmed per-vessel tariff. For bookings call 01724766720.",
     "schedule": {
-      "dhaka_to_ilisha": {
-        "departure": "09:00 PM",
-        "duration": "7h"
+      "dhaka_to_chandpur": {
+        "departure": "11:30 PM",
+        "duration": "3h 30m"
       },
-      "ilisha_to_dhaka": {
-        "departure": "08:30 AM",
-        "duration": "7h"
+      "chandpur_to_dhaka": {
+        "departure": "01:00 PM",
+        "duration": "3h 20m"
       }
     },
     "fares": {
       "currency": "BDT",
-      "deck": 350,
-      "economyChair": 450,
-      "businessClassAC": 600,
-      "singleCabinNonAC": 1200,
-      "singleCabinAC": 1400,
-      "doubleCabinNonAC": 2200,
-      "doubleCabinAC": 2400,
-      "familyCabinAC": 3500,
-      "vipCabin": 7000
+      "deck": {
+        "min": 150,
+        "max": 200
+      },
+      "economyChair": {
+        "min": 150,
+        "max": 300
+      },
+      "businessClassAC": {
+        "min": 270,
+        "max": 400
+      },
+      "singleCabinNonAC": {
+        "min": 500,
+        "max": 800
+      },
+      "singleCabinAC": {
+        "min": 600,
+        "max": 900
+      },
+      "doubleCabinNonAC": {
+        "min": 1000,
+        "max": 1600
+      },
+      "doubleCabinAC": {
+        "min": 1200,
+        "max": 1500
+      },
+      "familyCabinAC": {
+        "min": 1500,
+        "max": 2000
+      },
+      "vipCabin": {
+        "min": 2200,
+        "max": 3500
+      }
     },
     "amenities": [
+      "AC",
       "TV",
       "Generator",
       "Life Jackets"
@@ -4859,8 +4887,8 @@
       "speedKnots": "17",
       "engines": 2
     },
-    "contact": "01752555325",
-    "status": "unverified",
+    "contact": "01724766720",
+    "status": "active",
     "image": "/launch-image/MV Zam Zam 7.jpg"
   }
 ]

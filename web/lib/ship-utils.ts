@@ -72,6 +72,92 @@ const FARE_LABELS: Record<keyof Omit<Fares, "currency">, string> = {
   vipCabin: "VIP Cabin",
 };
 
+/** Presentation for a `status` value: badge copy, colours, and a plain-English note. */
+export interface StatusMeta {
+  label: string;
+  /** Chip sitting on top of a photo. */
+  overlay: string;
+  /** Chip sitting on a light surface. */
+  chip: string;
+  note: string;
+}
+
+const STATUS_META: Record<string, StatusMeta> = {
+  active: {
+    label: "Active",
+    overlay: "bg-emerald-500/90",
+    chip: "bg-emerald-50 text-emerald-700 ring-1 ring-emerald-600/20",
+    note: "Running on this route as of the last check.",
+  },
+  suspended: {
+    label: "Suspended",
+    overlay: "bg-red-500/90",
+    chip: "bg-red-50 text-red-700 ring-1 ring-red-600/20",
+    note: "Service is paused — confirm with the operator before planning around it.",
+  },
+  discontinued: {
+    label: "Discontinued",
+    overlay: "bg-slate-500/90",
+    chip: "bg-slate-100 text-slate-700 ring-1 ring-slate-500/20",
+    note: "This service has ended; the times and fares below are historical.",
+  },
+  unverified: {
+    label: "Unverified",
+    overlay: "bg-amber-500/90",
+    chip: "bg-amber-50 text-amber-800 ring-1 ring-amber-600/20",
+    note: "No independent source confirms these details — treat every figure as provisional.",
+  },
+};
+
+export function statusMeta(status: string): StatusMeta {
+  return STATUS_META[status] ?? STATUS_META.active;
+}
+
+/** "09:15 PM" -> minutes since midnight, or null when unparseable. */
+export function parseClock(time: string): number | null {
+  const match = time.match(/(\d{1,2}):(\d{2})\s*(AM|PM)/i);
+  if (!match) return null;
+  const hours = (parseInt(match[1], 10) % 12) + (match[3].toUpperCase() === "PM" ? 12 : 0);
+  return hours * 60 + parseInt(match[2], 10);
+}
+
+/** "8h 30m" -> 510, "13h" -> 780, or null when unparseable. */
+export function parseDuration(duration: string): number | null {
+  const match = duration.trim().match(/^(?:(\d+)\s*h)?\s*(?:(\d+)\s*m)?$/i);
+  if (!match || (!match[1] && !match[2])) return null;
+  return (match[1] ? parseInt(match[1], 10) * 60 : 0) + (match[2] ? parseInt(match[2], 10) : 0);
+}
+
+/** Minutes since midnight -> "03:00 AM". Wraps past midnight. */
+export function formatClock(minutes: number): string {
+  const wrapped = ((minutes % 1440) + 1440) % 1440;
+  const hours24 = Math.floor(wrapped / 60);
+  const hours12 = hours24 % 12 === 0 ? 12 : hours24 % 12;
+  const suffix = hours24 < 12 ? "AM" : "PM";
+  return `${String(hours12).padStart(2, "0")}:${String(wrapped % 60).padStart(2, "0")} ${suffix}`;
+}
+
+/**
+ * Scheduled departure plus the quoted running time, e.g. 11:30 PM + 3h 30m
+ * -> `{ time: "03:00 AM", nextDay: true }`. An estimate, not a published arrival.
+ */
+export function estimatedArrival(leg: Leg): { time: string; nextDay: boolean } | null {
+  const departure = parseClock(leg.departure);
+  const minutes = parseDuration(leg.duration);
+  if (departure === null || minutes === null) return null;
+  const arrival = departure + minutes;
+  return { time: formatClock(arrival), nextDay: arrival >= 1440 };
+}
+
+/** Every fare class in display order, including the ones this launch does not offer. */
+export function fareEntries(ship: Ship): { key: string; label: string; fare: Fare }[] {
+  return (Object.keys(FARE_LABELS) as (keyof typeof FARE_LABELS)[]).map((key) => ({
+    key,
+    label: FARE_LABELS[key],
+    fare: ship.fares[key],
+  }));
+}
+
 export function getRoutes(ships: Ship[]): Route[] {
   const seen = new Map<string, Route>();
   for (const ship of ships) {
