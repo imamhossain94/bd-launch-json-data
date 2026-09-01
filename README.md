@@ -42,11 +42,11 @@ A companion Next.js app that renders this data as a browsable launch list lives 
 
 | Route | Launches |
 |---|---|
-| Dhaka ⇄ Chandpur | 30 |
+| Dhaka ⇄ Chandpur | 31 |
 | Dhaka ⇄ Barishal | 23 |
 | Dhaka ⇄ Patuakhali | 6 |
 | Dhaka ⇄ Hularhat (Pirojpur) | 4 |
-| Dhaka ⇄ Ilisha | 4 |
+| Dhaka ⇄ Ilisha | 3 |
 | Dhaka ⇄ Char Fasson ⇄ Betua | 3 |
 | Dhaka ⇄ Monpura ⇄ Hatiya | 3 |
 | Dhaka ⇄ Bhashanchar (Mehendiganj) | 2 |
